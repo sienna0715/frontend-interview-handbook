@@ -38,8 +38,9 @@ person.foo(function () {
 	console.log(`Hi! my name is ${this.name}.`); // Hi! my name is .
 })
 ```
-person.foo()는 일반 함수로서 호출되면서 this는 전역 객체 window를 가리키게 됩니다. 때문에 'Lee'가 아닌 빌트인 메소드 window.name를 뜻하게 되어 name 프로퍼티의 기본값인 빈 문자열('')로 출력되게 됩니다.
-
+person.foo()는 일반 함수로서 호출되면서 this는 전역 객체 window를 가리키게 됩니다. 때문에 'Lee'가 아닌 빌트인 메소드 window.name를 뜻하게 되어 name 프로퍼티의 기본값인 빈 문자열('')로 출력되게 됩니다. 
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
 ### 2. this가 JavaScript에서 어떻게 작동하는지 설명하세요.
@@ -48,7 +49,8 @@ person.foo()는 일반 함수로서 호출되면서 this는 전역 객체 window
 일반 함수로 호출할 경우, this는 전역 객체 window를 가리킵니다.
 생성자 함수로 호출할 경우, 인스턴스를 가리킵니다.
 이처럼 일반함수로 호출할 경우에는 전역 객체를 가리키다보니 this가 불일치하는 경우가 생겨 개발자가 의도한 바와 다른 경우를 초래할 수 있기 때문에 주의를 기울어야 합니다.
-
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
 ### 3. 이벤트 루프란 무엇인가요? 콜 스택과 태스크 큐의 차이점은 무엇인가요?
@@ -59,3 +61,5 @@ person.foo()는 일반 함수로서 호출되면서 this는 전역 객체 window
 콜 스택은 자바스크립트의 엔진 중 하나로 함수가 호출되면 순차적으로 쌓인 후, 순차적으로 실행됩니다. 이때문에 자바스크립트를 싱글 스레드라고 하는 이유이기도 합니다.
 
 이야기를 종합해보면 콜 스택과 태스크 큐의 가장 큰 차이점은 데이터를 처리하는 방식입니다. 앞서 이벤트 루프에서 설명한 바를 생각해보면 결국 코드가 실행되는 곳은 자바스트립트 엔진, 즉 콜 스택입니다. setTimeout과 같은 비동기 함수를 태스크 큐에 모아두었다가 콜 스택에서 동기적으로 평가하고 실행되게 됩니다.
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
