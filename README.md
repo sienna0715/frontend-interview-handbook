@@ -26,3 +26,7 @@
  2. 주제 강의 : 매주 화요일, 홀수 주 금요일
      - 주제 업로드는 매 발표 전까지
  3. 모의 면접 : 짝수 주 금요일
+<br />
+
+ # 🔗 링크
+- [Notion](https://www.notion.so/Interview-HandBook-8817e4cb83d14764a2a874cab20fec1a)
