@@ -63,3 +63,5 @@ person.foo()는 일반 함수로서 호출되면서 this는 전역 객체 window
 이야기를 종합해보면 콜 스택과 태스크 큐의 가장 큰 차이점은 데이터를 처리하는 방식입니다. 앞서 이벤트 루프에서 설명한 바를 생각해보면 결국 코드가 실행되는 곳은 자바스트립트 엔진, 즉 콜 스택입니다. setTimeout과 같은 비동기 함수를 태스크 큐에 모아두었다가 콜 스택에서 동기적으로 평가하고 실행되게 됩니다.
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+
+### 4. 프로토타입 상속이 어떻게 작동하는지 설명하세요.
