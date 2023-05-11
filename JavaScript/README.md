@@ -3,6 +3,10 @@
 - [this가 JavaScript에서 어떻게 작동하는지 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#2-this%EA%B0%80-javascript%EC%97%90%EC%84%9C-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [이벤트 루프란 무엇인가요? 콜 스택과 태스크 큐의 차이점은 무엇인가요?](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#3-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%A3%A8%ED%94%84%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94-%EC%BD%9C-%EC%8A%A4%ED%83%9D%EA%B3%BC-%ED%83%9C%EC%8A%A4%ED%81%AC-%ED%81%90%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94)
 - [프로토타입 상속이 어떻게 작동하는지 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#4-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%EC%83%81%EC%86%8D%EC%9D%B4-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
+- [이벤트 버블링(Event Bubbling)이란 무엇인지 설명하세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#5-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%B2%84%EB%B8%94%EB%A7%81event-bubbling%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
+- [얕은 복사와 깊은 복사에 대해 설명하세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#6-%EC%96%95%EC%9D%80-%EB%B3%B5%EC%82%AC%EC%99%80-%EA%B9%8A%EC%9D%80-%EB%B3%B5%EC%82%AC%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
+- [attribute와 property의 차이점에 대해 설명해보세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#7-attribute%EC%99%80-property%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
+- [ 쿠키와 웹스토리지(로컬 스토리지, 세션 스토리지)에 대해 설명해보세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#8-%EC%BF%A0%ED%82%A4-%EB%A1%9C%EC%BB%AC-%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%B0%8F-%EC%84%B8%EC%85%98-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%99%80-%EA%B0%99%EC%9D%80-%EA%B0%81-%EC%A0%80%EC%9E%A5%EC%86%8C%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%8B%A4%EB%A5%B8%EA%B0%80%EC%9A%94)
 ------
 
 ### 1. Function.prototype.bind에 대해 설명하세요.
@@ -155,12 +159,80 @@ JSON.stringify를 활용해 데이터를 문자로 변형시키고. JSON.parse�
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
-### 8. 쿠키, 로컬 저장소 및 세션 저장소와 같은 각 저장소는 어떻게 다른가요?
-#### 0. 쿠키, 웹 스토리지(로컬 스토리지, 세션 스토리지)가 왜 필요한가
+### 8. 쿠키와 웹스토리지(로컬 스토리지, 세션 스토리지)에 대해 설명해보세요.
+#### 저장소(쿠키/웹스토리지)는 왜 필요한가
+HTTP는 요청과 응답으로 이뤄지는 하나의 사이클이 끝나면, 연결이 끊어지는 무상태성을 가져 클라이언트의 상태를 보존하지 않습니다.
 
-#### 1. 쿠키(Cookie)
+HTTP의 이러한 단점을 보완하고자 쿠키와 웹 스토리지를 통해 서버가 아닌 클라이언트의 사용자 정보 및 상태를 저장해두고 필요시마다 데이터를 꺼내서 서버의 전달하는 방식을 구현합니다.
 
-#### 2. 로컬 스토리지(local Storage)
+#### 쿠키(Cookie)
+클라이언트(브라우저) 로컬에 저장하는 만료기간을 가진 작은 텍스트파일로, 서버와 클라이언트가 주고 받은 내용을 기억하고 불러올수 있는 역할을 수행합니다.
 
-#### 3. 세션 스토리지(Session Storage)
+만료 기간을 정할 수 있어 사용자 인증이 유효한 시간을 명시할 수 있고, 브라우저가 종료되어도 만료 기간 내에는 클라이언트에 보관되어 인증이 유지된다는 특징이 있습니다.
 
+쿠키는 로그인/사용자정보/접속 시간 등 세션을 관리하기 위해 사용하며, 사용자의 언어 환경, 다크/라이트 모드 등 사용자 맞춤형 페이지를 제공할 목적으로 사용됩니다.
+
+**쿠키의 장점**
+
+1. 대부분의 브라우저에서 지원한다.
+2. 데이터의 유효기간을 지정할 수 있다.
+3. XSS(사이트간 악성 JS 코드를 심는 행위) 공격으로부터 안전하다.
+4. 서버에서 쿠키의 httpOnly 옵션을 설정하면, JS를 통해 쿠키에 접근하는 것을 막을 수 있다.
+
+**쿠키의 단점**
+
+1. 저장할 수 있는 데이터 용량이 매우 작다(최대 4kb)
+2. 서버로 HTTP 요청시 매번 같이 전달되어야 해 서버와 네트워크 측면에 부담이 있다.
+3. 쿠키 속 정보는 암호화되어 있지 않아 제 3자에게 탈취되어 악용될 수 있는 위험이 있다.
+4. CSRF(사이트 간 요청 위조) 위협 존재하다.
+5. CSRF : 제 3자가 사용자의 요청을 가로채 변조하여 부당 이익을 취하는 행위를 말한다.
+6. 문자열만 저장 가능하다.
+
+<br />
+
+#### 웹 스토리지(Web Storage)
+window 객체의 프로퍼티로 존재하기도 하는 웹 스토리지는 클라이언트에 데이터를 저장할 수 있도록 HTML5부터 나온 새로운 방식의 데이터 저장소를 말합니다.
+
+웹 스토리지로는 로컬 스토리지(Local Storage)와 세션 스토리지(Session Storage)가 있습니다.
+
+**로컬 스토리지(Local Storage) vs 세션 스토리지(Session Storage)**
+
+두 스토리지는 영구성과 데이터 공유 범위로 구분됩니다. 먼저 로컬 스토리지는 브라우저를 종료해도 데이터가 영구적으로 보관됩니다. 반면 세션 스토리지는 브라우저 종료 시 데이터도 함께 삭제됩니다.
+
+또한 로컬스토리지는 도메인이 같다면 전역적으로 데이터가 공유된다는 특성이 있으나, 세션 스토리지는 도메인이 같더라도 브라우저가 다르면(탭 브라우저, 다른 브라우저) 브라우저 컨텍스트가 다르기 때문에, 브라우저마다 각각의 세션 스토리지가 형성되어 데이터가 공유되지 않습니다.
+
+
+|  | 로컬 스토리지 | 세션 스토리지 |
+| --- | --- | --- |
+| 데이터 유지 | 영구성(브라우저 종료 시 보관) | 비영구성(브라우저 종료 시 삭제) |
+| 데이터 범위 | 동일한 도메인 전역 공유 | 브라우저간 공유 불가 |
+| 접근 | window.localStorage | window.sessionStorage |
+
+<br />
+
+**웹 스토리지의 장점**
+
+1. 서버에 불필요하게 데이터를 저장하지 않아도 되어 서버 부담이 줄어듭니다.
+2. 쿠키에 비해 데이터 용량이 큽니다.(모바일 : 2.5MB / 데스크탑 : 5~10MB)
+3. 문자열은 물론 자바스크립트의 모든 원시형 데이터와 객체타입을 저장할 수 있습니다.
+4. 도메인 단위로 접근이 제한되는 CORS 특성 덕에 CSRF위협으로부터 안전합니다.
+
+**웹 스토리지의 단점**
+1. HTML5를 지원하는 브라우저에만 사용가능합니다.
+2. JS코드를 통해 웹 스토리지에 쉽게 접근할 수 있어 XSS 공격에 취약합니다.
+
+<br />
+
+#### 각 저장소는 언제 사용해야 할까.
+
+- 쿠키 : 일시적으로 필요한 가벼운 데이터를 저장할 때
+     - e.g. 다시보지않음 쿠키 팝업창, 로그인 자동 완성
+
+- 로컬 스토리지 : 브라우저가 종료되어도 지속적인 데이터 저장이 필요할 때
+     - e.g. 자동 로그인
+- 세션 스토리지 : 브라우저가 종료되면 사라지는 일시적으로 데이터를 저장할 때
+     - e.g. 일회성 로그인, 입력 폼 저장, 비로그인 장바구니
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
