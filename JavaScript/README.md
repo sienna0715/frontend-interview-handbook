@@ -3,11 +3,6 @@
 - [this가 JavaScript에서 어떻게 작동하는지 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#2-this%EA%B0%80-javascript%EC%97%90%EC%84%9C-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [이벤트 루프란 무엇인가요? 콜 스택과 태스크 큐의 차이점은 무엇인가요?](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#3-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%A3%A8%ED%94%84%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94-%EC%BD%9C-%EC%8A%A4%ED%83%9D%EA%B3%BC-%ED%83%9C%EC%8A%A4%ED%81%AC-%ED%81%90%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94)
 - [프로토타입 상속이 어떻게 작동하는지 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#4-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%EC%83%81%EC%86%8D%EC%9D%B4-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
-- [이벤트 버블링(Event Bubbling)이란 무엇인지 설명하세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#5-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%B2%84%EB%B8%94%EB%A7%81event-bubbling%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
-- [얕은 복사와 깊은 복사에 대해 설명하세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#6-%EC%96%95%EC%9D%80-%EB%B3%B5%EC%82%AC%EC%99%80-%EA%B9%8A%EC%9D%80-%EB%B3%B5%EC%82%AC%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
-- [attribute와 property의 차이점에 대해 설명해보세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#7-attribute%EC%99%80-property%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
-- [ 쿠키, 로컬 저장소 및 세션 저장소와 같은 각 저장소는 어떻게 다른가요?](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#8-%EC%BF%A0%ED%82%A4-%EB%A1%9C%EC%BB%AC-%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%B0%8F-%EC%84%B8%EC%85%98-%EC%A0%80%EC%9E%A5%EC%86%8C-%EA%B0%81-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
-
 ------
 
 ### 1. Function.prototype.bind에 대해 설명하세요.
