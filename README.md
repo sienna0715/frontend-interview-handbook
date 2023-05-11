@@ -28,5 +28,5 @@
  3. 모의 면접 : 짝수 주 금요일 1시
 <br />
 
- ## 🖇️ Link
+ ## 🔗 Link
 - [Notion](https://www.notion.so/Interview-HandBook-8817e4cb83d14764a2a874cab20fec1a)
