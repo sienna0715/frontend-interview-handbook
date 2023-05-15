@@ -281,7 +281,7 @@ console.log(b); // 참조 오류
 let b = 2;
 ```
 
-let은 초기화가 안 되었기 때문에 변수를 참조할 수 없다. 스코프에서 초기화가 되기까지 변수를 참조할 수 없는 구간을 TDZ 또는 일시적 사각지대라고 한다.
+let은 초기화가 안 되었기 때문에 변수를 참조할 수 없습니다. 스코프에서 초기화가 되기까지 변수를 참조할 수 없는 구간을 TDZ 또는 일시적 사각지대라고 합니다.
 
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
