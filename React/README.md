@@ -70,7 +70,8 @@ cf. [client-side routing](https://betterprogramming.pub/react-router-and-client-
 
 ### 4. React의 state와 props는 각각 무엇인지 설명해주세요.
 React에서 state와 props는 둘 다 컴포넌트에서 `데이터`를 다루는데 사용되지만, 목적과 사용 방법에서 차이점이 존재합니다.
-![](https://velog.velcdn.com/images/haizel/post/3b8d0544-f29e-4c46-a1ff-fefc96fa3d12/image.png)
+
+<img src="https://velog.velcdn.com/images/haizel/post/3b8d0544-f29e-4c46-a1ff-fefc96fa3d12/image.png" width="500px" />
 
 
 ### State
@@ -101,9 +102,7 @@ props는 `함수의 매개변수`처럼 **외부** 컴포넌트(부모 컴포넌
 
 <br />
 
-#### 🙋‍♀️ Quiz1. `setState()` 호출은 동기적일까요? 비동기적일까요?
-<br />
-
+#### 🙋‍♀️ Quiz1. `setState()` 호출은 동기적일까요? 비동기적일까요? <br />
 #### 🙋‍♀️ Quiz2. `this.state.count`의 초기값이 0일때, 최종 `this.state.count` 은  몇일까요?
 ```jsx
 incrementCount() {
@@ -122,11 +121,10 @@ handleSomething() {
 
 ## 5. React 컴포넌트의 key 속성에 대해 설명하세요.
 React에서 `map` 등을 사용해 컴포넌트를 반복적으로 생성할 때,  `'Warning: Each child in a list should have a unique "key" prop.’` 와 같은 경고를 마주치게 됩니다.
-![](https://velog.velcdn.com/images/haizel/post/62bf062f-6fbb-4af8-889e-c46e5d43ade6/image.png)
 
-React 컴포넌트에서 왜 key 속성이 필요한지 React 렌더링 원리에 대해 알아보도록 하겠습니다.
+<img src="https://velog.velcdn.com/images/haizel/post/62bf062f-6fbb-4af8-889e-c46e5d43ade6/image.png" width="800px" />
 
-<br />
+React 컴포넌트에서 왜 key 속성이 필요한지 React 렌더링 원리에 대해 알아보도록 하겠습니다. <br />
 
 ### Key 속성, 왜 필요한가
 
@@ -136,7 +134,8 @@ React 컴포넌트에서 왜 key 속성이 필요한지 React 렌더링 원리�
 
 여기서 기존 요소들 뒤에 새로운 내용을 추가할 경우 새로운 부분에 대해서만 재렌더링 되지만, 기존 요소 앞에 새로운 내용을 추가할 경우 모든 부분이 재렌더링됩니다. 바로 이런 상황을 최적화하기 위해 `key` 속성을 사용합니다.
 
-각 요소에 `key` 속성을 부여하면 더 이상 모든 요소를 렌더링하지 않고, 추가된 부분만 제렌더링해 효율적인 렌더링을 실현할 수 있습니다.
+각 요소에 `key` 속성을 부여하면 더 이상 모든 요소를 렌더링하지 않고, 추가된 부분만 제렌더링해 효율적인 렌더링을 실현할 수 있습니다. <br /><br />
+
 
 ### key 속성 사용시 주의할 점
 
