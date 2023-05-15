@@ -149,3 +149,133 @@ React 컴포넌트에서 왜 key 속성이 필요한지 React 렌더링 원리�
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
+
+## 6. React를 사용하는 이유에 대해 설명하세요.
+
+react는 component와 Virtual DOM 때문에 사용합니다. 
+
+component는 재사용이 가능한 각각의 독립적 모듈이라고 할 수 있습니다. react는 component를 조립하여 프로그램을 만듭니다. 그래서 재사용에 용이하며 재사용하기 때문에 코드의 불필요한 반복이 줄어 생산성이 좋아지며 재사용한 컴포넌트에 에러가 발생했을때 해당 컴포넌트의 에러만 해결하면 되기 때문에 유지보수에도 용이합니다.
+
+기존에는 상태나 페이지가 바뀌면 전체를 렌더링했지만 react는 Virtual DOM을 이용하여 상태나 페이지가 바뀌었을 경우 바뀐 부분만 렌더링하게되어 불필요한 렌더링이 줄어듭니다.
+
+react를 사용하는 이유는 재사용이 가능하고 그로인해 생산성과 유지보수가 용이하고 불필요한 렌더링을 줄일수 있기 때문입니다.
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
+
+## 7. React의 생명주기에 대해 설명하세요.
+
+react의 생명주기는 mount(생성) -> 업데이트 -> unmount(제거) 순으로 구성되어 있습니다. 각각의 생명주기에 특별한 메서드를 선언하여 코드를 작동할 수 있습니다.
+
+### 마운트 생명주기 메서드
+
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdiVCbs%2Fbtsf4e2XfIX%2FbfQMhkBE8yXHknZg115hD1%2Fimg.png" width="500px" /></p>
+
+
+#### Constructor
+
+```javascript
+
+  constructor(props) {
+    super(props);
+  }
+
+```
+- 컴포넌트의 생성자 메서드이며 컴포넌트가 만들어지면 가장 먼저 실행되는 메서드입니다.
+
+
+#### getDerivedStateFromProps
+
+```javascript
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    console.log("getDerivedStateFromProps");
+    if (nextProps.color !== prevState.color) {
+      return { color: nextProps.color };
+    }
+    return null;
+  }
+  
+```
+- props로 받아온 값을 state에 넣어주고 싶을 경우 사용합니다.
+- 다른 생명주기 메서드와 다르게 static 키워드가 필요합니다.
+- this로 조회할 수 없습니다.
+- 특정 객체를 반환하면 객체 안의 내용들이 컴포넌트의 state로 설정됩니다. (null일 경우 아무일도 발생하지 않음)
+
+
+#### render
+- 컴포넌트를 렌더링하는 메서드입니다.
+
+
+#### componentDidMount
+- 컴포넌트의 첫번째 렌더링이 끝나면 호출되는 메서드입니다.
+- 주로 DOM을 사용해야하는 외부 라이브러리를 연동하거나 데이터를 요청하기 위해 ajax 요청을 하거나 DOM의 속성을 읽거나 직접 변경하는 작업을 진행합니다.
+
+
+### 업데이트 생명주기 메서드
+
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fdd0Hkw%2Fbtsf6DBaKa6%2Fgljfcu6mKKQ1NzwsdRvL20%2Fimg.png" width="500px" /></p>
+
+
+#### getDerivedStateFromProps
+- 위의 다뤘던 내용과 같습니다.
+- 컴포넌트의 state와 props가 바뀌었을때도 호출됩니다.
+
+
+#### shouldComponentUpdate
+
+```javascript
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return true;
+  }
+  
+```
+- 컴포넌트가 리렌더링의 여부를 결정하는 메서드입니다.
+- 주로 최적화 할 때 사용하는 메서드입니다.
+- 반환 값이 true이면 리렌더링을 하며, false일 경우 리렌더링을 하지 않습니다.
+
+
+#### getSnapshotBeforeUpdate
+
+```javascript
+
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    console.log("getSnapshotBeforeUpdate");
+    if (prevProps.color !== this.props.color) {
+      return this.myRef.style.color;
+    }
+    return null;
+  }
+  
+```
+- 컴포넌트에서 변화가 일어나기 직전의 DOM상태를 가져와서 특정 값을 반환하면 그 값을 componentDidUpdate에서 사용할 수 있습니다.
+
+
+#### componentDidUpdate
+
+
+```javascript
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log("componentDidUpdate", prevProps, prevState);
+    if (snapshot) {
+      console.log("업데이트 되기 직전 색상: ", snapshot);
+    }
+  }
+  
+```
+- 리렌더링과 업데이트를 마치고 난 뒤에 호출되는 메서드입니다.
+- getSnapshotBeforeUpdate에서 반환한 값을 3번째 인자로 받을 수 있습니다.
+- 업데이트 전의 props와 이후의 props를 비교하는데 사용할 수 있습니다.
+
+
+### 제거(언마운트) 생명주기 메서드
+
+#### componentWillUnmount
+- DOM에 직접 등록했었던 이벤트를 제거합니다.
+- setTimeout을 사용했다면 clearTimeout으로 제거합니다.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
