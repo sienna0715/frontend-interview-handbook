@@ -286,20 +286,3 @@ let은 초기화가 안 되었기 때문에 변수를 참조할 수 없다. 스�
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
-
-### 11. 클로저에 대해서 설명해보세요.
-함수가 속한 렉시컬 스코프(Lexical Environment)를 기억하여, 함수가 렉시컬 스코프 밖에서 실행될 때도 이 스코프에 접근할 수 있게 해주는 기능입니다.
-
-**랙시컬 스코프**
-내부함수는 외부함수의 지역변수에 접근할 수 있는데 외부함수의 실행이 끝나서 외부함수가 소멸된 이후에도 내부함수가 외부함수의 변수에 접근할 수 있는 것을 말합니다.
-
-<br/><br/>
-👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
-<br/><br/>
-
-### 12. Callback 함수와 Promise의 차이에 대해서 설명해보세요.
-callback을 사용하면 비동기 로직의 결과값을 처리하기 위해서는 callback 안에서만 처리를 해야하고, callback 밖에서는 비동기에서 온 값을 알 수가 없습니다. 하지만 promise를 사용하면 비동기에서 온 값이 promise 객체에 저장되기 때문에 코드 작성이 용이해집니다. 콜백의 경우 매번 비동기를 실행해야지 그 값을 사용할 수 있지만 프로미스는 .then 메소드를 통해서 저장되어 있는 값을 원하는 때에 사용할 수 있습니다.
-
-<br/><br/>
-👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
-<br/><br/>
