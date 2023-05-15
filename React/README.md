@@ -1,7 +1,7 @@
 # React
-- [useEffect의 dependency array에 대해서 설명해주세요.]()
-- [리액트의 내부 작동 원리를 재조정 (Reconciliation) 개념과 함께 설명하세요.]()
-- [리액트 라우터같은 Client Side Routing 에 대해서 설명하세요.]()
+- [useEffect의 dependency array에 대해서 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#1-useeffect%EC%9D%98-dependency-array%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [리액트의 내부 작동 원리를 재조정 (Reconciliation) 개념과 함께 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#2-%EB%A6%AC%EC%95%A1%ED%8A%B8%EC%9D%98-%EB%82%B4%EB%B6%80-%EC%9E%91%EB%8F%99-%EC%9B%90%EB%A6%AC%EB%A5%BC-%EC%9E%AC%EC%A1%B0%EC%A0%95-reconciliation-%EA%B0%9C%EB%85%90%EA%B3%BC-%ED%95%A8%EA%BB%98-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
+- [리액트 라우터같은 Client Side Routing 에 대해서 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#2-%EB%A6%AC%EC%95%A1%ED%8A%B8%EC%9D%98-%EB%82%B4%EB%B6%80-%EC%9E%91%EB%8F%99-%EC%9B%90%EB%A6%AC%EB%A5%BC-%EC%9E%AC%EC%A1%B0%EC%A0%95-reconciliation-%EA%B0%9C%EB%85%90%EA%B3%BC-%ED%95%A8%EA%BB%98-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 ----
 
 ### 1. useEffect의 dependency array에 대해서 설명해주세요.
