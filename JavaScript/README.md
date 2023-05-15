@@ -229,3 +229,60 @@ window 객체의 프로퍼티로 존재하기도 하는 웹 스토리지는 클�
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
+
+### 9. 스코프에 대해서 설명해보세요.
+스코프는 '변수에 접근할 수 있는 범위'라고 할 수 있습니다. 자바스크립트에서 스코프는 전역 스코프와 지역 스코프로 나눌 수 있습니다.
+
+**전역 스코프**
+전역에 선언되어 있는 변수는 전역 스코프를 가지게 되는데 이것은 어느곳에서든지 해당 변수에 접근할 수 있다는 의미입니다.
+
+```javascript
+const a = 1; // 전역스코프
+
+if(true){
+console.log(a) // if문 밖의 변수 참조 가능
+}
+```
+
+**지역 스코프**
+지역 스코프에 선언된 변수는 해당 지역에서만 접근할 수 있고 해당 지역 밖에서는 접근할 수 없습니다. 지역 스코프는 함수 스코프와 블록 스코프로 나뉩니다. 
+var로 선언한 변수는 함수만 지역 스코프로 인식하기 때문에 함수 스코프를 가진다고 할 수 있으며, let과 const는 중괄호로 둘러쌓인 블록을 지역 스코프로 인식하기 때문에 블록 스코프를 가진다고 할 수 있습니다.
+
+```javascript
+var a = '전역 스코프'
+fuction fuc () {
+ var a = '함수 스코프';
+ console.log(a); 
+}
+fuc(); // '함수 스코프' 출력
+console.log(a); // '전역 스코프' 출력
+
+let b = '전역 스코프';
+if(true){
+ let b = '블록 스코프';
+ console.log(b); // '블록 스코프' 출력
+}
+console.log(b); // '전역 스코프' 출력
+
+```
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
+
+### 10. 호이스팅에 대해서 설명해보세요.
+호이스팅이란 변수 또는 함수 선언문이 스코프 내의 최상단으로 끌어올려지는 것 같이 동작하는 현상을 말합니다. var로 선언한 변수는 호이스팅시 undefined로 초기화합니다. let과 const로 선언한 변수는 호이스팅시 변수를 초기화하지 않습니다.
+
+```javascript
+console.log(a); // undefined
+var a = 1;
+
+console.log(b); // 참조 오류
+let b = 2;
+```
+
+let은 초기화가 안 되었기 때문에 변수를 참조할 수 없습니다. 스코프에서 초기화가 되기까지 변수를 참조할 수 없는 구간을 TDZ 또는 일시적 사각지대라고 합니다.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
