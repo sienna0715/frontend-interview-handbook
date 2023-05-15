@@ -23,8 +23,9 @@ useEffect은 브라우저 렌더링이 모두 끝난 후, 즉 첫 렌더링이 �
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
 ### 3. 리액트 라우터같은 Client Side Routing 에 대해서 설명하세요.
-#### <u>Server-side Routing</u>
-SSR은 사용자가 새 페이지나 새 데이터에 접근할 때, 서버에서 이와 일치하는 응답(새로운 URL)을 사용자에게 제공해줍니다. 이는 새로운 전체 페이지를 렌더링한다는 의미이기도 합니다. 때문에 SSR은 페이지를 이동할 때마다 콘텐츠를 브라우저에 표시하기까지 시간이 걸립니다. 하지만 Client side routing은 SSR의 이러한 단점을 보완해줍니다. 클라이언트 단에서 처리되기 때문에 부분적으로 업데이트를 가능하게 합니다. 때문에 초기 로드 때, 데이터를 받아와서 다른 링크 간의 지연 시간이 적습니다. CSR는 SPA가 붐이 일어나면서 흥행을 했었습니다.
+
+Server-side Routing은 사용자가 새 페이지나 새 데이터에 접근할 때, 서버에서 이와 일치하는 응답(새로운 URL)을 사용자에게 제공해줍니다. 이는 새로운 전체 페이지를 렌더링한다는 의미이기도 합니다. 때문에 SSR은 페이지를 이동할 때마다 콘텐츠를 브라우저에 표시하기까지 시간이 걸립니다. 하지만 Client side routing은 SSR의 이러한 단점을 보완해줍니다. 클라이언트 단에서 즉, 서버가 아닌 자바스크립트 파일에서 처리되기 때문에 부분적으로 업데이트를 가능하게 합니다. 때문에 초기 로드 때, 데이터를 받아와서 다른 링크 간의 지연 시간이 적습니다. <br/><br/>
+이러한 CSR 방식은 React Router에서도 강력하게 나타납니다. React Router는 동적으로 라우팅이 결정됩니다. 즉, 렌더링 될 때마다 경로가 업데이트 됩니다. 이는 브라우저가 완전히 새로운 문서를 요청하거나 재평가할 필요가 없기 때문에 더 빠른 사용자 경험을 가능하게 합니다. CSR는 SPA가 붐이 일어나면서 흥행을 했었습니다. 
 
 ```javascript
 import React from "react";
@@ -56,10 +57,9 @@ ReactDOM.render((
 );
 ```
 
-하지만 CSR은 초기 로드 시 전체 페이지를 로드해야 하기 때문에 홈페이지에 대한 초기 요청이 더 오래 걸릴 수도 있습니다. 때문에 SSR과 CSR의 특징을 잘 파악하여 애플리케이션에 알맞는 방식을 결정해야 합니다.
+하지만 이러한 CSR에도 단점이 존재합니다. CSR은 초기 로드 시 전체 페이지를 로드해야 하기 때문에 홈페이지에 대한 초기 요청이 더 오래 걸릴 수도 있습니다. 때문에 SSR과 CSR의 특징을 잘 파악하여 애플리케이션에 알맞는 방식을 결정해야 합니다.
 
 
-cf. [cliebt side routing](https://betterprogramming.pub/react-router-and-client-side-routing-2e483452fbfb)
-<br/><br/>
+cf. [client-side routing](https://betterprogramming.pub/react-router-and-client-side-routing-2e483452fbfb) 
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
