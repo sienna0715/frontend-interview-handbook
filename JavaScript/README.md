@@ -9,8 +9,8 @@
 - [ 쿠키와 웹스토리지(로컬 스토리지, 세션 스토리지)에 대해 설명해보세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#8-%EC%BF%A0%ED%82%A4%EC%99%80-%EC%9B%B9%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EB%A1%9C%EC%BB%AC-%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80-%EC%84%B8%EC%85%98-%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
 - [스코프에 대해서 설명해보세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#9-%EC%8A%A4%EC%BD%94%ED%94%84%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
 - [호이스팅에 대해서 설명해보세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#10-%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
-- [null, undefined, undeclared, NaN에 대해 각각 설명해주세요.]()
-- [순수함수에 대해 불변성과 사이드 이펙과 연결해 설명해주세요.]()
+- [null, undefined, undeclared, NaN에 대해 각각 설명해주세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#11-null-undefined-undeclared-nan%EC%97%90-%EB%8C%80%ED%95%B4-%EA%B0%81%EA%B0%81-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [순수함수에 대해 불변성과 사이드 이펙과 연결해 설명해주세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#12-%EC%88%9C%EC%88%98%ED%95%A8%EC%88%98%EC%97%90-%EB%8C%80%ED%95%B4-%EB%B6%88%EB%B3%80%EC%84%B1%EA%B3%BC-%EC%82%AC%EC%9D%B4%EB%93%9C-%EC%9D%B4%ED%8E%99%EA%B3%BC-%EC%97%B0%EA%B2%B0%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 ------
 
 ### 1. Function.prototype.bind에 대해 설명하세요.
