@@ -6,9 +6,11 @@
 - [이벤트 버블링(Event Bubbling)이란 무엇인지 설명하세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#5-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%B2%84%EB%B8%94%EB%A7%81event-bubbling%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [얕은 복사와 깊은 복사에 대해 설명하세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#6-%EC%96%95%EC%9D%80-%EB%B3%B5%EC%82%AC%EC%99%80-%EA%B9%8A%EC%9D%80-%EB%B3%B5%EC%82%AC%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [attribute와 property의 차이점에 대해 설명해보세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#7-attribute%EC%99%80-property%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
-- [ 쿠키와 웹스토리지(로컬 스토리지, 세션 스토리지)에 대해 설명해보세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#8-%EC%BF%A0%ED%82%A4-%EB%A1%9C%EC%BB%AC-%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%B0%8F-%EC%84%B8%EC%85%98-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%99%80-%EA%B0%99%EC%9D%80-%EA%B0%81-%EC%A0%80%EC%9E%A5%EC%86%8C%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%8B%A4%EB%A5%B8%EA%B0%80%EC%9A%94)
+- [ 쿠키와 웹스토리지(로컬 스토리지, 세션 스토리지)에 대해 설명해보세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#8-%EC%BF%A0%ED%82%A4%EC%99%80-%EC%9B%B9%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EB%A1%9C%EC%BB%AC-%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80-%EC%84%B8%EC%85%98-%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
 - [스코프에 대해서 설명해보세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#9-%EC%8A%A4%EC%BD%94%ED%94%84%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
 - [호이스팅에 대해서 설명해보세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#10-%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
+- [null, undefined, undeclared, NaN에 대해 각각 설명해주세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#11-null-undefined-undeclared-nan%EC%97%90-%EB%8C%80%ED%95%B4-%EA%B0%81%EA%B0%81-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [순수함수에 대해 불변성과 side effect와 연결해 설명해주세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#12-%EC%88%9C%EC%88%98%ED%95%A8%EC%88%98%EC%97%90-%EB%8C%80%ED%95%B4-%EB%B6%88%EB%B3%80%EC%84%B1%EA%B3%BC-%EC%82%AC%EC%9D%B4%EB%93%9C-%EC%9D%B4%ED%8E%99%EA%B3%BC-%EC%97%B0%EA%B2%B0%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 ------
 
 ### 1. Function.prototype.bind에 대해 설명하세요.
@@ -284,6 +286,123 @@ let b = 2;
 ```
 
 let은 초기화가 안 되었기 때문에 변수를 참조할 수 없습니다. 스코프에서 초기화가 되기까지 변수를 참조할 수 없는 구간을 TDZ 또는 일시적 사각지대라고 합니다.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
+
+### 11. null, undefined, undeclared, NaN에 대해 각각 설명해주세요.
+## null
+
+null은 객체 형태의 빈 값으로, 값이 없는 것을 의도적으로 명시하기 위해 사용합니다.
+
+```jsx
+let name = null;
+console.log(name) // null
+console.log(typeof name) //object
+```
+
+## undefined (미정의 변수)
+
+undefined는 변수를 선언하고 값을 할당하기 이전의 값으로, 변수에 값이 할당되지 않은 상태를 말합니다.
+
+변수는 변수 선언, 초기화, 할당의 3단계를 거쳐 생성되는데, 이때 자바스크립트 엔진이 변수를 초기화할 때 undefined를 사용합니다.
+
+```jsx
+let name;
+console.log(name); //undefined
+console.log(typeof name); //undefined
+```
+
+## undelared (미선언 변수)
+
+접근 가능한 스코프 내에 변수의 선언 조차되지 않은 상태를 말합니다. undefined 타입을 갖습니다.
+
+```jsx
+console.log(name); //ReferenceError: name is not defined
+console.log(typeof name); //undefined
+```
+
+## NaN
+
+`Not a Number`의 약어로, 표현할 수 없는 수치형 결과를 나타냅니다. 이 속성은 값이 유효한 숫자가 아니라는 것을 나타냅니다.
+
+단 주의해야 할 점은 NaN은 숫자 타입의 데이터 타입으로, 다만 컴퓨터로 표현할 수 없는 숫자 값을 의미합니다.
+
+```jsx
+let age = NaN;
+console.log(age); //NaN
+Console.log(typeof age); // number
+```
+
+## undefined == null vs undefined === null
+
+```jsx
+console.log(undefined == null); //true 
+console.log(undefined === null); //false
+```
+
+동등 연산자(==) 는 자료형이 다르면 자동형변환으로 자료형을 강제로 맞춰서 비교하는 연산자입니다.
+
+undefined와 null은 각각 다른 자료형으로, 자동형변환을 거쳐 값을 비교하면 둘다 값이 없기 때문에 일치하다고 판단해 true를 반환합니다.
+
+하지만 일치 연산자(===) 는 자료형까지 비교하기 때문에 undefined는 undefined타입, null은 의도적으로 빈 값이 들어간 object 타입이기 때문에 false가 반환됩니다.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
+
+### 12. 순수함수에 대해 불변성과 side effect와 연결해 설명해주세요.
+## 순수함수
+
+---
+
+순수함수란 함수 프로그래밍에서 자주 사용되는 개념으로, 2가지 조건을 모두 만족하는 함수를 말합니다.
+
+첫째, 같은 입력 값에 대해 항상 동일한 출력 값을 반환하는 함수여야 합니다. 순수 함수는 입력 값이 변경되지 않는 한 항상 같은 결과 값을 반환하기 때문에 불변성을 유지합니다.
+
+둘째, 함수 바깥 영역에 side effect, 즉 부수효과를 초래하지 않는 함수여야 합니다. 즉 함수 외부의 값이나 함수에 전달된 값을 변경하지 않는 함수를 말합니다.
+
+```jsx
+/*<-- 순수 함수 -->*/
+const a = (x, y) => x + y;
+const b = (arr, value) => arr.concat(value);
+const c = arr => [...arr].sort((a, b) => a - b);
+
+/*<-- 순수 함수 ❌ -->*/
+// 항상 같은 결과를 return 하지 않음
+const a = (x, y) => x + y + Math.random(); 
+// 전달받은 arr에 value를 넣어서 데이터를 변경함
+const b = (arr, value) => (arr.push(value), arr); 
+// arr를 정렬해서 순서가 바뀌게 함
+const c = arr => arr.sort((a, b) => a - b);
+```
+
+<br />
+
+### 💡 사이드 이펙트(Side effect)
+
+의도치 않게 발생하는 예측할 수 없는 효과들을 말하며 대표적으로 외부 함수의 값이나 상태를 변경하는 것을 말합니다.
+
+사이드 이펙트는 원래의 목적과 다르게 발생하기 때문에 사이드 이펙트가 발생하지 않도록 주의해야 합니다.
+
+### 💡불변성
+
+자바스크립트에서 순수함수를 제작하기 위해선 데이터의 불변성을 유지하는 것이 중요합니다. 이때 함수의 전달인자로 참조 자료형이 전달되는 경우, 의도치 않게 해당 객체 자체를 바꾸는 사이드 이펙트를 만들어 불변성을 손상시킬 수 있습니다. 때문에 배열의 불변성을 보장하는 메서드인 map, filter, ruduce와 같은 고차함수를 많이 사용합니다.
+
+### 💡함수형 프로그래밍
+
+순수함수로 사이드 이펙트(부수효과) 없이 불변성을 보장할 수 있는 프로그래밍 패러다임을 말합니다.  디버깅이 수월하다는 장점이 있습니다. 
+
+순수함수는 평가 시점이 무관하다는 특징을 가져 함수형 프로그래밍에서 효과적인 로직을 구성할 수 있도록 돕습니다.
+
+<br />
+
+## 순수 함수의 장점
+
+1. 순수 함수는 불변성을 유지하기 때문에 `코드의 예측 가능성과 안정성`을 높여줍니다.
+2. 함수를 호출하면 항상 동일한 결과를 반환하기 때문에 `함수를 디버깅하거나 테스트`하기 쉽습니다.
+3. 순수 함수는 병렬처리와 메모이제이션 등을 적용하기 쉬워 `성능을 향상` 시키는데 도움을 줍니다.
 
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
