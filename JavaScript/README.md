@@ -6,9 +6,11 @@
 - [이벤트 버블링(Event Bubbling)이란 무엇인지 설명하세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#5-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%B2%84%EB%B8%94%EB%A7%81event-bubbling%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [얕은 복사와 깊은 복사에 대해 설명하세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#6-%EC%96%95%EC%9D%80-%EB%B3%B5%EC%82%AC%EC%99%80-%EA%B9%8A%EC%9D%80-%EB%B3%B5%EC%82%AC%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [attribute와 property의 차이점에 대해 설명해보세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#7-attribute%EC%99%80-property%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
-- [ 쿠키와 웹스토리지(로컬 스토리지, 세션 스토리지)에 대해 설명해보세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#8-%EC%BF%A0%ED%82%A4-%EB%A1%9C%EC%BB%AC-%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%B0%8F-%EC%84%B8%EC%85%98-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%99%80-%EA%B0%99%EC%9D%80-%EA%B0%81-%EC%A0%80%EC%9E%A5%EC%86%8C%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%8B%A4%EB%A5%B8%EA%B0%80%EC%9A%94)
+- [ 쿠키와 웹스토리지(로컬 스토리지, 세션 스토리지)에 대해 설명해보세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#8-%EC%BF%A0%ED%82%A4%EC%99%80-%EC%9B%B9%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EB%A1%9C%EC%BB%AC-%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80-%EC%84%B8%EC%85%98-%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
 - [스코프에 대해서 설명해보세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#9-%EC%8A%A4%EC%BD%94%ED%94%84%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
 - [호이스팅에 대해서 설명해보세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#10-%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
+- [null, undefined, undeclared, NaN에 대해 각각 설명해주세요.]()
+- [순수함수에 대해 불변성과 사이드 이펙과 연결해 설명해주세요.]()
 ------
 
 ### 1. Function.prototype.bind에 대해 설명하세요.
@@ -284,6 +286,75 @@ let b = 2;
 ```
 
 let은 초기화가 안 되었기 때문에 변수를 참조할 수 없습니다. 스코프에서 초기화가 되기까지 변수를 참조할 수 없는 구간을 TDZ 또는 일시적 사각지대라고 합니다.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
+
+### 11. null, undefined, undeclared, NaN에 대해 각각 설명해주세요.
+## null
+
+null은 객체 형태의 빈 값으로, 값이 없는 것을 의도적으로 명시하기 위해 사용합니다.
+
+```jsx
+let name = null;
+console.log(name) // null
+console.log(typeof name) //object
+```
+
+## undefined (미정의 변수)
+
+undefined는 변수를 선언하고 값을 할당하기 이전의 값으로, 변수에 값이 할당되지 않은 상태를 말합니다.
+
+변수는 변수 선언, 초기화, 할당의 3단계를 거쳐 생성되는데, 이때 자바스크립트 엔진이 변수를 초기화할 때 undefined를 사용합니다.
+
+```jsx
+let name;
+console.log(name); //undefined
+console.log(typeof name); //undefined
+```
+
+## undelared (미선언 변수)
+
+접근 가능한 스코프 내에 변수의 선언 조차되지 않은 상태를 말합니다. undefined 타입을 갖습니다.
+
+```jsx
+console.log(name); //ReferenceError: name is not defined
+console.log(typeof name); //undefined
+```
+
+## NaN
+
+`Not a Number`의 약어로, 표현할 수 없는 수치형 결과를 나타냅니다. 이 속성은 값이 유효한 숫자가 아니라는 것을 나타냅니다.
+
+단 주의해야 할 점은 NaN은 숫자 타입의 데이터 타입으로, 다만 컴퓨터로 표현할 수 없는 숫자 값을 의미합니다.
+
+```jsx
+let age = NaN;
+console.log(age); //NaN
+Console.log(typeof age); // number
+```
+
+## undefined == null vs undefined === null
+
+```jsx
+console.log(undefined == null); //true 
+console.log(undefined === null); //false
+```
+
+동등 연산자(==) 는 자료형이 다르면 자동형변환으로 자료형을 강제로 맞춰서 비교하는 연산자입니다.
+
+undefined와 null은 각각 다른 자료형으로, 자동형변환을 거쳐 값을 비교하면 둘다 값이 없기 때문에 일치하다고 판단해 true를 반환합니다.
+
+하지만 일치 연산자(===) 는 자료형까지 비교하기 때문에 undefined는 undefined타입, null은 의도적으로 빈 값이 들어간 object 타입이기 때문에 false가 반환됩니다.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
+
+### 12. 순수함수에 대해 불변성과 사이드 이펙과 연결해 설명해주세요.
+
+작성 중.
 
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
