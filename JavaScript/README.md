@@ -11,9 +11,11 @@
 - [호이스팅에 대해서 설명해보세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#10-%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
 - [null, undefined, undeclared, NaN에 대해 각각 설명해주세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#11-null-undefined-undeclared-nan%EC%97%90-%EB%8C%80%ED%95%B4-%EA%B0%81%EA%B0%81-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [순수함수에 대해 불변성과 side effect와 연결해 설명해주세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#12-%EC%88%9C%EC%88%98%ED%95%A8%EC%88%98%EC%97%90-%EB%8C%80%ED%95%B4-%EB%B6%88%EB%B3%80%EC%84%B1%EA%B3%BC-%EC%82%AC%EC%9D%B4%EB%93%9C-%EC%9D%B4%ED%8E%99%EA%B3%BC-%EC%97%B0%EA%B2%B0%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [var, let, const 차이를 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#13-var-let-const-%EC%B0%A8%EC%9D%B4%EB%A5%BC-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [이벤트 버블링과 캡처링에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#14-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%B2%84%EB%B8%94%EB%A7%81%EA%B3%BC-%EC%BA%A1%EC%B2%98%EB%A7%81%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 ------
 
-### 1. Function.prototype.bind에 대해 설명하세요.
+## 1. Function.prototype.bind에 대해 설명하세요.
 > bind() 메소드가 호출되면 새로운 함수를 생성합니다. 받게되는 첫 인자의 value로는 this 키워드를 설정하고, 이어지는 인자들은 바인드 된 함수의 인수에 제공됩니다. 
 from. MDN
 
@@ -52,7 +54,7 @@ person.foo()는 일반 함수로서 호출되면서 this는 전역 객체 window
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
-### 2. this가 JavaScript에서 어떻게 작동하는지 설명하세요.
+## 2. this가 JavaScript에서 어떻게 작동하는지 설명하세요.
 생성자 함수로 메서드를 호출할 때, 자신이 속한 객체 또는 자신이 생성할 인스턴스를 가리키는 특수한 식별자가 필요했고 이에 자바스크립트는 this라는 특수한 식별자를 제공하였습니다. 하지만 인스턴스만을 가리키는 다른 언어들과는 다르게 자바스크립트의 this는 호출 시점에 바인딩 될 객체가 동적으로 결정됩니다.
 
 일반 함수로 호출할 경우, this는 전역 객체 window를 가리킵니다.
@@ -62,7 +64,7 @@ person.foo()는 일반 함수로서 호출되면서 this는 전역 객체 window
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
-### 3. 이벤트 루프란 무엇인가요? 콜 스택과 태스크 큐의 차이점은 무엇인가요?
+## 3. 이벤트 루프란 무엇인가요? 콜 스택과 태스크 큐의 차이점은 무엇인가요?
 자바스크립트는 싱글 스레드입니다. 이는 한 번에 하나의 태스크만 처리할 수 있음을 의미합니다. 하지만 우리가 개발을 하다보면 마치 동시에 작업이 되는 것처럼 느껴질 때가 있습니다. 이것이 바로 '이벤트 루프'의 역할입니다.
 이벤트 루프는 브라우저에 내장되어 있는 기능으로 콜 스택에 현재 실행 중인 코드가 있는지. 태스크 큐에 대기중인 함수가 있는지를 반복적으로 확인하여 콜 스택이 비었다면 대기중인 함수를 이동시켜 비동기적으로 처리하게 됩니다. 때문에 이벤트 루프는 자바스크립트의 동시성을 지원하게 됩니다.
 
@@ -74,32 +76,35 @@ person.foo()는 일반 함수로서 호출되면서 this는 전역 객체 window
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
-### 4. 프로토타입 상속이 어떻게 작동하는지 설명하세요.
+## 4. 프로토타입 상속이 어떻게 작동하는지 설명하세요.
 > 자바스크립트는 프로토타입 기반의 객체지향 프로그래밍 언어이다.
 
-#### <u>상속(inheritance)</u>
+### <u>상속(inheritance)</u>
 객체지향 프로그래밍의 핵심 개념으로, 어떤 객체의 프로퍼티 또는 메소드를 다른 객체가 받아와서 그대로 사용할 수 있는 것을 의미합니다. 때문에 상속은 코드 재사용이라는 관점에서 매우 유용하며, 이를 이용하면 불필요한 중복을 제거하기 떼문에 개발 비용을 줄일 수 있습니다.
 <br/>
-#### <u>프로토타입이란?</u>
+
+### <u>프로토타입이란?</u>
 객체지향 프로그래밍에서 핵심이라 할 수 있는 **객체 간 상속을 구현하기 위해** 사용됩니다.
 어떤 객체의 상위(부모) 객체의 역할을 하는 객체로서 상속받은 하위(자식)) 객체는 상위 객체의 프로퍼티를 자신의 프로퍼티처럼 사용할 수 있게 됩니다. 모든 객체는 [[Prototype]]이라는 내부 슬롯을 가지며, 내부 슬롯에 저장되는 프로토타입은 객체가 생성될 때 객체 생성 방식에 따라 결정됩니다. 즉, 모든 객체는 하나의 프로토타입을 갖습니다.
 <br/>
-#### <u>프로토타입 체인이란?</u>
+
+### <u>프로토타입 체인이란?</u>
 [[Prototype]] 내부 슬롯의 값(=프로토타입)에 접근할 때는 접근자 프로퍼티( \_\_proto__ )를 사용하게 되는데, **\_\_proto__는 객체가 직접 소유한 프로퍼티가 아닌 Object.prototype의 프로퍼티 입니다. \_\_proto__가 가리키는 참조에 따라 자신의 부모 역할을 하는 프로토타입의 프로퍼티를 순차적으로 검색할 수 있습니다.** 즉, 모든 객체는 프로토타입의 계층 구조인 프로토타입 체인에 묶여 있으며, 프로토타입 체인의 최상위 객체(종점)인 Object.prototype의 프로퍼티와 메서드는 모든 객체가 상속할 수 있다는 의미이기도 합니다. <br/>
 
 프로토타입 체인은 단방향 링크드 리스트로 구현되어야 하기 때문에 접근자 프로퍼티( \_\_proto__ )를 사용하면 서로를 참조하는 양방향 프로토타입 체인이 생성되는 것을 방지할 수도 있습니다.<br/><br/>
 
-**이야기를 종합해보자면 '자바스크립트는 프로토타입 객체지향 언어이며, 상속과 프로퍼티 검색 매커니즘을 구현할 수 있는 이유는 모든 객체가 프로토타입 체인에 묶여 있기 때문이다.'라고 정의할 수 있겠습니다.**
+### 결론
+이야기를 종합해보자면 '자바스크립트는 프로토타입 객체지향 언어'이며, 모든 객체는 프로토타입을 가지고 있습니다. 이 말은 곧 모든 객체는 프로토타입 체인에 묶여있다는 의미이기도 합니다. 그렇기에 상속과 프로퍼티 검색 매커니즘을 구현할 수 있는 이유라고 정의할 수 있겠습니다.
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
-### 5. 이벤트 버블링(Event Bubbling)이란 무엇인지 설명하세요.
+## 5. 이벤트 버블링(Event Bubbling)이란 무엇인지 설명하세요.
 이벤트 버블링은 한 요소에 이벤트가 발생해 요소에 할당된 핸들러가 동작하면 이어 부모 요소의 핸들러가 동작하고, 가장 최상단에 위치한 부모요소를 만날때까지 이 과정이 반복되면서 요소 각각에 할당된 핸들러가 동작하는 것을 의미합니다.
  
 
 이벤트가 제일 깊은 곳에 있는 요소부터 시작해 부모 요소를 거슬러 올라가며 발생하는 모양이 마치 물속 거품, 즉 버블과 닮아 이벤트 버블링이라고 부릅니다. <br/><br/>
-<img src='https://velog.velcdn.com/images/haizel/post/b94f9e23-04d6-4dec-8532-4c19c49a40c7/image.png' width='500px' />
+<p align="center"><img src='https://velog.velcdn.com/images/haizel/post/b94f9e23-04d6-4dec-8532-4c19c49a40c7/image.png' width='400px' /></p>
 
 ### 이벤트 버블링 중단하기
 
@@ -126,10 +131,10 @@ person.foo()는 일반 함수로서 호출되면서 this는 전역 객체 window
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
-### 6. 얕은 복사와 깊은 복사에 대해 설명하세요.
+## 6. 얕은 복사와 깊은 복사에 대해 설명하세요.
 객체, 배열, 함수와 같은 **참조타입**의 데이터는 복사 시 데이터의 값이 아닌, **값이 저장된 메모리의 주소**가 저장됩니다. 따라서 참조 타입의 데이터를 복사하는 방법으로 얕은 복사와 깊은 복사로 나뉩니다.
 
-<img src='https://velog.velcdn.com/images/haizel/post/65a1b787-c48a-4bd0-bb4f-708826420b78/image.png' width='500px' />
+<p align="center"><img src='https://velog.velcdn.com/images/haizel/post/65a1b787-c48a-4bd0-bb4f-708826420b78/image.png' width='500px' /></p>
 
 **얕은 복사**는 참조 타입 데이터가 저장한 `메모리의 주소값`을 복사하는 것을 의미합니다. 즉 메모리 상 같은 주소를 가르키는 참조 변수 하나가 더 생기는 방법입니다.
 
@@ -152,7 +157,7 @@ JSON.stringify를 활용해 데이터를 문자로 변형시키고. JSON.parse�
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
-### 7. attribute와 property의 차이점에 대해 설명해보세요.
+## 7. attribute와 property의 차이점에 대해 설명해보세요.
 자바스크립트에서 attribute와 property 모두 `속성`을 의미하지만, `존재하는 위치, 값의 불별성`에 대한 차이점이 존재합니다.
 <br />예를 들어, value 값이 ‘기본값’인 input 요소가 있다 가정할 때, 해당 input 요소가 html에 있다면 value는  attribute를 의미하고, html DOM 안에 있다면 property를 의미합니다.
 
@@ -165,7 +170,7 @@ JSON.stringify를 활용해 데이터를 문자로 변형시키고. JSON.parse�
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
-### 8. 쿠키와 웹스토리지(로컬 스토리지, 세션 스토리지)에 대해 설명해보세요.
+## 8. 쿠키와 웹스토리지(로컬 스토리지, 세션 스토리지)에 대해 설명해보세요.
 ### 저장소(쿠키/웹스토리지)는 왜 필요한가
 HTTP는 요청과 응답으로 이뤄지는 하나의 사이클이 끝나면, 연결이 끊어지는 무상태성을 가져 클라이언트의 상태를 보존하지 않습니다.
 
@@ -234,7 +239,7 @@ window 객체의 프로퍼티로 존재하기도 하는 웹 스토리지는 클�
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
-### 9. 스코프에 대해서 설명해보세요.
+## 9. 스코프에 대해서 설명해보세요.
 스코프는 '변수에 접근할 수 있는 범위'라고 할 수 있습니다. 자바스크립트에서 스코프는 전역 스코프와 지역 스코프로 나눌 수 있습니다.
 
 **전역 스코프**
@@ -274,7 +279,7 @@ console.log(b); // '전역 스코프' 출력
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
-### 10. 호이스팅에 대해서 설명해보세요.
+## 10. 호이스팅에 대해서 설명해보세요.
 호이스팅이란 변수 또는 함수 선언문이 스코프 내의 최상단으로 끌어올려지는 것 같이 동작하는 현상을 말합니다. var로 선언한 변수는 호이스팅시 undefined로 초기화합니다. let과 const로 선언한 변수는 호이스팅시 변수를 초기화하지 않습니다.
 
 ```javascript
@@ -291,7 +296,7 @@ let은 초기화가 안 되었기 때문에 변수를 참조할 수 없습니다
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
-### 11. null, undefined, undeclared, NaN에 대해 각각 설명해주세요.
+## 11. null, undefined, undeclared, NaN에 대해 각각 설명해주세요.
 ## null
 
 null은 객체 형태의 빈 값으로, 값이 없는 것을 의도적으로 명시하기 위해 사용합니다.
@@ -352,7 +357,7 @@ undefined와 null은 각각 다른 자료형으로, 자동형변환을 거쳐 �
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
-### 12. 순수함수에 대해 불변성과 side effect와 연결해 설명해주세요.
+## 12. 순수함수에 대해 불변성과 side effect와 연결해 설명해주세요.
 ## 순수함수
 
 순수함수란 함수 프로그래밍에서 자주 사용되는 개념으로, 2가지 조건을 모두 만족하는 함수를 말합니다.
@@ -406,10 +411,72 @@ const c = arr => arr.sort((a, b) => a - b);
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
-### 13. var, let, const 차이를 설명해주세요.
+## 13. var, let, const 차이를 설명해주세요.
+var는 함수 레벨 스코프로 var로 선언한 변수는 오로지 함수의 코드 블록만을 지역 스코프로 인정합니다. 즉, 함수 외부에서 var 키워드로 선언한 변수는 전역 변수가 됩니다. 때문에 의도치 않게 중복 선언이 되는 경우 또는 변수 선언 이전에 참조할 수 있는 변수 호이스팅이 발생합니다. 반면, let, const는 블록 레벨 스코프로 코드 블록 내에서 선언했다면 모두 지역 변수로 인정합니다. 때문에 전역변수의 남발을 예방할 수 있습니다. 이 외에도 let과 const는 변수 중복 선언이 되지 않으며, 특히 const 같은 경우에는 재할당도 금지되기 때문에 안정성을 부여할 수 있습니다. 
+```javascript
+console.log(temp); // undefined
+
+var temp;
+
+console.log(temp); // undefined
+
+temp = 1;
+
+console.log(temp); // 1
+```
+```javascript
+console.log(temp); // ReferenceError: temp is not defined
+
+let temp;
+
+console.log(temp); // undefined
+
+temp = 1;
+
+console.log(temp); // 1
+```
+let과 const에도 변수 호이스팅이 발생하는데, var와 다르게 ReferenceError가 발생한다는 점을 확인할 수 있습니다.
+var는 선언과 초기화가 동시에 일어나지만, let과 const의 경우 선언과 초기화가 분리되어 진행됩니다. 즉, var와 마찬가지로 런타임 이전에 자바스크립트 엔진에 의해 암묵적으로 선언이 되어 먼저 실행되지만, 초기화는 변수 선언문에 도달했을 때 실행되기 때문에 참조 에러가 발생하는 것 입니다. 이렇게 선언 시점부터 초기화 시점 사이에 참조할 수 없는 구간을 일시적 사각지대(TDZ)라고 합니다.
+참고로 const는 반드시 선언과 동시에 초기화를 해야하기 때문에, 즉 선언과 할당을 동시에 진행해야 합니다. 그렇지 않으면 SyntaxError가 발생합니다.
+```javascript
+const temp; // SyntaxError: Missing initializer in const declaration
+```
 
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
-### 14. 이벤트 버블링과 캡처링에 대해 설명해주세요.
+## 14. 이벤트 버블링과 캡처링에 대해 설명해주세요.
+```html
+<div onclick="alert('div에 할당한 핸들러!')">
+  <em><code>EM</code>을 클릭했는데도 <code>DIV</code>에 할당한 핸들러가 동작합니다.</em>
+</div>
+```
+위 코드는 div에 핸들러를 할당했지만 아래 em 태그나 code 태그를 클릭해도 동작합니다. 
+이는 바로 버블링(bubbling)이라는 원리 때문입니다. <br/><br/>
+
+### 🧋 버블링이란
+한 요소에 이벤트가 발생하면, 이 요소에 할당된 핸들러가 동작하고 그 위 부모 요소의 핸들러도 동작하여 가장 최상단의 조상 요소를 만날 때까지 반복합니다. **즉, 물속 거품처럼 제일 깊은 곳에서 거슬러 올라가며 요소 각각에 할당된 핸들러가 동작합니다.**
+이벤트 버블링은 우리가 일일이 이벤트 위임을 해주지 않아도 되기 때문에 굉장히 유용합니다. 그렇기에 특별한 목적이 아닌 이상 버블링을 막지 않는 것이 좋습니다.
+```html
+<form onclick="alert('form')">FORM
+  <div onclick="alert('div')">DIV
+    <p onclick="alert('p')">P</p>
+  </div>
+</form>
+```
+1. \<p>에 할당된 onclick 핸들러가 동작합니다.
+2. 바깥의 \<div>에 할당된 핸들러가 동작합니다.
+3. 그 바깥의 \<form>에 할당된 핸들러가 동작합니다.
+document 객체를 만날 때까지, 각 요소에 할당된 onclick 핸들러가 동작합니다. 
+<br/><br/>
+
+그렇다면 캡처링이란 무엇일까요? <br/><br/>
+
+### 📸 캡처링이란
+버블링과 반대로 이벤트가 하위 요소로 전파되는 것을 캡처링이라고 합니다. 제일 처음 보여드린 예시 코드로 설명하면 code 태그를 클릭하면 최상위 조상에서 시작해 아래로 전파되는 **캡처링 단계**를 거칩니다. 클릭한 요소(target 요소)에 도착하면 실행이 되는데 이를 **타겟 단계**라 하며, 이때 이벤트가 타겟 요소에 전달되는 것 입니다. 이후 다시 위로 전파되는 **버블링 단계**가 일어나며 버블링 설명처럼 각 요소에 할당된 이벤트 핸들러가 호출되는 것입니다.
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
+
+## 15.

@@ -8,7 +8,7 @@
 - [React의 생명주기에 대해 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#6-react%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 ----
 
-### 1. useEffect의 dependency array에 대해서 설명해주세요.
+## 1. useEffect의 dependency array에 대해서 설명해주세요.
 > The Effect Hook lets you perform side effects in function components
 
 데이터 패칭, DOM을 직접적으로 변경하는 것 등은 리액트에서 모두 side effect 입니다. 때문에 원활한 렌더링을 위하여 이를 분리시켜줘야 하는데 그럴 때 사용할 수 있는 것이 useEffect 입니다. useEffect은 외부 세계와 상호 작용하면서 해당 컴포넌트의 렌더링이나 성능에는 영향을 미치지 않도록 만들어줍니다. 즉, 컴포넌트 내에서 side effect를 실행할 수 있도록 만들어 줍니다. <br/><br/>
@@ -20,13 +20,15 @@ useEffect은 브라우저 렌더링이 모두 끝난 후, 즉 첫 렌더링이 �
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
-### 2. 리액트의 내부 작동 원리를 재조정 (Reconciliation) 개념과 함께 설명하세요.
+
+## 2. 리액트의 내부 작동 원리를 재조정 (Reconciliation) 개념과 함께 설명하세요.
 리액트는 선언형(declarative)입니다. 이는 복잡한 과정을 추상화하여 결과에만 집중할 수 있게 만들어주며, 이 말은 곧 리액트 내부에서 어떤 일이 일어나고 있는지 명확히 눈에 보이지 않는다는 말이기도 합니다. 배열 고차 함수인 filter, map, reduce를 사용할 때를 생각해 보면 더 잘 와닿을 거라 생각합니다. 이러한 리액트의 특징은 Virtual DOM 덕분에 가능한 것인데 리액트는 실제 DOM에 직접 업데이트하지 않고 실제 DOM 객체를 복사하여 변경된 요소만 업데이트합니다. 이 때 복사된 DOM을 Virtual DOM(VDOM)이라 합니다. <br/><br/>
 내부 동작을 다시 정리해보자면 상태가 변경될 때마다 새로운 가상 돔 트리를 만들고, diffing 알고리즘을 사용하여 실제 DOM 트리를 업데이트 합니다. 이때 실제 돔과 가상 돔이 일치하는지 안 하는지 비교하는 과정을 reconciliation(재조정)이라 합니다. 
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
-### 3. 리액트 라우터같은 Client Side Routing 에 대해서 설명하세요.
+
+## 3. 리액트 라우터같은 Client Side Routing 에 대해서 설명하세요.
 
 Server-side Routing은 사용자가 새 페이지나 새 데이터에 접근할 때, 서버에서 이와 일치하는 응답(새로운 URL)을 사용자에게 제공해줍니다. 이는 새로운 전체 페이지를 렌더링한다는 의미이기도 합니다. 때문에 SSR은 페이지를 이동할 때마다 콘텐츠를 브라우저에 표시하기까지 시간이 걸립니다. 하지만 Client side routing은 SSR의 이러한 단점을 보완해줍니다. 클라이언트 단에서 즉, 서버가 아닌 자바스크립트 파일에서 처리되기 때문에 부분적으로 업데이트를 가능하게 합니다. 때문에 초기 로드 때, 데이터를 받아와서 다른 링크 간의 지연 시간이 적습니다. <br/><br/>
 이러한 CSR 방식은 React Router에서도 강력하게 나타납니다. React Router는 동적으로 라우팅이 결정됩니다. 즉, 렌더링 될 때마다 경로가 업데이트 됩니다. 이는 브라우저가 완전히 새로운 문서를 요청하거나 재평가할 필요가 없기 때문에 더 빠른 사용자 경험을 가능하게 합니다. CSR는 SPA가 붐이 일어나면서 흥행을 했었습니다. 
@@ -70,10 +72,10 @@ cf. [client-side routing](https://betterprogramming.pub/react-router-and-client-
 <br/><br/>
 
 
-### 4. React의 state와 props는 각각 무엇인지 설명해주세요.
+## 4. React의 state와 props는 각각 무엇인지 설명해주세요.
 React에서 state와 props는 둘 다 컴포넌트에서 `데이터`를 다루는데 사용되지만, 목적과 사용 방법에서 차이점이 존재합니다.
 
-<img src="https://velog.velcdn.com/images/haizel/post/3b8d0544-f29e-4c46-a1ff-fefc96fa3d12/image.png" width="500px" />
+<img src="https://velog.velcdn.com/images/haizel/post/3b8d0544-f29e-4c46-a1ff-fefc96fa3d12/image.png" width="400px" />
 
 
 ### State
@@ -92,7 +94,7 @@ state와 마찬가지로 props도 변경되면 render() 메소드를 트리거�
 
 <br />
 
-### 한줄 정리
+### 요약
 
 ---
 
@@ -124,7 +126,7 @@ handleSomething() {
 ## 5. React 컴포넌트의 key 속성에 대해 설명하세요.
 React에서 `map` 등을 사용해 컴포넌트를 반복적으로 생성할 때,  `'Warning: Each child in a list should have a unique "key" prop.’` 와 같은 경고를 마주치게 됩니다.
 
-<img src="https://velog.velcdn.com/images/haizel/post/62bf062f-6fbb-4af8-889e-c46e5d43ade6/image.png" width="800px" />
+<img src="https://velog.velcdn.com/images/haizel/post/62bf062f-6fbb-4af8-889e-c46e5d43ade6/image.png" width="700px" />
 
 React 컴포넌트에서 왜 key 속성이 필요한지 React 렌더링 원리에 대해 알아보도록 하겠습니다. <br />
 
