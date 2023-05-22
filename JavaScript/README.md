@@ -407,3 +407,11 @@ const c = arr => arr.sort((a, b) => a - b);
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
+
+### 13. var, let, const 차이를 설명해주세요.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
+
+### 14. 이벤트 버블링과 캡처링에 대해 설명해주세요.
