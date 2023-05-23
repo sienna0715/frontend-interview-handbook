@@ -22,6 +22,8 @@
 - [순수함수에 대해 불변성과 side effect와 연결해 설명해주세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#12-%EC%88%9C%EC%88%98%ED%95%A8%EC%88%98%EC%97%90-%EB%8C%80%ED%95%B4-%EB%B6%88%EB%B3%80%EC%84%B1%EA%B3%BC-%EC%82%AC%EC%9D%B4%EB%93%9C-%EC%9D%B4%ED%8E%99%EA%B3%BC-%EC%97%B0%EA%B2%B0%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [var, let, const 차이를 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#13-var-let-const-%EC%B0%A8%EC%9D%B4%EB%A5%BC-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [이벤트 버블링과 캡처링에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#14-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%B2%84%EB%B8%94%EB%A7%81%EA%B3%BC-%EC%BA%A1%EC%B2%98%EB%A7%81%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [원시자료형과 참조자료형의 차이에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#15-%EC%9B%90%EC%8B%9C%EC%9E%90%EB%A3%8C%ED%98%95%EA%B3%BC-%EC%B0%B8%EC%A1%B0%EC%9E%90%EB%A3%8C%ED%98%95%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [동등연산자(==)와 일치연산자(===)의 차이에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#16-%EB%8F%99%EB%93%B1%EC%97%B0%EC%82%B0%EC%9E%90%EC%99%80-%EC%9D%BC%EC%B9%98%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 
 <br/>
 
