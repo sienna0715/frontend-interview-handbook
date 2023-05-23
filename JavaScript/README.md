@@ -498,6 +498,11 @@ document 객체를 만날 때까지, 각 요소에 할당된 onclick 핸들러�
 - 값을 참조합니다.
 - 하나의 데이터만 담을 수 있습니다.
 - 값 자체는 변경이 불가능하지만 변수에 재할당하여 수정은 가능합니다.
+<br/>
+
+![image](https://github.com/lapmu/frontend-interview-handbook/assets/115691844/933d073b-db39-4497-a8c0-9a4a1821d9eb)
+
+<br/>
 
 ### 참조자료형
 원시자료형이 아닌 모든 데이터를 말합니다.
