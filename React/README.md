@@ -6,8 +6,8 @@
 - [React 컴포넌트의 key 속성에 대해 설명하세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/React#5-react-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%9D%98-key-%EC%86%8D%EC%84%B1%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [React를 사용하는 이유에 대해 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#6-react%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [React의 생명주기에 대해 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#6-react%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
-- [useEffect와 useLayoutEffect의 차이에 대해 설명해주세요.]()
-- [제어컴포넌트와 비제어 컴포넌트의 차이점에 대해 설명해주세요.]()
+- [useEffect와 useLayoutEffect의 차이에 대해 설명해주세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/React#8-useeffect%EC%99%80-uselayouteffect%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [제어컴포넌트와 비제어 컴포넌트의 차이점에 대해 설명해주세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/React#8-useeffect%EC%99%80-uselayouteffect%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 
 ----
 
