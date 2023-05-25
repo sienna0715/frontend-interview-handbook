@@ -484,3 +484,192 @@ function UnControl() {
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
+
+## 10. props drilling은 무엇이고, 어떻게 해결할 수 있나요?
+
+<p align="center"><img src="https://user-images.githubusercontent.com/115691844/240905168-2b4d3dba-dc3f-467b-b37e-433880f4aaf6.png" width="500px" /></p>
+
+<br/>
+
+props drilling은 데이터를 부모 컴포넌트에서 props로 하위 컴포넌트에게 전달할 때 발생합니다. 부모 컴포넌트부터 props가 필요한 하위 컴포넌트까지 해당 props를 사용하지 않고 전달만 하는 컴포넌트가 있을 경우 props drilling이라고 합니다.
+
+### 문제점
+- props의 전달이 3 ~ 5개 정도면 문제가 되지 않지만 10개와 같이 더 많은 컴포넌트를 거치게 된다면 props의 추적이 어렵게 됩니다.
+
+### 해결 방법
+- 컴포넌트를 세분화하지 않고 state를 가장 가까운 부모 컴포넌트와 공유함으로써 해결할 수 있습니다.
+- 멀리 떨어진 컴포넌트와 state를 공유해야할 경우 Redux와 같은 상태관리 라이브러리를 사용하면 해결할 수 있습니다.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
+
+## 11. 클래스 컴포넌트와 함수형 컴포넌트의 차이에 대해 설명해주세요.
+클래스 컴포넌트는 내부 상태를 유지하는데 필요한 컴포넌트를 생성하거나 생명주기 메소드를 활용하기 위해 사용했습니다. 그러나 Hooks의 도입 이전의 함수형 컴포넌트는 상태값을 가질 수 없고 생명주기 메소드도 활용하지 못했습니다. 하지만 Hooks가 도입되면서 함수형 컴포넌트에서도 상태값과 생명주기 메소드를 사용할 수 있게 되었습니다.
+
+### 클래스형 컴포넌트
+```javascript
+
+import React, {Component} from 'react';
+
+class App extends Component {
+  render() {
+    const name = 'react';
+    return <div className="react">{name}</div>
+  }
+}
+
+export default App;
+
+```
+
+- class 키워드를 사용합니다.
+- Component로 상속 받아야 합니다.
+- render() 메소드가 필요합니다.
+
+### 함수형 컴포넌트
+```javascript
+
+import React from 'react';
+import './App.css';
+
+function App() {
+  const name = 'react';
+  return <div className = "react">{name}</div>
+}
+
+export default App;
+
+```
+
+- return으로 화면을 구성합니다.
+
+### state 사용 차이
+
+#### 클래스형 컴포넌트
+```javascript
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      data : "data",
+    }
+  }
+}
+
+```
+- constructor 안에서 this.state 초기 값 설정이 가능합니다.
+
+```javascript
+
+class App extends Component {
+
+  this.state = {
+    data : "data",
+  }
+  
+}
+    
+```
+- constructor 없어도 state 초기 값 설정이 가능합니다.
+
+```javascript
+
+  this.state = {
+    data : "data",
+  }
+   
+```
+- 클래스형 컴포넌트의 state는 객체형태입니다.
+
+```javascript
+
+onClick = {()=>this.setState({data : "newData"})}
+    
+```
+- this.setState 함수로 state의 값을 변경할 수 있습니다.
+
+#### 함수형 컴포넌트
+```javascript
+
+const [data, setData] = useState('data')
+    
+```
+- useState 함수로 state를 사용합니다.
+- useState의 배열 중 첫번째 원소는 현재 state, 두번째 원소는 상태를 바꾸는 함수입니다.
+
+### props의 차이
+
+#### 클래스형 컴포넌트
+```javascript
+
+import React, {Component} from 'react';
+
+class App extends Component {
+  render() {
+    const {name} = this.props;
+    return <div className="react">{name}</div>
+  }
+}
+
+export default App;
+
+```
+- this.props를 통해 값을 불러올 수 있습니다.
+
+#### 함수형 컴포넌트
+```javascript
+
+import React from 'react';
+import './App.css';
+
+function App({ name }) {
+  return <div className = "react">{name}</div>
+}
+
+export default App;
+
+```
+- this.props를 통하지 않고 바로 값을 불러올 수 있습니다.
+
+### 이벤트 핸들러의 차이
+
+#### 클래스형 컴포넌트
+```javascript
+
+handleChange = e => {
+  this.setState({
+    data : e.target.value
+  })
+}
+
+...
+
+<input 
+  onChange = {this.handleChange}
+/>
+
+```
+- 요소를 적용하기 위해서는 this를 사용해야 합니다.
+
+#### 함수형 컴포넌트
+```javascript
+
+const handleChange = e => {
+  setData(e.target.value)
+}
+
+...
+
+<input 
+  onChange = {handleChange}
+/>
+
+```
+- 요소를 적용하기 위해 this를 필요로하지 않는다.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
