@@ -14,6 +14,7 @@
 - [props drilling은 무엇이고, 어떻게 해결할 수 있나요?](https://github.com/sienna0715/frontend-interview-handbook/blob/main/React/README.md#12-props-drilling%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B4%EA%B3%A0-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%B4%EA%B2%B0%ED%95%A0-%EC%88%98-%EC%9E%88%EB%82%98%EC%9A%94)
 - [클래스 컴포넌트와 함수형 컴포넌트의 차이에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/React/README.md#13-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%99%80-%ED%95%A8%EC%88%98%ED%98%95-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 
+
 ---
 
 ## 1. useEffect의 dependency array에 대해서 설명해주세요.
