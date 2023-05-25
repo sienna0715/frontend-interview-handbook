@@ -6,6 +6,9 @@
 - [React 컴포넌트의 key 속성에 대해 설명하세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/React#5-react-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%9D%98-key-%EC%86%8D%EC%84%B1%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [React를 사용하는 이유에 대해 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#6-react%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [React의 생명주기에 대해 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#6-react%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
+- [useEffect와 useLayoutEffect의 차이에 대해 설명해주세요.]()
+- [제어컴포넌트와 비제어 컴포넌트의 차이점에 대해 설명해주세요.]()
+
 ----
 
 ## 1. useEffect의 dependency array에 대해서 설명해주세요.
@@ -279,6 +282,204 @@ react의 생명주기는 mount(생성) -> 업데이트 -> unmount(제거) 순으
 #### componentWillUnmount
 - DOM에 직접 등록했었던 이벤트를 제거합니다.
 - setTimeout을 사용했다면 clearTimeout으로 제거합니다.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
+
+
+## 8. useEffect와 useLayoutEffect의 차이에 대해 설명해주세요.
+
+
+>  💡 **필수 용어**
+    > - **Render** : DOM Tree를 구성하기 위해 각 엘리먼트의 스타일 속성을 계산하는 과정
+    > - **Paint** : 실제 스크린에 Layout을 표시하고 업데이트하는 과정
+
+  <br />
+
+### useEffect
+
+---
+
+useEffect은 컴포넌트들이 `render와 paint된 후에 실행`되며, **비동기적**입니다.
+
+paint된 후에 실행되기 때문에, useEffect 내부에 DOM에 영향을 주는 코드가 있을 경우 화면 깜빡임 현상이 발생할 수 있습니다.
+
+**useEffect의 Life cycle**
+
+![](https://velog.velcdn.com/images/haizel/post/3f875b56-b2e5-4614-9baa-a0b2ce20b8bc/image.png)
+
+
+<br />
+
+
+### useLayoutEffect
+
+---
+
+useLayoutEffect은 컴포넌트들이 `render된 후에 실행되며, 그 후 paint`됩니다. 즉 `동기적`으로 실행됩니다.
+
+paint가 되기 전에 실행되기 때문에 DOM을 조작하는 코드가 존재하더라도 사용자는 깜빡임을 경험하지 않습니다.
+
+**useLayoutEffect의 Life cycle**
+
+![](https://velog.velcdn.com/images/haizel/post/3648d4de-6a7a-48c7-b2a1-621ba4847df8/image.png)
+
+
+<br />
+
+## 언제 사용하는 것이 좋을까?
+
+### useEffect
+
+useLayoutEffect은 동기적으로 실행되어 내부 코드가 모두 실행된 후 painting 작업을 거칩니다. 따라서 로직이 복잡할 경우 사용자가 레이아웃을 보는데까지 시간이 오래 걸린다는 단점이 있어 보통의 경우 useEffect의 사용이 권장됩니다. 대표적으로 `데이터 fetch`, `event handler`, `state reset` 의 경우 useEffect을 많이 사용합니다.
+
+### useLayoutEffect
+
+화면이 깜빡 거리는 상황일 때 유용합니다.
+
+예를 들어 아래와 같이 state가 있고, 조건에 따라 첫 painting 시 다르게 렌더링 되어야 할때, useEffect은 처음에 0이 보여지고 re-rendering 되면서 화면 깜빡임 현상이 발생하지만, useLayoutEffect은 코드가 모두 실행된 후 painting 되기 때문에 화면 깜빡임 현상이 발생하지 않습니다.
+
+```jsx
+const Test = (): JSX.Element => {
+  const [value, setValue] = useState(0);
+
+  useLayoutEffect(() => {
+    if (value === 0) {
+      setValue(10 + Math.random() * 200);
+    }
+  }, [value]);
+
+  console.log('render', value);
+
+  return (
+    <button onClick={() => setValue(0)}>
+      value: {value}
+    </button>
+  );
+};
+```
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
+
+
+
+## 9. 제어컴포넌트와 비제어 컴포넌트의 차이점에 대해 설명해주세요.
+
+## 1. 제어 컴포넌트
+
+React에 의해 값이 제어되는 컴포넌트를 제어 컴포넌트라고 합니다. 보통  `form` 이나 `input` 등의 입력 요소 태그를 다룰 때, 요소에 입력되는 값을 state로 관리하거나 DOM API를 통해서 관리할 수 있습니다. 이때 state로 DOM 요소의 값을 다루는 컴포넌트가 바로 제어 컴포넌트입니다.
+
+### 예제 코드
+
+아래 코드는 `input`  의 값이 바뀔 때마다 ChangeName 함수를 통해 state의 값을 업데이트해주는 제어 컴포넌트입니다.
+
+```jsx
+import React, { useState } from "React";
+
+function Control() {
+	const [name, setName] = useState(null);
+
+	const ChangeName = (e) => {
+		setName(e.current.value);
+	}
+
+	return (
+		<input onChange={ChangeName} value={name} />
+	 )
+}
+```
+
+제어 컴포넌트는 사용자의 입력을 기반으로 **state**를 관리하고 update합니다. 이처럼 제어 컴포넌트는 React에 의해 값이 제어되는 입력, 폼 요소에서 사용됩니다.
+
+<br />
+
+### 문제점
+
+제어 컴포넌트는 입력할 때마다 렌더링 하기 때문에, 불필요하게 리렌더링되거나 API를 호출할 수 있습니다. 즉 사용자가 입력하는 모든 데이터가 동기화됩니다.
+이 문제를 해결하기 위해서 쓰로틀링(Throttling)과 디바운싱(Debouncing)을 활용할 수 있습니다.
+
+>
+- **쓰로틀링(Throttling)** : 마지막 함수가 호출된 후 일정시간이 지나기 전에 다시 호출되지 않도록 하는 것
+- **디바운싱(Debouncing)** : 연이어 호출되는 함수들 중 마지막(혹은 맨 처음) 함수만 호출하도록 하는 것
+>
+[📎  참고자료 - 쓰로틀링과 디바운싱](https://www.zerocho.com/category/JavaScript/post/59a8e9cb15ac0000182794fa)
+  
+  <br />
+
+### 언제 사용할까?
+
+1. 유효성 검사
+2. 실시간으로 필드 검사를 해야하는 경우
+3. 조건에 따라 버튼의 활성화 여부가 바뀌는 경우
+
+<br />
+
+## 2. 비제어 컴포넌트
+
+React에 의해 값이 제어되지 않은 컴포넌트를 비제어 컴포넌트라고 합니다. 제어 컴포넌트에서 폼 데이터는 React 컴포넌트에서 다뤄지는 반면, 비제어 컴포넌트는 **DOM 자체**에서 폼 데이터가 다뤄집니다.
+
+따라서 모든 state 업데이트에 대한 이벤트 핸들러를 작성하는 대신 **ref**를 사용해 DOM에서 폼 값을 가져올 수 있습니다. 
+
+### 예제 코드
+
+아래 코드는 ref를 통해 input 값에 접근 할 수 있고, 이벤트 핸들러를 통해 ref에 저장된 요소의 값을 가져와 활용하는 비제어 컴포넌트입니다.
+
+```jsx
+import React, { useRef } from "React";
+
+function UnControl() {
+	const nameRef = useRef(null);
+	
+	return (
+		<input ref={nameRef} />
+	)
+}
+```
+
+비제어 컴포넌트는 state로 값을 관리하지 않기 때문에 값이 바뀔 때마다 리렌더링, API 호출을 하지 않아 성능상 이점이 있습니다. 즉 비제어 컴포넌트는 사용자가 직접 트리거 하지 전까지는 리렌더링을 발생시키지 않고 값을 동기화 시키지도 않습니다.
+대표적 예로 submit 버튼을 클릭하면 함수 내에서 ref를 통해 form 내 value들에 접근합니다.
+
+<br />
+
+### 언제 사용할까?
+
+일반적으로 모든 form 요소의 동기화가 필요하지 않고, form 요소가 증가할수록 면 모든 컴포넌트에 쓰로틀링이나 디바운싱을 걸기엔 어려움이 있습니다. 따라서 만약 값이 트리거 된 이후에 값이 갱신되어도 된다면, 비제어 컴포넌트를 통해 불필요한 렌더링을 방지하고 성능 향상을 할 수 있습니다.
+
+대표적으로 비제어 컴포넌트를 사용해 렌더링을 최적화하는 라이브러리로 `react-hook-form`이 있습니다.
+
+<br />
+
+## 3. 제어 컴포넌트 vs 비제어 컴포넌트
+
+---
+
+### 차이점
+
+|  | 제어 컴포넌트 | 비제어 컴포넌트 |
+| --- | --- | --- |
+| **1. 동기화**| 항상 동기화(제어 컴포넌트의 값은 **항상 최신값을 유지**) | 동기화 X |
+| **2. 폼 데이터** | React 컴포넌트 | DOM 자체 |
+
+✔️ React 공식 문서에 따르면 대부분의 경우 폼 구현 시 제어 컴포넌트를 사용하는 것을 권장
+
+<br />
+
+### 언제 무엇을 사용해야 할까?
+
+| 기능 | 제어 컴포넌트 | 비제어 컴포넌트 |
+| --- | --- | --- |
+| 일회성 정보 검색 (ex. 제출) | ✅ | ✅ |
+| 제출 시 값 검증 | ✅ | ✅ |
+| 실시간으로 필드값의 유효성 검사 | ✅ | ❌ |
+| 조건부로 제출 버튼 비활성화(disabled) | ✅ | ❌ |
+| 실시간으로 입력 형식 적용하기(ex. 숫자만 가능하게 등) | ✅ | ❌ |
+| 동적 입력 | ✅ | ❌ |
+- 즉각적, 실시간으로 값에 대한 피드백이 필요하다 → 제어 컴포넌트
+- 즉각적인 피드백이 불필요하고 제출시에만 값이 필요하다 혹은 불필요한 렌더링과 값 동기화가 싫다 → 비제어 컴포넌트
+
 
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
