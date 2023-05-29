@@ -48,6 +48,8 @@
 ## Front-end
 - [RESTful API에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#1-restful-api%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [객체 지향 프로그래밍이란 무엇인가요?](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#1-restful-api%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [프로세스와 스레드는 각자 무엇이며, 어떤 차이가 있나요?](https://github.com/sienna0715/frontend-interview-handbook/tree/main/FrontEnd#3-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%99%80-%EC%8A%A4%EB%A0%88%EB%93%9C%EB%8A%94-%EA%B0%81%EC%9E%90-%EB%AC%B4%EC%97%87%EC%9D%B4%EB%A9%B0-%EC%96%B4%EB%96%A4-%EC%B0%A8%EC%9D%B4%EA%B0%80-%EC%9E%88%EB%82%98%EC%9A%94)
+- [자바스크립트는 싱글 스레드 언어로 알려져있는데, 싱글 스레드와 멀티 스레드의 차이점은 무엇이며, 각 장단점은 무엇인지 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/FrontEnd#4-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%8B%B1%EA%B8%80-%EC%8A%A4%EB%A0%88%EB%93%9C-%EC%96%B8%EC%96%B4%EB%A1%9C-%EC%95%8C%EB%A0%A4%EC%A0%B8%EC%9E%88%EB%8A%94%EB%8D%B0-%EC%8B%B1%EA%B8%80-%EC%8A%A4%EB%A0%88%EB%93%9C%EC%99%80-%EB%A9%80%ED%8B%B0-%EC%8A%A4%EB%A0%88%EB%93%9C%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B4%EB%A9%B0-%EA%B0%81-%EC%9E%A5%EB%8B%A8%EC%A0%90%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 
 
 <br/>
