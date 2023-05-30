@@ -28,6 +28,13 @@ Delete: 데이터 삭제(DELETE)
 
  그럼 어떤 규칙을 지켜야 하는지 알아보도록 하겠습니다. <br/><br/>
 
+#### ‼️ REST API 중심 규칙
+1. URI는 정보의 자원을 표현해야 한다.
+2. 자원에 대한 행위는 HTTP Method(GET, POST, PUT, DELETE 등)로 표현
+> DELETE /members/1
+
+
+#### ‼️ URI 설계 시 주의할 점
 1. URI는 동사보다는 명사를, 대문자보다는 소문자를 사용하여야 한다.
 > Bad Example http://khj93.com/Running/ <br/>
 Good Example  http://khj93.com/run/  
