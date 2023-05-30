@@ -259,12 +259,14 @@ cf. [객체지향 프로그래밍이란?](https://jongminfire.dev/%EA%B0%9D%EC%B
 <br/>
 
 1. 사용자가 브라우저를 통해 웹 사이트에 접속합니다.
-2. Resource Downloading : 브라우저는 서버로부터 HTML, CSS, JavaScript와 같은 필요한 리소스를  웹사이트에 다운 받습니다.
+2. Resource Downloading : 브라우저는 서버로부터 HTML, CSS, JavaScript와 같은 필요한 리소스를 웹사이트에 다운 받습니다.
 3. HTML DOM Tree 구축 : 렌더링 엔진은 전달받은 HTML 문서를 파싱(parsing)해 DOM(Document Object Model, 문서 객체 모델) 트리 형성합니다.
 4. CSSOM Tree 구축 : 이어서 다운 받은 외부 CSS 파일과 함께 포함된 스타일 요소를 파싱(parsing)해 CSSOM Tree 형성합니다.
 5. Render Tree 구축 : 만든 DOM 트리와 CSSOM 트리를 결합합니다.
 6. Rayout : 각 요소를 어디에 배치할 지 결정합니다.
 7. Paint : 레이아웃 과정이 끝나면 UI 백엔드에서 Render 트리를 화면에 그리기 시작하는 과정입니다.
+
+> 주의 : HTML문서를 파싱하는 도중에 Javascript를 만나면 하던 일을 멈추고 Javascript 먼저 읽습니다. 
 
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
@@ -276,13 +278,13 @@ cf. [객체지향 프로그래밍이란?](https://jongminfire.dev/%EA%B0%9D%EC%B
 
 <br/>
 
-1. 사용자가 웹브라우저 검색창에 www.google.com 입력합니다.
-2. 웹브라우저는 캐싱된 DNS 기록들을 통해 해당 도메인 주소와 대응하는 IP주소를 확인합니다.
-3. DNS가 웹브라우저에게 찾는 사이트의 IP주소를 응답합니다.
-4. 웹브라우저가 웹서버에게 IP주소를 이용하여 데이터를 요청합니다.
-5. 웹서버가 요청 받은 데이터를 처리합니다.
-6. 웹서버는 웹브라우저에게 데이터 처리 결과를 응답합니다.
-7. 웹브라우저는 화면에 결과를 출력합니다.
+1. 사용자가 브라우저 검색창에 www.google.com 입력합니다.
+2. 브라우저는 캐싱된 DNS 기록들을 통해 해당 도메인 주소와 대응하는 IP주소를 확인합니다.
+3. DNS가 브라우저에게 찾는 사이트의 IP주소를 응답합니다.
+4. 브라우저가 서버에게 IP주소를 이용하여 데이터를 요청합니다.
+5. 서버가 요청 받은 데이터를 처리합니다.
+6. 서버는 브라우저에게 데이터 처리 결과를 응답합니다.
+7. 브라우저는 화면에 결과를 출력합니다.
 
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
