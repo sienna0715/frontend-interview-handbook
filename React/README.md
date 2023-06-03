@@ -478,14 +478,87 @@ function UnControl() {
 <br/><br/>
 
 ## 10. useMemo와 useCallback에 대해 설명해주세요.
-발표 잘 들어주세요. 눙물 
+### useMemo
+memoization 기법을 사용하여 동일한 값을 반환하는 함수가 있다면 첫 렌더링 때 계산된 값을 메모리에 캐시해둔 다음 필요할 때마다 캐시된 값을 꺼내 재사용할 수 있도록 만들어준다. 주로 컴포넌트 내부에서 대량의 연산과 같은 무거운 일을 수행할 때 불필요하게 반복적으로 호출되는 것을 막아주기 위해 사용한다. 
+```javascript
+import { useMemo } from 'react';
+
+function TodoList({ todos, tab }) {
+  const visibleTodos = useMemo(
+    () => filterTodos(todos, tab),
+    [todos, tab]
+  );
+  // ...
+}
+```
+즉, 특정 값을 재사용하고자 할 때 사용한다. 렌더링될 때마다 종속성을 비교해 값이 동일한 경우에는 이전 렌더링의 값을 그대로 재활용할 수 있게 되며, 종속성이 변경되었다면 해당 함수를 실행하여 새 값을 반환한다.
+
+### useCallback
+useMemo와 마찬가지로 memoization 기법을 사용한다. 그러나 다른 점이면 이름에서도 유추할 수 있듯이, 값이 아닌 함수를 캐시한다.
+매번 렌더링 될 때마다 이전 렌더링과 현재 렌더링의 종속성을 비교하여, 변경이 없다면 이전에 캐시된 동일한 함수를 반환하지만 변경이 있다면 useCallback에서 전달한 함수를 반환한다.
+```javascript
+import { useCallback } from 'react';
+
+export default function ProductPage({ productId, referrer, theme }) {
+  const handleSubmit = useCallback((orderDetails) => {
+    post('/product/' + productId + '/buy', {
+      referrer,
+      orderDetails,
+    });
+  }, [productId, referrer]);
+  // ...
+ }
+  ```
 
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
 
 ## 11. Context API에 대해 설명해주세요.
-발표 잘 들어주세요. 눙물
+react 16.3 버전부터 정식적으로 context api (opens new window)를 지원하여 일반적으로 부모와 자식간 props를 날려 state를 변화시키는 것과는 달리 context api는 컴포넌트 간 간격이 없습니다. 즉, 컴포넌트를 건너띄고 다른 컴포넌트에서 state, function을 사용할 수 있습니다. 또한 redux의 어려운 개념보다 context api는 Provider, Consumer, createContext 개념만 알면 적용가능합니다.
+
+### createContext
+```javascript
+const DarkModeContext = createContext(defaultValue);
+```
+context 객체를 만듭니다. 컴포넌트가 이 context를 가지려면 해당 컴포넌트 상위에 provider로 부터 context를 정의한 변수 DarkModeContext를 감싸면 됩니다.
+defaultValue는 트리 안에 적절한 provider를 찾지 못했을 때 쓰이는 값입니다. createContext 를 실행하면 Provider와 Consumer을 담고 있는 컨텍스트 객체가 생성됩니다.
+
+### Provider
+```javascript
+<DarkModeContext.Provider value={this.state}>
+  <subComponent1 />
+  <subComponent2 />
+</DarkModeContext.Provider>
+```
+provider는 정의한 context를 하위 컴포넌트에게 전달하는 역할을 합니다. 전달하는 변수는 꼭 value를 사용해야 합니다.
+
+### Consumer
+```javascript
+function Button() {
+  return (
+    <ThemeContext.Consumer>
+      {theme => (
+        <button className={theme} />
+      )}
+    </ThemeContext.Consumer>
+  );
+}
+```
+context 변화를 구독하는 컴포넌트입니다. Provider에 담긴 state를 필요한 컴포넌트에서 접근할 수 있게 만드는 역할을 합니다. 하지만 이 방법을 사용하지 않고 useContext를 사용하여 컨텍스트를 읽을 수 있다. useContext 사용을 더 권장합니다.
+
+### useContext
+```javascript
+import { useContext } from 'react';
+
+function MyComponent() {
+  const theme = useContext(DarkModeContext);
+  // ...
+```
+컨텍스트를 읽고 구독할 수 있는 리액트 훅입니다. useContext에 createContext로 만든 컨텍스트를 전달하면 해당 객체에 접근하여 값을 반환합니다.
+
+### 결론
+Context API는 리액트에 내장된 기능으로 Props를 사용하지 않아도 특정 값이 필요한 컴포넌트끼리 쉽게 값을 공유할 수 있게 해 줍니다. 주로 프로젝트에서 전역 상태를 관리할 때 많이 사용합니다.
 
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
