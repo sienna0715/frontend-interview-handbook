@@ -15,7 +15,11 @@
 - [이벤트 버블링과 캡처링에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#14-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%B2%84%EB%B8%94%EB%A7%81%EA%B3%BC-%EC%BA%A1%EC%B2%98%EB%A7%81%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [원시자료형과 참조자료형의 차이에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#15-%EC%9B%90%EC%8B%9C%EC%9E%90%EB%A3%8C%ED%98%95%EA%B3%BC-%EC%B0%B8%EC%A1%B0%EC%9E%90%EB%A3%8C%ED%98%95%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [동등연산자(==)와 일치연산자(===)의 차이에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#16-%EB%8F%99%EB%93%B1%EC%97%B0%EC%82%B0%EC%9E%90%EC%99%80-%EC%9D%BC%EC%B9%98%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [forEach() 루프와 map() 루프 사이의 주요 차이점을 설명할 수 있나요? 왜 둘 중 하나를 선택할 것인가요?](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#17-foreach-%EB%A3%A8%ED%94%84%EC%99%80-map-%EB%A3%A8%ED%94%84-%EC%82%AC%EC%9D%B4%EC%9D%98-%EC%A3%BC%EC%9A%94-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%84-%EC%84%A4%EB%AA%85%ED%95%A0-%EC%88%98-%EC%9E%88%EB%82%98%EC%9A%94-%EC%99%9C-%EB%91%98-%EC%A4%91-%ED%95%98%EB%82%98%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%A0-%EA%B2%83%EC%9D%B8%EA%B0%80%EC%9A%94)
+- [async, await 사용 방법을 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#18-async-await-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95%EC%9D%84-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+
 ------
+<br />
 
 ## 1. Function.prototype.bind에 대해 설명하세요.
 > bind() 메소드가 호출되면 새로운 함수를 생성합니다. 받게되는 첫 인자의 value로는 this 키워드를 설정하고, 이어지는 인자들은 바인드 된 함수의 인수에 제공됩니다. 
@@ -573,6 +577,77 @@ true == 1 //false
 <br/><br/>
 
 ## 17. forEach() 루프와 map() 루프 사이의 주요 차이점을 설명할 수 있나요? 왜 둘 중 하나를 선택할 것인가요?
+### forEach
+배열의 요소를 반복하는데 이때 각 요소에 대한 콜백을 실행합니다. forEach는 반복만 할 뿐 값을 반환하지는 않습니다.
+```javascript
+const a = [1, 2, 3];
+const doubled = a.forEach((num, index) => {
+  console.log(num, index)
+});
+```
+### map
+forEach와 마찬가지로 요소를 반복합니다. 단, 각 요소에 대한 콜백을 실행하여 새로운 배열을 결과값으로 내보냅니다.
+```javascript
+const a = [1, 2, 3];
+const doubled = a.map((num) => {
+  return num * 2;
+});
+```
+이렇듯 두 메소드의 가장 큰 차이점은 새로운 배열을 반환하는가 안 하는가 입니다. 즉, 원본 배열을 변경하고 싶지 않다면 map 메소드를 사용할 수 있습니다. 단순히 배열의 반복을 위함이라면 forEach 메소드를 사용할 수 있습니다.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
 
 ## 18. async, await 사용 방법을 설명해주세요.
+async와 await은 자바스크립트의 비동기 처리 방식 중 가장 최근 문법입니다. 그래서인지 기존의 비동기 처리 방식인 콜백 함수와 프로미스의 단점을 보완하고 개발자가 읽기 좋은 코드를 작성할 수 있게 도와준다.
+
+```javascript
+async function logName() {
+  var user = await fetchUser('domain.com/users/1');
+  if (user.id === 1) {
+    console.log(user.name);
+  }
+}
+```
+위 예제에서 fetchUser()는 서버에서 데이터를 받아오는 HTTP 통신 코드이다. 일반적으로 자바스크립트의 비동기 처리 코드는 콜백을 사용해야지 코드의 실행 순서를 보장받을 수 있다. 그런데 이 개념이 익숙하지 않을 수도 있다. 그럴 때 우리는 위 예제처럼 async await를 이용하여 실행 순서를 보장 받을 수 있다.
+```javascript
+async function 함수명() {
+  await 비동기_처리_메서드_명();
+}
+```
+함수의 앞에 async 라는 예약어를 붙입니다. 그러고 나서 함수의 내부 로직 중 HTTP 통신을 하는 비동기 처리 코드 앞에 await를 붙입니다. 여기서 주의할 점은 비동기 처리 메서드가 꼭 프로미스 객체를 반환해야 await가 의도한 대로 동작합니다.
+
+일반적으로 await의 대상이 되는 비동기 처리 코드는 Axios 등 프로미스를 반환하는 API 호출 함수입니다.
+
+```javascript
+function fetchItems() {
+  return new Promise(function(resolve, reject) {
+    var items = [1,2,3];
+    resolve(items)
+  });
+}
+
+async function logItems() {
+  var resultItems = await fetchItems();
+  console.log(resultItems); // [1,2,3]
+}
+```
+fetchItems() 함수는 프로미스 객체를 반환하는 함수입니다. logItems() 함수는 fetchItems() 함수의 결과 값인 items 배열이 resultItems 변수에 담깁니다.
+
+이때 await를 사용하지 않았다면 데이터를 받아온 시점에 콘솔을 출력할 수 있게 콜백 함수나 .then()등을 사용해야 했어야 했지만 async await 문법 덕택에 비동기에 대한 사고를 하지 않아도 되는 것입니다. 
+
+즉, awiat은 promise.then보다 좀 더 세련되게 프라미스의 result 값을 얻을 수 있도록 해주는 문법입니다. promise.then보다 가독성 좋고 쓰기도 쉽습니다.
+
+또한 await은 프라미스가 처리되면 그 결과와 함께 실행이 재개되기 때문에 프라미스가 처리되길 기다리는 동안엔 엔진이 다른 일(다른 스크립트를 실행, 이벤트 처리 등)을 할 수 있어 CPU 리소스가 낭비되지 않는다는 장점도 있습니다.
+<br /><br />
+
+### 결론
+async와 await을 사용하면 비동기를 완전히 이해하지 않아도 간편하게 사용할 수 있도록 만들어줍니다. 대신 async가 붙은 함수는 반드시 프라미스를 반환해야하며, 프라미스가 아닌 것은 프라미스로 감싸 반환합니다. 그리고 async 함수 안에서만 동작하는 await은 '기다리다'라는 의미처럼 프로미스가 처리될 때까지 기다린 후 결과를 반환합니다.
+<br /><br />
+
+cf. [자바스크립트 async와 await](https://joshua1988.github.io/web-development/javascript/js-async-await/)
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
 
