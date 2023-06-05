@@ -572,3 +572,7 @@ true == 1 //false
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
+## 17. forEach() 루프와 map() 루프 사이의 주요 차이점을 설명할 수 있나요? 왜 둘 중 하나를 선택할 것인가요?
+
+## 18. async, await 사용 방법을 설명해주세요.
+
