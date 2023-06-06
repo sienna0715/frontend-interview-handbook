@@ -17,6 +17,8 @@
 - [동등연산자(==)와 일치연산자(===)의 차이에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#16-%EB%8F%99%EB%93%B1%EC%97%B0%EC%82%B0%EC%9E%90%EC%99%80-%EC%9D%BC%EC%B9%98%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [forEach() 루프와 map() 루프 사이의 주요 차이점을 설명할 수 있나요? 왜 둘 중 하나를 선택할 것인가요?](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#17-foreach-%EB%A3%A8%ED%94%84%EC%99%80-map-%EB%A3%A8%ED%94%84-%EC%82%AC%EC%9D%B4%EC%9D%98-%EC%A3%BC%EC%9A%94-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%84-%EC%84%A4%EB%AA%85%ED%95%A0-%EC%88%98-%EC%9E%88%EB%82%98%EC%9A%94-%EC%99%9C-%EB%91%98-%EC%A4%91-%ED%95%98%EB%82%98%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%A0-%EA%B2%83%EC%9D%B8%EA%B0%80%EC%9A%94)
 - [async, await 사용 방법을 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#18-async-await-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95%EC%9D%84-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [strict mode은 무엇이며 사용하는 이유에 대해 설명해주세요.]()
+- [AJAX에 대해 설명해주세요.]()
 
 ------
 <br />
@@ -651,3 +653,59 @@ cf. [자바스크립트 async와 await](https://joshua1988.github.io/web-develop
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
+
+## 19. strict mode은 무엇이며 사용하는 이유에 대해 설명해주세요.
+
+### 👮🏻‍♂️ Strict 모드
+ES5에 처음 추가된 개념으로, 자바스크립트 코드에 더욱 엄격한 오류 검사를 적용하는 키워드입니다. 스크립트나 함수의 맨 처음에 `“use strict”` 지시어를 사용해 선언할 수 있습니다.
+
+```jsx
+/* 스크립트에서 strict 선언 */
+"use strict";
+let start = "Hi! I'm a strict mode script!";
+
+/* 함수에서 strict 선언 */
+function strict() {
+	"use strict";
+	return  "Hi! I'm a strict mode script!";
+}
+```
+
+### 👮🏻‍♂️ Strict 모드의 이점
+엄격모드에서는 이전에 통용되던 행동들을 제약합니다. 또한 몇 가지 중요한 기능을 수정하여 강력한 오류 검사와 함께 향상된 보안 기능을 제공합니다. 대표적인 이점은 다음과 같습니다.
+
+1. 기존에는 무시되던 에러들을 throwing 합니다.
+2. JavaScript 엔진의 최적화 작업을 어렵게 만드는 실수들을 바로 잡습니다. 때문에 엄격 모드로 작성된 코드는 동일하게 작성된 기존의 코드보다 더 빨리 작동하기도 합니다.
+3. 엄격모드는 ECMAScript의 차기 버전들에거 정의 될 문법을 금지합니다.
+
+### 👮🏻‍♂️ Strict 모드의 특징
+
+#### 1. 선언되지 않은 전역 변수를 사용할 수 없다.
+
+<img src="https://velog.velcdn.com/images/haizel/post/ad19d7a9-e65a-46ff-b809-8655ef2ce871/image.png" width="400" />
+
+#### 2. 읽기 전용 프로퍼티에는 대입할 수 없다.
+
+writable이 false로, 읽기 전용 객체에 쓰는 것이 불가능합니다. (read only 객체 수정 불가능)
+
+<img src="https://velog.velcdn.com/images/haizel/post/af48532e-32a8-425a-99b9-929bb36029e1/image.png"/>
+
+
+#### 3. 매개변수 이름이 중복되어서는 안된다.
+<img src="https://velog.velcdn.com/images/haizel/post/4ffa26a8-8913-4f69-abfd-7478cadf29b5/image.png"/>
+
+#### 4. this 포인터가 가리키는 값이 null, undefind인 경우 전역 객체로 반환되지 않는다.
+this의 결과가 null, undefind인 경우, 전역객체 window를 반환하지 않고 그대로 반환하게 됩니다.
+
+<img src="https://velog.velcdn.com/images/haizel/post/1b494f1c-e785-48a8-81e4-21d673385643/image.png" />
+
+#### 5. 예약어를 사용할 수 없다.
+예약된 키워드의 이름으로 변수 또는 함수를 생성할 수 없습니다.
+
+<img src="https://velog.velcdn.com/images/haizel/post/c0acc606-29cd-4017-b91f-5dfb35b45b1b/image.png" />
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
+
+## 20. AJAX에 대해 설명해주세요.
