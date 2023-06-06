@@ -26,6 +26,8 @@
 - [동등연산자(==)와 일치연산자(===)의 차이에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#16-%EB%8F%99%EB%93%B1%EC%97%B0%EC%82%B0%EC%9E%90%EC%99%80-%EC%9D%BC%EC%B9%98%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [forEach() 루프와 map() 루프 사이의 주요 차이점을 설명할 수 있나요? 왜 둘 중 하나를 선택할 것인가요?](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#17-foreach-%EB%A3%A8%ED%94%84%EC%99%80-map-%EB%A3%A8%ED%94%84-%EC%82%AC%EC%9D%B4%EC%9D%98-%EC%A3%BC%EC%9A%94-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%84-%EC%84%A4%EB%AA%85%ED%95%A0-%EC%88%98-%EC%9E%88%EB%82%98%EC%9A%94-%EC%99%9C-%EB%91%98-%EC%A4%91-%ED%95%98%EB%82%98%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%A0-%EA%B2%83%EC%9D%B8%EA%B0%80%EC%9A%94)
 - [async, await 사용 방법을 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#18-async-await-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95%EC%9D%84-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [strict mode은 무엇이며 사용하는 이유에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#19-strict-mode%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B4%EB%A9%B0-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [AJAX에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#20-ajax%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 
 <br/>
 
