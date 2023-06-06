@@ -28,6 +28,8 @@
 - [async, await 사용 방법을 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#18-async-await-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95%EC%9D%84-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [strict mode은 무엇이며 사용하는 이유에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#19-strict-mode%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B4%EB%A9%B0-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [AJAX에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#20-ajax%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [구조분해할당에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#21-%EA%B5%AC%EC%A1%B0%EB%B6%84%ED%95%B4%ED%95%A0%EB%8B%B9%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [spread문법과 rest문법에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#22-spread%EB%AC%B8%EB%B2%95%EA%B3%BC-rest%EB%AC%B8%EB%B2%95%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 
 <br/>
 
