@@ -748,3 +748,254 @@ AJax는 HTML 페이지의 전체가 가인 일부분만 갱신할 수 있도록 
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
+## 21. 구조분해할당에 대해 설명해주세요.
+> 구조분해할당 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 JavaScript 표현식입니다. from.MDN
+
+구조분해할당의 구문은 할당문의 좌변에서 리터럴 표현식을 사용하고 우변에는 원래 변수를 사용하여 원래 변수에서 어떤 값을 분해해 할당할 것인지 정의합니다.
+
+### 배열 구조분해할당
+
+```javascript
+
+const x = [1, 2, 3, 4, 5];
+const [y, z] = x;
+console.log(y); // 1
+console.log(z); // 2
+
+```
+
+#### 선언과 할당의 분리
+변수의 선언과 할당을 분리해도 구조분해를 통해 값을 할당할 수 있습니다.
+
+```javascript
+
+let a, b;
+
+[a, b] = [1, 2];
+console.log(a); // 1
+console.log(b); // 2
+
+```
+
+#### 기본값 할당
+변수에 기본값을 할당하면, 분해한 값이 undefined일 때 그 값을 대신 사용합니다.
+
+```javascript
+
+let a, b;
+
+[a=5, b=7] = [1];
+console.log(a); // 1
+console.log(b); // 7
+
+```
+
+#### 두 변수 값 교환
+구조 분해 할당 없이 두 값을 교환하려면 임시 변수가 필요하지만 하나의 구조 분해 표현식으로 두 변수의 값을 교환할 수 있습니다.
+
+```javascript
+
+// 구조분해할당 X
+let a = 1;
+let b = 3;
+let c;
+
+c = a;
+a = b;
+b = c;
+console.log(a); // 3
+console.log(b); // 1
+
+// 구조분해할당 O
+let a = 1;
+let b = 3;
+
+[a, b] = [b, a];
+console.log(a); // 3
+console.log(b); // 1
+
+```
+
+### 객체 구조분해할당
+
+```javascript
+
+const o = {p: 42, q: true};
+const {p, q} = o;
+
+console.log(p); // 42
+console.log(q); // true
+
+```
+
+#### 선언과 할당의 분리
+변수의 선언과 할당을 분리해도 구조분해를 통해 값을 할당할 수 있습니다.
+
+
+```javascript
+
+let a, b;
+
+({a, b} = {a: 1, b: 2});
+
+```
+
+#### 새로운 이름으로 변수 할당
+객체로부터 속성을 해체하여 객체의 원래 key와는 다른 이름의 변수에 할당할 수 있습니다.
+
+```javascript
+
+const o = {p: 42, q: true};
+const {p: foo, q: bar} = o;
+
+console.log(foo); // 42
+console.log(bar); // true
+
+```
+
+#### 기본값 할당
+객체로부터 할당된 값이 undefined일 경우 변수에 기본값을 할당하게 됩니다.
+
+
+```javascript
+
+const {a = 10, b = 5} = {a: 3};
+
+console.log(a); // 3
+console.log(b); // 5
+
+```
+
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
+
+## 22. spread문법과 rest문법에 대해 설명해주세요.
+
+### spread문법
+'spread'의 의미인 펼치다, 퍼트리다와 같이 객체 또는 배열을 펼칠 수 있습니다.
+
+```javascript
+
+const slime = {
+  name: '슬라임'
+};
+
+const cuteSlime = {
+  name: '슬라임',
+  attribute: 'cute'
+};
+
+const purpleCuteSlime = {
+  name: '슬라임',
+  attribute: 'cute',
+  color: 'purple'
+};
+
+console.log(slime); // {name: '슬라임'}
+console.log(cuteSlime); // {name: '슬라임', attribute: 'cute'}
+console.log(purpleCuteSlime); // {name: '슬라임', attribute: 'cute', color: 'purple'}
+
+```
+
+위의 코드를 보면 기존의 것을 건들이지 않고 새로운 객체를 만들었는데 이 상황에서 spread문법을 사용하면 번복되는 코드 없이 유용하게 사용할 수 있습니다.
+
+```javascript
+
+const slime = {
+  name: '슬라임'
+};
+
+const cuteSlime = {
+  ...slime,
+  attribute: 'cute'
+};
+
+const purpleCuteSlime = {
+  ...cuteSlime,
+  color: 'purple'
+};
+
+console.log(slime); // {name: '슬라임'}
+console.log(cuteSlime); // {name: '슬라임', attribute: 'cute'}
+console.log(purpleCuteSlime); // {name: '슬라임', attribute: 'cute', color: 'purple'}
+
+```
+
+spread문법은 배열에서도 사용이 가능합니다.
+
+```javascript
+
+const animals = ['개', '고양이', '참새'];
+const anotherAnimals = [...animals, '비둘기'];
+
+console.log(animals); // ['개', '고양이', '참새']
+console.log(anotherAnimals); // ['개', '고양이', '참새', '비둘기']
+
+```
+
+배열에서는 spread문법을 여러번 사용이 가능합니다.
+
+
+```javascript
+
+const numbers = [1, 2, 3, 4, 5];
+
+const spreadNumbers = [...numbers, 1000, ...numbers];
+console.log(spreadNumbers); // [1, 2, 3, 4, 5, 1000, 1, 2, 3, 4, 5]
+
+```
+
+### rest문법
+rest문법은 spread문법과 유사하게 생겼지만 역할이 매우 다르며 객체, 배열, 함수의 파라미터에서 사용이 가능합니다.
+
+#### 객체에서의 rest문법
+rest문법을 객체와 배열에 사용할 때는 구조분해할당과 함께 사용됩니다. 주로 rest라는 키워드를 사용하게 되는데 추출한 값의 이름이 꼭 rest일 필요는 없습니다. 
+
+```javascript
+
+const purpleCuteSlime = {
+  name: '슬라임',
+  attribute: 'cute',
+  color: 'purple'
+};
+
+const { color, ...rest } = purpleCuteSlime;
+console.log(color);  // purple
+console.log(rest); // {name: '슬라임', attribute: 'cute'}
+
+```
+
+#### 배열에서의 rest문법
+객체에서와 같이 구조분해할당을 사용하여 원하는 값을 밖으로 꺼내고 나머지 값을 rest에 넣을수 있습니다.
+
+```javascript
+
+const numbers = [0, 1, 2, 3, 4, 5, 6];
+
+const [one, ...rest] = numbers;
+
+console.log(one); // 0
+console.log(rest); // [1, 2, 3, 4, 5, 6]
+
+```
+
+#### 함수 파라미터의 rest문법
+함수의 파라미터가 몇개가 될 지 모르는 상황에서 rest 파라미터를 사용하면 매우 유용합니다.
+
+
+```javascript
+
+function sum(...rest) {
+  return rest;
+}
+
+const result = sum(1, 2, 3, 4, 5, 6);
+console.log(result); // [1, 2, 3, 4, 5, 6]
+
+```
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
