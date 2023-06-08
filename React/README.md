@@ -13,7 +13,8 @@
 - [Context API에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/React/README.md#11-context-api%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [props drilling은 무엇이고, 어떻게 해결할 수 있나요?](https://github.com/sienna0715/frontend-interview-handbook/blob/main/React/README.md#12-props-drilling%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B4%EA%B3%A0-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%B4%EA%B2%B0%ED%95%A0-%EC%88%98-%EC%9E%88%EB%82%98%EC%9A%94)
 - [클래스 컴포넌트와 함수형 컴포넌트의 차이에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/React/README.md#13-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%99%80-%ED%95%A8%EC%88%98%ED%98%95-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
-
+- [JSX란 무엇인지 설명해주세요.]()
+- [브라우저에서 어떻게 JSX 파일을 실행하는지 설명해주세요.]()
 
 ---
 
@@ -788,6 +789,159 @@ const handleChange = e => {
 - Webpack과 같은 프로덕션 수준 빌드 도구를 사용하여 애플리케이션 코드를 최적화하고 전반적인 성능을 향상시킵니다.
 
 - 서버 측 렌더링을 사용하여 초기 로딩 성능을 개선하고 검색 엔진 및 소셜 미디어 플랫폼의 사용자 경험을 개선하십시오.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
+
+## 16. JSX란 무엇인지 설명해주세요.
+### 💡 JSX란?
+
+JavaScript XML(eXtensible Markup Language)의 약어로, **JavaScript에 XML을 추가한 확장된 문법**입니다. 
+
+- 리액트 사용시 JSX를 이용해 HTML과 JavaScript를 모두 포함하고 있는 `컴포넌트`를 생성합니다.
+
+#### 장점
+
+1. **보기 쉽고 익숙하다.**
+    - JSX는 HTML 코드와 비슷하기 때문에 일반 자바스크립트만 사용한 코드보다 더 익숙하고 간결하며 가독성이 좋습니다.
+2. **높은 활용도**
+    - JSX에서는 div, span과 같은 HTML 태그를 사용할 수 있으며, 개발자가 만든 컴포넌트도 JSX 안에서 작성할 수 있습니다.
+    
+<br />
+
+### 💡JSX 문법 규칙
+
+1. **요소가 하나 이상이라면, 반드시 부모 요소로 감싸는 형태여야 합니다.**
+
+Virtual DOM에서 컴포넌트 변화를 감지할 때 효율적으로 비교할 수 있도록 컴포넌트 내부는 하나의 DOM Tree 구조로 이루어져야 한다는 규칙이 있기 때문입니다.
+
+```jsx
+function App() {
+	return (
+		<div>
+			<div>Hello!</div>
+			<div>World!</div>
+		</div>
+	)
+}
+```
+
+2. **자바스크립트 표현식**
+
+JSX 안에서도 자바스크립트 표현식을 사용할 수 있습니다. JSX 내부에서 코드를 `{ }`로 감싸주면 됩니다.
+
+```jsx
+import React from 'react';
+
+// 자바스크립트 표현
+function App(){
+	const name = 'react';
+	return(
+    	<>
+          <h1>Hello! {name}</h1>
+          <h2>Is it working well?</h2>
+        <>
+    )
+}
+
+export default App;
+```
+
+3. **삼항 연산자(조건 연산자) 사용**
+
+`if문`과 `for 루프`는 JavaScript 표현식이 아니기 때문에 JSX 내부의 자바스크립트 표현식에서 사용할 수 없습니다. 대신 JSX 밖에서 if 문을 사용하거나 `{ }` 안에서 삼항 연산자(조건부 연산자)를 사용할 수 있습니다.
+
+```jsx
+//1. 외부에서 사용
+function App() {
+	let desc = '';
+	const loginYn = 'Y';
+	if(loginYn === 'Y') {
+		desc = <div>GodDaeHee 입니다.</div>;
+	} else {
+		desc = <div>비회원 입니다.</div>;
+	}
+	return (
+		<>
+			{desc}
+		</>
+	);
+}
+
+//2. 삼항 연산자 사용
+function App() {
+	const loginYn = 'Y';
+	return (
+		<>
+			<div>
+				{loginYn === 'Y' ? (
+					<div>GodDaeHee 입니다.</div>
+				) : (
+					<div>비회원 입니다.</div>
+				)}
+			</div>
+		</>
+	);
+}
+```
+
+4. **`CamelCase` 표기법으로 작성**
+
+JSX는 HTML보단 JavaScript에 가깝기 때문에 React DOM은 HTML 어트리뷰트 이름 대신 `CamelCase` 프로퍼티 명명 규칙을 사용합니다.
+
+또한 JSX 내부에서 스타일을 설정할 때는 String 형식이 아닌 Key가 카멜 표기법으로 작성된 객체 형태로 넣어주어야 합니다.
+
+```jsx
+/*
+background-color → backgroundColor
+font-size → fontSize
+*/
+
+function App() {
+	const style = {
+		backgroundColor: 'green',
+		fontSize: '12px'
+	}
+	return (
+		<div style={style}>Hello, GodDaeHee!</div>
+	);
+}
+```
+
+- JSX에서 자바스립트 문법을 쓰려면 `{ }`를 써야합니다.
+5. **class 대신 className**
+
+일반 HTML에서 CSS 클래스를 사용할 땐 class 속성을 사용하지만, JSX에서는 className을 사용합니다.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
+
+## 17. 브라우저에서 어떻게 JSX 파일을 실행하는지 설명해주세요.
+브라우저는 JSX를 이해하지 못하기 때문에 JSX 코드를 JavaScript 코드로 변환하는 과정이 필요합니다. JSX를 JS로 변환하기 위해 바벨(Babel)과 같은 컴파일러를 사용합니다.
+
+> `바벨(Babel)` : 대표적인 트렌스파일러로, 특정 언어로 작성된 코드를 비슷한 다른 언어로 변환시키는 역할을 수행합니다.
+
+바벨은 JSX를 JavaScript로 변환하는데 사용되는 가장 일반적인 도구로, 바벨을 사용하면 JSX를 JavaScript 코드로 변환하고 이를 브라우저에서 실행할 수 있도록 컴파일합니다.
+
+```jsx
+//JSX
+function App() {
+  return (
+  	<div>
+    	Hello <b>react</b>
+    </div>
+  );
+}
+
+//JavaScript로 변환되었을 때의 모습
+function App() {
+  return React.createElement("div", null, "Hello ", React.createElement("b", null, "react"));}
+
+```
+
+이렇게 바벨을 사용하여 JavaScript로 변환하면, React에서 작성한 UI 구성 요소를 일반적인 JavaScript 코드로 컴파일하여 브라우저에서 실행할 수 있습니다.
 
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
