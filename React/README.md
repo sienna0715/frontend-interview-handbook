@@ -13,8 +13,8 @@
 - [Context API에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/React/README.md#11-context-api%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [props drilling은 무엇이고, 어떻게 해결할 수 있나요?](https://github.com/sienna0715/frontend-interview-handbook/blob/main/React/README.md#12-props-drilling%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B4%EA%B3%A0-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%B4%EA%B2%B0%ED%95%A0-%EC%88%98-%EC%9E%88%EB%82%98%EC%9A%94)
 - [클래스 컴포넌트와 함수형 컴포넌트의 차이에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/React/README.md#13-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%99%80-%ED%95%A8%EC%88%98%ED%98%95-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
-- [JSX란 무엇인지 설명해주세요.]()
-- [브라우저에서 어떻게 JSX 파일을 실행하는지 설명해주세요.]()
+- [JSX란 무엇인지 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#16-jsx%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [브라우저에서 어떻게 JSX 파일이 실행되는지 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#17-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C-%EC%96%B4%EB%96%BB%EA%B2%8C-jsx-%ED%8C%8C%EC%9D%BC%EC%9D%84-%EC%8B%A4%ED%96%89%ED%95%98%EB%8A%94%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 
 ---
 
@@ -918,7 +918,7 @@ function App() {
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
 
-## 17. 브라우저에서 어떻게 JSX 파일을 실행하는지 설명해주세요.
+## 17. 브라우저에서 어떻게 JSX 파일이 실행되는지 설명해주세요.
 브라우저는 JSX를 이해하지 못하기 때문에 JSX 코드를 JavaScript 코드로 변환하는 과정이 필요합니다. JSX를 JS로 변환하기 위해 바벨(Babel)과 같은 컴파일러를 사용합니다.
 
 > `바벨(Babel)` : 대표적인 트렌스파일러로, 특정 언어로 작성된 코드를 비슷한 다른 언어로 변환시키는 역할을 수행합니다.
