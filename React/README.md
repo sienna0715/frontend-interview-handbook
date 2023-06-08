@@ -947,7 +947,7 @@ function App() {
 이렇게 바벨을 사용하여 JavaScript로 변환하면, React에서 작성한 UI 구성 요소를 일반적인 JavaScript 코드로 컴파일하여 브라우저에서 실행할 수 있습니다.
 
 <br/><br/>
-⬆️ [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
 
 ## 18. Redux에 대해 설명하세요.
@@ -985,7 +985,7 @@ Redux는 React를 위한 Third-Party 상태관리 라이브러리로 Context API
 cf. [How to use Redux Hooks in a React Native App](https://blog.bitsrc.io/how-to-use-redux-hooks-in-a-react-native-app-login-logout-example-6dee84dee51b)
 
 <br/><br/>
-⬆️ [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
 
 ## 19. 리액트 hooks는 무엇이고, 장점은 무엇인가요?
@@ -997,5 +997,5 @@ Hooks는 클래스 기반 컴포넌트의 장점(예를 들어 내부 상태와 
 이렇듯 Hooks의 등장으로 더이상 클래스형 컴포넌트를 사용하지 않아도 더 쉽고 빠르게 상태 관리를 할 수 있게 되었습니다.
 
 <br/><br/>
-⬆️ [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
