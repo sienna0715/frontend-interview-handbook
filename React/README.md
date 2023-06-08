@@ -758,3 +758,37 @@ const handleChange = e => {
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
+
+## 14. state를 직접 변경하지 않고 setState를 사용하는 이유에 대해서 설명하세요.
+
+- state(상태)는 불변성을 유지해야 하기 때문에 state를 직접 변경하지 않고 setState를 사용합니다. 또한 컴포넌트는 현재의 this.state와 setState를 비교해서 업데이트가 필요한 경우에만 render 함수를 호출하는데, state를 직접 수정하게 되면 리액트가 render 함수를 호출하지 않아 상태 변경이 일어나도 렌더링이 일어나지 않을 수 있습니다. 상태 변경을 추적하고 변경에 따라 구성요소를 다시 렌더링하려면 setState를 사용해야 합니다.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
+
+## 15. React 애플리케이션의 성능을 어떻게 최적화할 수 있습니까?
+
+- 메모이제이션을 사용하여 불필요한 재렌더링을 방지하고 렌더링 성능을 향상시킵니다.
+
+- React.Component 클래스 대신 React.PureComponent 클래스를 사용하여 소품 또는 상태가 변경될 때 다시 렌더링할 필요가 없는 구성 요소의 성능을 최적화합니다.
+
+- shouldComponentUpdate 수명 주기 메서드를 사용하여 구성 요소가 다시 렌더링되는 시기를 제어하고 불필요한 업데이트를 방지합니다.
+
+- React.Suspense 및 React.Lazy 구성 요소를 사용하여 구성 요소를 지연 로드하고 초기 로드 성능을 개선합니다.
+
+- 불필요한 래퍼 요소를 피하고 DOM 노드 수를 줄이려면 React.Fragment 구성 요소를 사용하세요.
+
+- React.Profiler 구성 요소를 사용하여 성능 병목 현상을 식별하고 렌더링 성능을 최적화하십시오.
+
+- React.StrictMode 구성 요소를 사용하여 애플리케이션에서 잠재적인 런타임 오류 및 성능 문제를 식별합니다.
+
+- 코드 분할 및 동적 가져오기를 사용하여 대규모 애플리케이션 코드베이스를 더 작은 청크로 분할하고 초기 로드 성능을 개선합니다.
+
+- Webpack과 같은 프로덕션 수준 빌드 도구를 사용하여 애플리케이션 코드를 최적화하고 전반적인 성능을 향상시킵니다.
+
+- 서버 측 렌더링을 사용하여 초기 로딩 성능을 개선하고 검색 엔진 및 소셜 미디어 플랫폼의 사용자 경험을 개선하십시오.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
