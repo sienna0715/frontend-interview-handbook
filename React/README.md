@@ -774,20 +774,91 @@ const handleChange = e => {
 ## 15. React 애플리케이션의 성능을 어떻게 최적화할 수 있습니까?
 
 - 메모이제이션을 사용하여 불필요한 재렌더링을 방지하고 렌더링 성능을 향상시킵니다.
+  - 메모이제이션(memoization)이란 프로그래밍을 할 때 반복되는 결과를 메모리에 저장함으로써 이후 같은 결과가 사용될 때 저장한 값을 이용해 빠르게 실행하는 코딩 기법을 말합니다.
 
 - React.Component 클래스 대신 React.PureComponent 클래스를 사용하여 소품 또는 상태가 변경될 때 다시 렌더링할 필요가 없는 구성 요소의 성능을 최적화합니다.
+  - React.Component
+    - shouldComponentUpdate를 따로 설정해주지 않은 경우, 항상 true를 반환하며 상태를 변경하는 setState가 실행되면 state와 props의 변경 여부를 신경쓰지 않고 컴포넌트를 업데이트 시킵니다.
 
+  - React.PureComponent
+    - shouldComponentUpdate가 내장되어 있는 컴포넌트 입니다. props랑 state를 얕은 비교를 통해 비교한 뒤 변경된 것이 있을때는 true를 return 해서 리렌더링 하고, 변경된 것이 없을때는 false를 리턴합니다.
+  
 - shouldComponentUpdate 수명 주기 메서드를 사용하여 구성 요소가 다시 렌더링되는 시기를 제어하고 불필요한 업데이트를 방지합니다.
 
+```javascript
+
+shouldComponentUpdate() {
+  if(아니 그래서 너 진짜 바뀌었니?) {
+    그렇다면 render() 하렴;
+  } else {
+    그렇다면 render 하지마렴;
+  }
+}
+
+```
 - React.Suspense 및 React.Lazy 구성 요소를 사용하여 구성 요소를 지연 로드하고 초기 로드 성능을 개선합니다.
+  - 불필요한 컴포넌트가 로드되지 않도록 할 수 있기 때문에 초기 렌더링 지연시간을 어느정도 줄일 수 있습니다.
+  - 컴포넌트가 로드되지 않았기 때문에 로드하는 시간이 필요할 수 있습니다. 이때 Suspense로 로딩 화면을 보여줄 수 있습니다.
+  - lazy 컴포넌트는 반드시 Suspense 컴포넌트 하위에서 렌더링 되어야 합니다.
+
+```javascript
+
+import React, { Suspense } from 'react';
+
+const OtherComponent = React.lazy(() => import('./OtherComponent'));
+
+function MyComponent() {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <OtherComponent />
+      </Suspense>
+    </div>
+  );
+}
+
+```
 
 - 불필요한 래퍼 요소를 피하고 DOM 노드 수를 줄이려면 React.Fragment 구성 요소를 사용하세요.
+  - React의 return문 안에 하나의 최상위 태그가 존재해야 합니다. 따라서 쓸데없는 태그가 들어갈 수 있는데 이때 쓸데없는 태그 대신 사용할 수 있습니다.
+  - <Fragment> </Fragment> 또는 <> </>을 사용할 수 있습니다.
 
+```javascript
+
+function Glossary(props) {
+  return (
+    <React.Fragment key={item.id}>
+      <div>{item.term}</div>
+      <div>{item.description}</div>
+    </React.Fragment>
+  );
+}
+
+```
 - React.Profiler 구성 요소를 사용하여 성능 병목 현상을 식별하고 렌더링 성능을 최적화하십시오.
+  - React 애플리케이션이 렌더링하는 빈도와 렌더링 “비용”을 측정합니다. Profiler의 목적은 메모이제이션 같은 성능 최적화 방법을 활용할 수 있는 애플리케이션의 느린 부분들을 식별해내는 것입니다.
+  - Profiler는 React 트리 내에 어디에나 추가될 수 있으며 트리의 특정 부분의 렌더링 비용을 계산해줍니다.
+
+```javascript
+
+render(
+  <App>
+    <Profiler id="Navigation" onRender={callback}>
+      <Navigation {...props} />
+    </Profiler>
+    <Main {...props} />
+  </App>
+);
+
+```
 
 - React.StrictMode 구성 요소를 사용하여 애플리케이션에서 잠재적인 런타임 오류 및 성능 문제를 식별합니다.
-
-- 코드 분할 및 동적 가져오기를 사용하여 대규모 애플리케이션 코드베이스를 더 작은 청크로 분할하고 초기 로드 성능을 개선합니다.
+  - 안전하지 않은 생명주기를 사용하는 컴포넌트 발견
+  - 레거시 문자열 ref 사용에 대한 경고
+  - 권장되지 않는 findDOMNode 사용에 대한 경고
+  - 예상치 못한 부작용 검사
+  - 레거시 context API 검사
+  - Ensuring reusable state
 
 - Webpack과 같은 프로덕션 수준 빌드 도구를 사용하여 애플리케이션 코드를 최적화하고 전반적인 성능을 향상시킵니다.
 
