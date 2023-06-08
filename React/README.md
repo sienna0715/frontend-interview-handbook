@@ -944,5 +944,55 @@ function App() {
 이렇게 바벨을 사용하여 JavaScript로 변환하면, React에서 작성한 UI 구성 요소를 일반적인 JavaScript 코드로 컴파일하여 브라우저에서 실행할 수 있습니다.
 
 <br/><br/>
-👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+⬆️ [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
+
+## 18. Redux에 대해 설명하세요.
+Redux는 React를 위한 Third-Party 상태관리 라이브러리로 Context API가 개발되기 이전부터 존재했습니다. Redux는 Store라는 상태 컨테이너를 기반으로 전체 어플리케이션의 상태를 저장합니다. <br/><br/>
+
+1️⃣ 리덕스의 구조
+1. 상태가 변경되어야 하는 이벤트가 발생하면, 변경될 상태에 대한 정보가 담긴 **Action 객체**가 생성된다.
+2. 이 Action 객체는 **Dispatch 함수**의 인자로 전달된다.
+3. Dispatch 함수는 Action 객체를 **Reducer 함수**로 전달해준다.
+4. Reducer 함수는 Action 객체의 값을 확인하고, 그 값에 따라 **전역 상태 저장소 Store**의 상태를 변경한다.
+5. 상태가 변경되면, React는 화면을 다시 렌더링 합니다.
+<p align="center">
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*N4UwVQFMJUnUQOikbZ2laA.png" alt="redux" width="350px" />
+</p>
+
+<br/>
+
+2️⃣ 리덕스의 세 가지 규칙
+- Store는 무조건 하나만 존재한다.
+- Redux의 state는 읽기 전용이다. <br/>
+(dispatch를 통해서만 state의 변경이 가능합니다.)
+- Reducer는 순수 함수로만 구성한다. <br/>
+(순수함수는 동일한 인자가 들어갈 때 항상 같은 값이 나와야 합니다. 또한 함수에서 외부의 변수 값을 변경하거나 함수 내로 들어온 인자 값을 변화하게 만드는 일 역시 일어나서는 안 됩니다.)
+
+<br/>
+
+3️⃣ 리덕스의 장점
+- 컴포넌트의 구조가 평평해지고 데이터 전달을 위한 복잡한 계층 구조가 필요하지 않게 됩니다.
+- 애플리케이션에서 Action과 Reducer 등을 각각 모아 분리함으로써 개발자들이 비즈니스 로직에 대해 파악하기 더 쉬워집니다.
+- props와 state를 이용해 상태에 대해 받아오지 않아도 되기 때문에, 무분별한 렌더링이 일어나는 것을 방지할 수 있습니다.
+- 상태 업데이트를 위한 함수들로 인해 컴포넌트가 필요 이상으로 커지는 것을 막을 수 있습니다.
+
+<br/>
+
+cf. [How to use Redux Hooks in a React Native App](https://blog.bitsrc.io/how-to-use-redux-hooks-in-a-react-native-app-login-logout-example-6dee84dee51b)
+
+<br/><br/>
+⬆️ [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
+
+## 19. 리액트 hooks는 무엇이고, 장점은 무엇인가요?
+Hooks는 클래스 기반 컴포넌트의 장점(예를 들어 내부 상태와 생명주기 메소드)을 함수형 컴포넌트로 가져오려는 리액트의 시도에서 시작되었습니다. 
+- 클래스 기반 컴포넌트, lifecyle hooks, this의 필요성이 사라졌다.
+- 공통 기능을 커스텀 hook으로 만들어서 로직을 재사용하기 쉬워졌다. <br/>
+(컴포넌트 자체에서 로직을 분리할 수 있어서 읽기 쉽고 테스트하기 쉬운 코드를 작성할 수 있습니다.) <br/>
+
+이렇듯 Hooks의 등장으로 더이상 클래스형 컴포넌트를 사용하지 않아도 더 쉽고 빠르게 상태 관리를 할 수 있게 되었습니다.
+
+<br/><br/>
+⬆️ [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
