@@ -15,8 +15,11 @@
 - [클래스 컴포넌트와 함수형 컴포넌트의 차이에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/React/README.md#13-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%99%80-%ED%95%A8%EC%88%98%ED%98%95-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [JSX란 무엇인지 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#16-jsx%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [브라우저에서 어떻게 JSX 파일이 실행되는지 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#17-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C-%EC%96%B4%EB%96%BB%EA%B2%8C-jsx-%ED%8C%8C%EC%9D%BC%EC%9D%84-%EC%8B%A4%ED%96%89%ED%95%98%EB%8A%94%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [Redux에 대해 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#18-redux%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
+- [리액트 hooks는 무엇이고, 장점은 무엇인가요?](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#18-redux%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 
 ---
+<br />
 
 ## 1. useEffect의 dependency array에 대해서 설명해주세요.
 
@@ -957,7 +960,7 @@ Redux는 React를 위한 Third-Party 상태관리 라이브러리로 Context API
 4. Reducer 함수는 Action 객체의 값을 확인하고, 그 값에 따라 **전역 상태 저장소 Store**의 상태를 변경한다.
 5. 상태가 변경되면, React는 화면을 다시 렌더링 합니다.
 <p align="center">
-<img src="https://miro.medium.com/v2/resize:fit:1400/1*N4UwVQFMJUnUQOikbZ2laA.png" alt="redux" width="350px" />
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*N4UwVQFMJUnUQOikbZ2laA.png" alt="redux" width="500px" />
 </p>
 
 <br/>
