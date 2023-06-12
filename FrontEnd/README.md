@@ -397,7 +397,7 @@ CSS 호환성을 위해 웹 브라우저 별로 전용 CSS 속성을 부여할 �
 "그냥 쉽고 확실하게 검색 광고 방식을 사용해 상위로 올리는 게 더 좋은거 아닌가?" 라고 생각할 수도 있을 것입니다. 아래 그래프를 봅시다!
 <br /><br />
 
-<p align="center"><img src="https://images.sparktoro.com/blog/wp-content/uploads/2019/08/Paid-Organic-Zero-Click-June-2019-1024x576.png" alt="2019 graph" width="500"></p>
+<p align="center"><img src="https://images.sparktoro.com/blog/wp-content/uploads/2019/08/Paid-Organic-Zero-Click-June-2019-1024x576.png" alt="2019 graph" width="700"></p>
 
 위 조사 결과를 보면 알 수 있듯이, 40%가 오가닉 검색을 활용하고 있으며, 3.8% 유저만이 광고를 클릭하고 있습니다. 이 그래프가 절대적이다라고 할 수는 없지만, 저 또한 광고라고 표시된 사이트는 접속을 잘 하지 않고 있습니다. 
 
@@ -431,7 +431,7 @@ cf. [구글 로봇 메타 태그](https://developers.google.com/search/docs/craw
 
 - 오픈 그래프(Open Graph) 태그 :  링크를 공유할 때 어떻게 노출될지 정의
 
-<p align="center"><img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F1hkKC%2FbtqC78M8NMg%2F6cG5iXuxXcqxpGa7cwaRx0%2Fimg.png" alt="2019 graph" width="500"></p>
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F1hkKC%2FbtqC78M8NMg%2F6cG5iXuxXcqxpGa7cwaRx0%2Fimg.png" alt="2019 graph" width="700"></p>
 
 > SNS에 효과적으로 공유될 수 있게 할 뿐만아니라, 해당 웹페이지가 얼마나 공유되고 있는지 판단하는 기준이 되어 검색 상위 노출을 위한 품질 평가에 영향을 주기 때문에 오픈 그래프를 잘 만드는 것도 중요하다!
 
