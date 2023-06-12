@@ -379,3 +379,5 @@ CSS 호환성을 위해 웹 브라우저 별로 전용 CSS 속성을 부여할 �
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
 
+## SEO에 대해 설명해주세요.
+
