@@ -1,8 +1,8 @@
 # Frontend Interview Handbook
 
-<p ***align***="center"><img *src*='https://github.com/sienna0715/frontend-interview-handbook/assets/91577106/9dc49b5b-2c94-446a-be5d-ef1eb30da544' *width*='700px' /></p>
+<p align="center"><img src='https://github.com/sienna0715/frontend-interview-handbook/assets/91577106/9dc49b5b-2c94-446a-be5d-ef1eb30da544' width*='700px' /></p>
 
-<p ***align***="center">2023.05.10 ~ </p>
+<p align="center">2023.05.10 ~ </p>
 
 <br />
 
