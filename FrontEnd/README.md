@@ -6,8 +6,10 @@
 - [브라우저의 렌더링 과정에 대하여 설명해 주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#5-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98-%EB%A0%8C%EB%8D%94%EB%A7%81-%EA%B3%BC%EC%A0%95%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-%EC%84%A4%EB%AA%85%ED%95%B4-%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [주소창에 google.com을 입력하면 일어나는 일을 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#6-%EC%A3%BC%EC%86%8C%EC%B0%BD%EC%97%90-googlecom%EC%9D%84-%EC%9E%85%EB%A0%A5%ED%95%98%EB%A9%B4-%EC%9D%BC%EC%96%B4%EB%82%98%EB%8A%94-%EC%9D%BC%EC%9D%84-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [크로스 브라우징에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/FrontEnd#7-%ED%81%AC%EB%A1%9C%EC%8A%A4-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A7%95%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [SEO에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/FrontEnd#seo%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 
 ---
+<br/>
 
 ## 1. RESTful API에 대해 설명해주세요.
 
@@ -379,5 +381,60 @@ CSS 호환성을 위해 웹 브라우저 별로 전용 CSS 속성을 부여할 �
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
 
-## SEO에 대해 설명해주세요.
+## 8. SEO에 대해 설명해주세요.
+우선, SEO는 Search Engine optimization의 줄임말로, 쉽게 말해 검색 엔진 최적화를 의미합니다. 우리가 궁금한게 생겨 구글이나 네이버에 검색을 했을 때, 수많은 검색 결과 중 가장 상위에 노출된 페이지들에 접속한 경험이 다들 있을 것 입니다. 이렇듯 검색 결과 페이지에서 노출도를 높이는 작업을 SEO라고 합니다.
+<br /><br />
+간략하게 먼저 설명하자면 구글이나 네이버의 검색 엔진이 쉽게 이해할 수 있는 형태로 웹페이지를 구성하는 과정입니다.
 
+검색 결과 첫 페이지에서는 크게 두 가지로 나눠볼 수 있습니다.
+- 자연 검색 (Organic Search)
+- PPC (PAy-per-click)
+
+>  pay-per-click(PPC)은 의역하면 '클릭당 지불'이라는 의미로 검색 엔진, 웹사이트, 블로그 등에서 쓰이는 것인 바, 사용자가 광고를 클릭해서 광고주의 웹사이트로 이동하였을 경우에만 광고주가 대금을 지불하는 방식의 광고 모델이다. 키워드 광고의 일종이다. <br /> 코스트 퍼 클릭(Cost Per Click, 줄여서 CPC),혹은 페이 퍼 십(Pay per Ship)이라고도 일컫는다.
+
+<br />
+
+"그냥 쉽고 확실하게 검색 광고 방식을 사용해 상위로 올리는 게 더 좋은거 아닌가?" 라고 생각할 수도 있을 것입니다. 아래 그래프를 봅시다!
+<br /><br />
+
+<p align="center"><img src="https://images.sparktoro.com/blog/wp-content/uploads/2019/08/Paid-Organic-Zero-Click-June-2019-1024x576.png" alt="2019 graph" width="500"></p>
+
+위 조사 결과를 보면 알 수 있듯이, 40%가 오가닉 검색을 활용하고 있으며, 3.8% 유저만이 광고를 클릭하고 있습니다. 이 그래프가 절대적이다라고 할 수는 없지만, 저 또한 광고라고 표시된 사이트는 접속을 잘 하지 않고 있습니다. 
+
+이렇듯 기업에서 검색 엔진에서 노출 순위를 무시할 수 없는 이유는 노출이 많이 될 수록 마케팅 효과를 얻을 수 있기 때문입니다. 특히나 검색 엔진 최적화를 선택하면 유료 광고와 달리 집행 비용이 발생하지 않기 때문에 너무나도 큰 장점으로 다가오는 것입니다.
+
+그렇다면 검색 엔진 최적화 어떻게 하면 되는 것일까요?
+<br/><br/>
+
+### 메타 태그(Meta Tag)
+- \<title> 태그 : 검색 엔진에 검색했을 때 노출되는 제목 <br/><br/>
+- \<description> 태그 : 해당 웹페이지를 설명 요약문 (평균 1-2줄)
+> 대부분의 유저가 이 description을 보고 자신이 찾고 있는 정보가 맞는지 확인 후 접속하기 때문에 최대한 반복적인 표현없이 잘 읽히도록 작성하는 것이 좋습니다.
+- \<robots> 태그 : 웹페이지 별 검색 로봇의 접근 여부를 설정
+> 보통 검색 엔진에는 웹페이지를 크롤링하는 검색 로봇이 있습니다. <br/>
+속성을 어떻게 정의하냐에 따라 결정됩니다. <br/> 
+cf. [구글 로봇 메타 태그](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag?hl=ko) <br/><br/> 
+크롤링이란? <br/> 
+검색 로봇들이 웹페이지를 돌아다니며 데이터를 수집하는 행위
+
+<br/>
+
+- \<canonical> 태그 : 대표 URL을 설정
+```html
+<link rel="canonical" href="https://example.com/shop">
+```
+> 구글은 다른 URL을 가지고 있는 웹페이지가 같은 내용을 담고 있으면, 페널티를 부과하게 되고 이는 웹페이지의 색인(indexing)이 불가능해지거나 저품질 콘텐츠로 평가받게 된다. 이에 한 페이지의 대표 URL을 지정함으로써, 검색 로봇이 웹페이지를 크롤링할 때 중복 URL로 인한 페널티가 적용되게 하지 않게끔 도와주는 역할을 합니다. <br/> <br/> 
+색인이란? <br/> 
+크롤링한 데이터를 기반으로 검색 결과에 표시될 수 있도록 하는 것
+
+<br/>
+
+- 오픈 그래프(Open Graph) 태그 :  링크를 공유할 때 어떻게 노출될지 정의
+
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F1hkKC%2FbtqC78M8NMg%2F6cG5iXuxXcqxpGa7cwaRx0%2Fimg.png" alt="2019 graph" width="500"></p>
+
+> SNS에 효과적으로 공유될 수 있게 할 뿐만아니라, 해당 웹페이지가 얼마나 공유되고 있는지 판단하는 기준이 되어 검색 상위 노출을 위한 품질 평가에 영향을 주기 때문에 오픈 그래프를 잘 만드는 것도 중요하다!
+
+<br/>
+
+출처 | https://yozm.wishket.com/magazine/detail/1540/
