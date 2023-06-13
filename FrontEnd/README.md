@@ -409,6 +409,9 @@ TCP는 네트워크에 연결된 컴퓨터에서 실행되는 프로그램 간�
 2. Server -> Client : 어 잘 들려! 내 말은 들려?
 3. Client -> Server : 잘 들려!
 
+<p align="center"><img src="https://github.com/lapmu/frontend-interview-handbook/assets/115691844/53bec4a8-007d-465b-bd09-e0e0b6e3afeb" width='400px'/></p>
+
+
 - SYN(synchronize sequence numbers) - 연결 확인을 보내는 무작위의 숫자 값 (내 말 들려?)
 - ACK(acknowledgements) - Client 혹은 Server로부터 받은 SYN에 1을 더해 SYN을 잘 받았다는 ACK (잘 들려!)
 
@@ -419,8 +422,13 @@ TCP는 네트워크에 연결된 컴퓨터에서 실행되는 프로그램 간�
 3. Server -> Client : 나도 끊을게!
 4. Client -> Server : 알겠어!
 
+<p align="center"><img src="https://github.com/lapmu/frontend-interview-handbook/assets/115691844/8817c68b-86de-41b5-94a9-d1d5f298bc88" width='400px'/></p>
+
+
 ### UDP(User Datagram Protocol)
 UDP는 비연결형 프로토콜입니다. 연결을 위해 할당되는 논리적인 경로가 없고, 각각의 패킷은 다른 경로로 전송되며, 독립적인 관계를 지닙니다.
+
+<p align="center"><img src="https://github.com/lapmu/frontend-interview-handbook/assets/115691844/e409ea33-31b2-4553-a2d8-43dc428993e6" width='400px'/></p>
 
 #### UDP의 특징
 - 비연결형 서비스로 데이터그램 방식을 제공
