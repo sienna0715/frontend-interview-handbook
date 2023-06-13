@@ -1,4 +1,5 @@
 # FrontEnd
+
 - [RESTful API에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#1-restful-api%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [객체 지향 프로그래밍이란 무엇인가요?](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#1-restful-api%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [프로세스와 스레드는 각자 무엇이며, 어떤 차이가 있나요?](https://github.com/sienna0715/frontend-interview-handbook/tree/main/FrontEnd#3-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%99%80-%EC%8A%A4%EB%A0%88%EB%93%9C%EB%8A%94-%EA%B0%81%EC%9E%90-%EB%AC%B4%EC%97%87%EC%9D%B4%EB%A9%B0-%EC%96%B4%EB%96%A4-%EC%B0%A8%EC%9D%B4%EA%B0%80-%EC%9E%88%EB%82%98%EC%9A%94)
@@ -9,78 +10,86 @@
 - [SEO에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/FrontEnd#8-seo%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 
 ---
+
 <br/>
 
 ## 1. RESTful API에 대해 설명해주세요.
 
 ### 1️⃣ REST란
-우선 RESTful API의 REST는 “Representational State Transfer”의 약자로 자원을 이름으로 구분하여 해당 자원의 상태를 주고 받는 모든 것을 의미합니다. 
+
+우선 RESTful API의 REST는 “Representational State Transfer”의 약자로 자원을 이름으로 구분하여 해당 자원의 상태를 주고 받는 모든 것을 의미합니다.
 즉, HTTP URI를 통해 자원(Resource)을 명시하고, HTTP Method를 통해 해당 URI에 대한 CRUD Operation을 적용하는 것입니다.
 
-> **CRUD Operation란?**  <br/>
-Create, Read, Update, Delete를 통틀어 일컫는 말이다. <br/><br/>
-Create: 데이터 생성(POST) <br/>
-Read: 데이터 조회(GET)  <br/>
-Update: 데이터 수정(PUT, PATCH)  <br/>
-Delete: 데이터 삭제(DELETE)
+> **CRUD Operation란?** <br/>
+> Create, Read, Update, Delete를 통틀어 일컫는 말이다. <br/><br/>
+> Create: 데이터 생성(POST) <br/>
+> Read: 데이터 조회(GET) <br/>
+> Update: 데이터 수정(PUT, PATCH) <br/>
+> Delete: 데이터 삭제(DELETE)
 
 <br/>
 
 ### 2️⃣ REST 구성과 특징
+
 - 자원(RESOURCE) -> URI
 - 행위(Verb) -> HTTP METHOD
 - 표현(Representations)
 
-
 1. Uniform (유니폼 인터페이스) <br/>
-: 4가지 인터페이스로 한정지어서 해당하는 Resource를 접근하도록 만든 아키텍처 스타일
+   : 4가지 인터페이스로 한정지어서 해당하는 Resource를 접근하도록 만든 아키텍처 스타일
 2. Stateless (무상태성) <br/>
-: 상태정보를 따로 저장하고 관리하지 않는다.
+   : 상태정보를 따로 저장하고 관리하지 않는다.
 3. Cacheable (캐시 가능) <br/>
-: HTTP가 가진 캐싱 기능이 적용 가능
+   : HTTP가 가진 캐싱 기능이 적용 가능
 4. Self-descriptiveness (자체 표현 구조) <br/>
-: REST API 메시지만 보고도 이를 쉽게 이해 할 수 있는 자체 표현 구조로 되어 있다
+   : REST API 메시지만 보고도 이를 쉽게 이해 할 수 있는 자체 표현 구조로 되어 있다
 5. Client - Server 구조 <br/>
-: 클라이언트와 서버에서 개발해야 할 내용이 명확해지고 서로간 의존성이 준다.
+   : 클라이언트와 서버에서 개발해야 할 내용이 명확해지고 서로간 의존성이 준다.
 6. 계층형 구조 <br/>
-: 다중 계층으로 구성될 수 있으며 보안, 로드 밸런싱, 암호화 계층을 추가해 구조상의 유연성을 둘 수 있고 PROXY, 게이트웨이 같은 네트워크 기반의 중간매체를 사용할 수 있다.
-<br/><br/>
-**HTTP라는 기존 웹표준을 그대로 사용하기 때문에, 웹에서 사용하는 기존 인프라를 그대로 활용이 가능하다!!!**
+   : 다중 계층으로 구성될 수 있으며 보안, 로드 밸런싱, 암호화 계층을 추가해 구조상의 유연성을 둘 수 있고 PROXY, 게이트웨이 같은 네트워크 기반의 중간매체를 사용할 수 있다.
+   <br/><br/>
+   **HTTP라는 기존 웹표준을 그대로 사용하기 때문에, 웹에서 사용하는 기존 인프라를 그대로 활용이 가능하다!!!**
 
 <br/>
 
 ### 3️⃣ REST API란
- 방금 설명한 REST의 원리를 따르는 API를 말하는 것으로 REST API의 설계 규칙을 올바르게 지킨 시스템을 "**RESTful하다**"라고 합니다.
 
- 그럼 어떤 규칙을 지켜야 하는지 알아보도록 하겠습니다. <br/><br/>
+방금 설명한 REST의 원리를 따르는 API를 말하는 것으로 REST API의 설계 규칙을 올바르게 지킨 시스템을 "**RESTful하다**"라고 합니다.
+
+그럼 어떤 규칙을 지켜야 하는지 알아보도록 하겠습니다. <br/><br/>
 
 #### ‼️ REST API 중심 규칙
+
 1. URI는 정보의 자원을 표현해야 한다.
 2. 자원에 대한 행위는 HTTP Method(GET, POST, PUT, DELETE 등)로 표현
-> DELETE /members/1
-
+   > DELETE /members/1
 
 #### ‼️ URI 설계 시 주의할 점
+
 1. URI는 동사보다는 명사를, 대문자보다는 소문자를 사용하여야 한다.
-> Bad Example http://khj93.com/Running/ <br/>
-Good Example  http://khj93.com/run/  
+
+   > Bad Example http://khj93.com/Running/ <br/>
+   > Good Example http://khj93.com/run/
 
 2. 마지막에 슬래시(/)를 포함하지 않는다.
-> Bad Example http://khj93.com/test/  <br/>
-Good Example  http://khj93.com/test
+
+   > Bad Example http://khj93.com/test/ <br/>
+   > Good Example http://khj93.com/test
 
 3. 언더바 대신 하이폰을 사용한다.
-> Bad Example http://khj93.com/test_blog <br/>
-Good Example  http://khj93.com/test-blog  
+
+   > Bad Example http://khj93.com/test_blog <br/>
+   > Good Example http://khj93.com/test-blog
 
 4. 파일확장자는 URI에 포함하지 않는다.
->  Bad Example http://khj93.com/photo.jpg  <br/>
-Good Example  http://khj93.com/photo  
+
+   > Bad Example http://khj93.com/photo.jpg <br/>
+   > Good Example http://khj93.com/photo
 
 5. URI에 행위(HTTP Method)나 동사 표현이 들어가면 안 된다.
-> Bad Example http://khj93.com/members/delete/1  <br/>
-> Bad Example http://khj93.com/members/show/1  <br/>
-Good Example  http://khj93.com/members/1  
+   > Bad Example http://khj93.com/members/delete/1 <br/>
+   > Bad Example http://khj93.com/members/show/1 <br/>
+   > Good Example http://khj93.com/members/1
 
 <br/>
 이렇듯 REST API는 각 요청이 어떤 동작이나 정보를 위한 것인지를 그 요청의 모습 자체로 추론이 가능하다는 것 입니다.
@@ -91,15 +100,17 @@ cf. [RESTful API란 무엇입니까?](https://aws.amazon.com/ko/what-is/restful-
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
 
-
 ## 2. 객체 지향 프로그래밍(OOP)란 무엇인가요?
+
 "Object Oriented Programming"의 약자로 객체 개념에 기반한 프로그래밍 패러다임의 일종으로, 프로그래밍에서 필요한 데이터를 추상화 시켜 상태와 행위를 가진 객체로 만들고, 객체들 간의 상호작용을 통해 로직을 구성하는 프로그래밍 방법을 말합니다.
 <br/><br/>
 
 그럼 객체 지향 프로그래밍의 핵심 4가지에 대해 얘기해보도록 하겠습니다.
 
-### Encapsulation (캡슐화) 
+### Encapsulation (캡슐화)
+
 연관 있는 데이터와 함수를 오브젝트에 담아두고, 외부에서 보일 필요가 없는 데이터를 캡슐화하는 것을 맓합니다.
+
 - 데이터 구조와 데이터를 다루는 방법들을 결합 시켜 묶는 것 (변수와 함수를 하나로 묶는 것을 뜻함)
 - 낮은 결합도를 유지할 수 있도록 설계하는 것
 
@@ -107,19 +118,23 @@ cf. [RESTful API란 무엇입니까?](https://aws.amazon.com/ko/what-is/restful-
 <br/><br/>
 
 ### Abstraction (추상화)
+
 내부의 복잡한 기능을, 외부에서 어떤 형태로, 공통적으로 어떻게 이 클래스를 이용하게 할 것인가를 고민하는 것을 추상화라고 합니다.
+
 - 객체에서 공통된 속성과 행위를 추출 하는 것
 - 공통의 속성과 행위를 찾아서 타입을 정의하는 과정
 - 추상화는 불필요한 정보는 숨기고 중요한 정보만을 표현함으로써 프로그램을 간단하게 만드는 것
-<br/><br/>
+  <br/><br/>
 
-### Inheritance (상속) 
+### Inheritance (상속)
+
 정의해둔 클래스의 속성과 행위를 하위 클래스에 물려주거나 하위 클래스가 상위 클래스의 속성과 행위를 물려받는 것을 말합니다. 즉, 재사용할 수 있게 해줍니다.
 
 - 새로운 클래스가 기존의 클래스의 데이터와 연산을 이용할 수 있게 하는 기능
-<br/><br/>
+  <br/><br/>
 
 ### Polymorphism (다형성)
+
 poly = many, morphi = form이라 하여 해석하면, '다양한 형태'를 의미하듯, 다형성은 공통된 함수(클래스)로 만들어진 객체(인스턴스)에 접근할 수 있습니다. 클래스 내부에 같은 이름의 행위를 여러개 정의하거나 상위 클래스의 행위를 하위 클래스에서 재정의하여 사용할 수 있기 때문에 다형성이라는 특징을 갖게 됩니다.
 
 - 하나의 변수명, 함수명이 상황에 따라 다른 의미로 해석 될 수 있는 것
@@ -141,10 +156,9 @@ cf. [객체지향 프로그래밍이란?](https://jongminfire.dev/%EA%B0%9D%EC%B
 
 ### ✍️ 프로세스와 스레드, 한줄 정리
 
-| 프로그램(Program) | 프로세스 (Process) | 스레드 (Thread) |
-| --- | --- | --- |
+| 프로그램(Program)                         | 프로세스 (Process)                         | 스레드 (Thread)                                      |
+| ----------------------------------------- | ------------------------------------------ | ---------------------------------------------------- |
 | 어떤 작업을 하기 위해 실행할 수 있는 파일 | 운영체제로부터 자원을 할당받은 작업의 단위 | 프로세스가 할당받은 자원을 이용하는 실행 흐름의 단위 |
-
 
 ### 🖥️ 프로그램(Progam)
 
@@ -152,23 +166,23 @@ cf. [객체지향 프로그래밍이란?](https://jongminfire.dev/%EA%B0%9D%EC%B
 - 프로그램은 파일이 저장 장치에 있지만 메모리에는 올라가 있지 않은 정적인 상태입니다.
 - 따라서 프로그램을 실행하기 위해서는 Memory 자원을 할당 받아야 하는테, 이때 자원을 할당받아 실행되는 프로그램을 프로세스라고 합니다.
 
-
 ### 🖥️ 프로세스 (Process)
+
 <img src="https://velog.velcdn.com/images/haizel/post/c06605bc-afe8-4309-b5f8-722cda7303ea/image.png" width="500" />
 
 - `컴퓨터에서 연속적으로 실행되고 있는 컴퓨터 프로그램` 으로, 메모리에 올라와 실행되고 있는 프로그램의 인스턴스(독립적인 개체)를 말합니다.
 - 즉 운영체제로부터 시스템 자원을 할당받은 작업의 단위로, 동적인 개념으로는 `실행된 프로그램`을 의미합니다.
 
-
 #### 특징
+
 <img src="https://velog.velcdn.com/images/haizel/post/a8878d85-c701-4148-b6d8-33a9d2738371/image.png" width="500" />
 
 1. 프로세스는 각각 독립된 메모리 영역 (Code, Data, Stack, Heap의 구조)를 할당 받습니다.
 2. 기본적으로 프로세스당 최소 1개의 스레드(메인 스레드)를 가지고 있습니다.
 3. 각 프로세스는 별도의 주소 공간에서 실행되며, 한 프로세스는 다른 프로세스의 변수나 자료 구조에 접근할 수 없습니다.
 4. 한 프로세스가 다른 프로세스 자원에 접근하려면 프로세스 간의 통신(IPC, Inter-Process-Communication)을 사용해야 합니다.
-    - e.g. 파이프, 파일, 소켓 등을 이용한 통신 방법
-    
+   - e.g. 파이프, 파일, 소켓 등을 이용한 통신 방법
+
 <br />
 
 ### 🖥️ 스레드(Thread)
@@ -179,14 +193,14 @@ cf. [객체지향 프로그래밍이란?](https://jongminfire.dev/%EA%B0%9D%EC%B
 <br />
 
 쉽게 설명하자면, 크롬 브라우저를 실행하면 하나의 프로세스가 생성됩니다.
-이때 브라우저에서 파일을 다운 받고 노래를 들으며 온라인 쇼핑을 한다면 각 작업마다 스레드가 형성됩니다. 즉, 하나의 프로세스 안에서 여러 작업의 흐름이 동시에 진행되기 때문에 가능한 일입니다. 
+이때 브라우저에서 파일을 다운 받고 노래를 들으며 온라인 쇼핑을 한다면 각 작업마다 스레드가 형성됩니다. 즉, 하나의 프로세스 안에서 여러 작업의 흐름이 동시에 진행되기 때문에 가능한 일입니다.
 
 <img src="https://velog.velcdn.com/images/haizel/post/0a64869f-615b-4f99-b4ca-6d797cd53d38/image.png" width="700" />
 
-여기서 각 일련의 작업 흐름들을 **스레드**라고 하며, 스레드가 여러 개라면 **멀티(다중) 스레드**라고 합니다. 
-
+여기서 각 일련의 작업 흐름들을 **스레드**라고 하며, 스레드가 여러 개라면 **멀티(다중) 스레드**라고 합니다.
 
 #### 특징
+
 <img src="https://velog.velcdn.com/images/haizel/post/0ee25928-42e8-4745-8fd9-73e9ed1a2a1d/image.png" width="500" />
 
 1. 스레드는 프로세스 내에서 각 Stack만 따로 할당받고, Code, Data, Heap 영역은 공유합니다.
@@ -200,7 +214,9 @@ cf. [객체지향 프로그래밍이란?](https://jongminfire.dev/%EA%B0%9D%EC%B
 <br/><br/>
 
 ## 4. 자바스크립트는 싱글 스레드 언어로 알려져있는데, 싱글 스레드와 멀티 스레드의 차이점은 무엇이며, 각 장단점은 무엇인지 설명해주세요.
+
 ### 🙎‍♀️ 싱글스레드(Single thread)
+
 <img src="https://velog.velcdn.com/images/haizel/post/4e2a729d-113e-40e8-a17f-f09c24d612ff/image.png" width="300" height="400" />
 하나의 프로세스에 오직 하나의 스레드로만 실행되며, 따라서 하나의 레지스터와 스택으로 표현이 가능합니다.
 
@@ -232,11 +248,12 @@ cf. [객체지향 프로그래밍이란?](https://jongminfire.dev/%EA%B0%9D%EC%B
 
 3. **싱글 스레드 모델은 에러 처리를 못하는 경우 중단됩니다.**
 
-반면 멀티 스레드 모델은 에러 발생 시 새로운 스레드를 생성하여 극복합니다. 
+반면 멀티 스레드 모델은 에러 발생 시 새로운 스레드를 생성하여 극복합니다.
 
 <br />
 
 ### 👨‍👩‍👧‍👦 **멀티 스레드 (Multi thread)**
+
 <img src="https://velog.velcdn.com/images/haizel/post/43689b9a-2245-4cc7-9822-8f9bc2f64455/image.png" width="300" height="300" />
 
 멀티 스레드는 CPU의 최대 활용을 위해 프로그램의 둘 이상을 동시에 실행하는 기술로, 컨텍스트 스위칭을 통해서 이뤄집니다.
@@ -244,9 +261,9 @@ cf. [객체지향 프로그래밍이란?](https://jongminfire.dev/%EA%B0%9D%EC%B
 메인 스레드 외의 추가적인 스레드를 이용하여 병렬적으로 작업을 처리한다는 특징이 있습니다.
 
 > 💡 **컨텍스트 스위칭(Context Switching)이란?**
+>
 > - CPU에서 여러 프로세스를 돌아가면서 작업을 처리하는 과정을 말합니다.
 > - 구체적으로, 동작 중인 프로세스가 대기 하면서 해당 프로세스의 상태(Context)를 보관하고, 대기하고 있던 다음 순서의 프로세스가 동작하면서 이전에 보관했던 프로세스의 상태를 복구하는 작업을 말합니다.
-
 
 #### 👍 장점
 
@@ -292,7 +309,7 @@ cf. [객체지향 프로그래밍이란?](https://jongminfire.dev/%EA%B0%9D%EC%B
 6. Rayout : 각 요소를 어디에 배치할 지 결정합니다.
 7. Paint : 레이아웃 과정이 끝나면 UI 백엔드에서 Render 트리를 화면에 그리기 시작하는 과정입니다.
 
-> 주의 : HTML문서를 파싱하는 도중에 Javascript를 만나면 하던 일을 멈추고 Javascript 먼저 읽습니다. 
+> 주의 : HTML문서를 파싱하는 도중에 Javascript를 만나면 하던 일을 멈추고 Javascript 먼저 읽습니다.
 
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
@@ -317,8 +334,10 @@ cf. [객체지향 프로그래밍이란?](https://jongminfire.dev/%EA%B0%9D%EC%B
 <br/><br/>
 
 ## 7. 크로스 브라우징에 대해 설명해주세요.
+
 ### 🖥️ 크로스 브라우징(Cross Browsing)이란?
-> *Cross Browsing이란* 표준 웹 기술을 채용하여 다른 기종 혹은 플랫폼에 따라 달리 구현되는 기술을 **비슷하게** 만들어 웹 페이지를 제작하는 기법을 말하는 것이다.
+
+> _Cross Browsing이란_ 표준 웹 기술을 채용하여 다른 기종 혹은 플랫폼에 따라 달리 구현되는 기술을 **비슷하게** 만들어 웹 페이지를 제작하는 기법을 말하는 것이다.
 >
 > 한국소프트웨어진흥원 공개S W지원센터 발간한 ‘Cross Browsing 가이드’ 중
 
@@ -329,6 +348,7 @@ cf. [객체지향 프로그래밍이란?](https://jongminfire.dev/%EA%B0%9D%EC%B
 크로스 브라우징을 고려하지 않으면 HTML, CSS, JS 등 코드가 원하는대로 작동되지 않을 수 있어, 각 브라우저의 렌더링 엔진에 따른 크로스 브라우징 설정을 해주어야 합니다.
 
 ### ⚠️ 크로스 브라우징은 바벨을 통해 이루어진다.
+
 > 바벨(Babel)은 대표적인 트렌스파일러로, 특정 언어로 작성된 코드를 다른 언어로 변환시키는 역할을 수행합니다. 입력과 출력이 모두 자바스크립트 코드인 컴파일러입니다.
 
 바벨은 1) 최신 문법(ES5 이후)으로 작성된 코드를 ES5버전의 코드로 바꿔주고, 2) TypeScript, JSX 등 다른 언어로 작성된 코드들이 모든 브라우저에서 동작하도록 호환성을 지원합니다.
@@ -342,18 +362,19 @@ cf. [객체지향 프로그래밍이란?](https://jongminfire.dev/%EA%B0%9D%EC%B
 대신 ‘크로스 브라우징’을 통해 최대한 다양한 브라우저에서 제작자가 의도한 내용을 이상없이 동작하도록 해주는 것입니다.
 
 ### ⚠️ 렌더링 엔진이란 무엇인가?
+
 > 웹 렌더링 엔진(Web Rendering Engine) 또는 웹 브라우저 엔진(Web Browser Engine) 또는 웹 레이아웃 엔진(Web Layout Engine)이라고도 불립니다.
 
 페이지를 렌더할 때 실질적으로 페이지를 작업해주는 브라우저 엔진을 의미합니다.
 사용되는 브라우저 버전 혹은 지원 회사에 따라 렌더링 엔진은 다르게 사용됩니다.
 
-| 브라우저 | 렌더링 엔진 | vendor prefix |
-| --- | --- | --- |
-| 모질라, 파이어폭스 | Gecko | -moz- |
-| 구글(크롬), 오페라 | Blink | -webkit-, -o- |
-| 사파리 | Webkit | -webkit- |
-| 익스플로러 | Trident | -ms- |
-| 마이크로소프트 엣지 | EdgeHTML | -ms- |
+| 브라우저            | 렌더링 엔진 | vendor prefix |
+| ------------------- | ----------- | ------------- |
+| 모질라, 파이어폭스  | Gecko       | -moz-         |
+| 구글(크롬), 오페라  | Blink       | -webkit-, -o- |
+| 사파리              | Webkit      | -webkit-      |
+| 익스플로러          | Trident     | -ms-          |
+| 마이크로소프트 엣지 | EdgeHTML    | -ms-          |
 
 ### ⚠️ **벤더 프리픽스(Vendor Prefix)란?**
 
@@ -387,15 +408,17 @@ CSS 호환성을 위해 웹 브라우저 별로 전용 CSS 속성을 부여할 �
 <br/><br/>
 
 ## 8. SEO에 대해 설명해주세요.
+
 우선, SEO는 Search Engine optimization의 줄임말로, 쉽게 말해 검색 엔진 최적화를 의미합니다. 우리가 궁금한게 생겨 구글이나 네이버에 검색을 했을 때, 수많은 검색 결과 중 가장 상위에 노출된 페이지들에 접속한 경험이 다들 있을 것 입니다. 이렇듯 검색 결과 페이지에서 노출도를 높이는 작업을 SEO라고 합니다.
 <br /><br />
 간략하게 먼저 설명하자면 구글이나 네이버의 검색 엔진이 쉽게 이해할 수 있는 형태로 웹페이지를 구성하는 과정입니다.
 
 검색 결과 첫 페이지에서는 크게 두 가지로 나눠볼 수 있습니다.
+
 - 자연 검색 (Organic Search)
 - PPC (PAy-per-click)
 
->  pay-per-click(PPC)은 의역하면 '클릭당 지불'이라는 의미로 검색 엔진, 웹사이트, 블로그 등에서 쓰이는 것인 바, 사용자가 광고를 클릭해서 광고주의 웹사이트로 이동하였을 경우에만 광고주가 대금을 지불하는 방식의 광고 모델이다. 키워드 광고의 일종이다. <br /> 코스트 퍼 클릭(Cost Per Click, 줄여서 CPC),혹은 페이 퍼 십(Pay per Ship)이라고도 일컫는다.
+> pay-per-click(PPC)은 의역하면 '클릭당 지불'이라는 의미로 검색 엔진, 웹사이트, 블로그 등에서 쓰이는 것인 바, 사용자가 광고를 클릭해서 광고주의 웹사이트로 이동하였을 경우에만 광고주가 대금을 지불하는 방식의 광고 모델이다. 키워드 광고의 일종이다. <br /> 코스트 퍼 클릭(Cost Per Click, 줄여서 CPC),혹은 페이 퍼 십(Pay per Ship)이라고도 일컫는다.
 
 <br />
 
@@ -404,7 +427,7 @@ CSS 호환성을 위해 웹 브라우저 별로 전용 CSS 속성을 부여할 �
 
 <p align="center"><img src="https://images.sparktoro.com/blog/wp-content/uploads/2019/08/Paid-Organic-Zero-Click-June-2019-1024x576.png" alt="2019 graph" width="700"></p>
 
-위 조사 결과를 보면 알 수 있듯이, 40%가 오가닉 검색을 활용하고 있으며, 3.8% 유저만이 광고를 클릭하고 있습니다. 이 그래프가 절대적이다라고 할 수는 없지만, 저 또한 광고라고 표시된 사이트는 접속을 잘 하지 않고 있습니다. 
+위 조사 결과를 보면 알 수 있듯이, 40%가 오가닉 검색을 활용하고 있으며, 3.8% 유저만이 광고를 클릭하고 있습니다. 이 그래프가 절대적이다라고 할 수는 없지만, 저 또한 광고라고 표시된 사이트는 접속을 잘 하지 않고 있습니다.
 
 이렇듯 기업에서 검색 엔진에서 노출 순위를 무시할 수 없는 이유는 노출이 많이 될 수록 마케팅 효과를 얻을 수 있기 때문입니다. 특히나 검색 엔진 최적화를 선택하면 유료 광고와 달리 집행 비용이 발생하지 않기 때문에 너무나도 큰 장점으로 다가오는 것입니다.
 
@@ -412,29 +435,32 @@ CSS 호환성을 위해 웹 브라우저 별로 전용 CSS 속성을 부여할 �
 <br/><br/>
 
 ### 메타 태그(Meta Tag)
+
 - \<title> 태그 : 검색 엔진에 검색했을 때 노출되는 제목 <br/><br/>
 - \<description> 태그 : 해당 웹페이지를 설명 요약문 (평균 1-2줄)
-> 대부분의 유저가 이 description을 보고 자신이 찾고 있는 정보가 맞는지 확인 후 접속하기 때문에 최대한 반복적인 표현없이 잘 읽히도록 작성하는 것이 좋습니다.
+  > 대부분의 유저가 이 description을 보고 자신이 찾고 있는 정보가 맞는지 확인 후 접속하기 때문에 최대한 반복적인 표현없이 잘 읽히도록 작성하는 것이 좋습니다.
 - \<robots> 태그 : 웹페이지 별 검색 로봇의 접근 여부를 설정
-> 보통 검색 엔진에는 웹페이지를 크롤링하는 검색 로봇이 있습니다. <br/>
-속성을 어떻게 정의하냐에 따라 결정됩니다. <br/> 
-cf. [구글 로봇 메타 태그](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag?hl=ko) <br/><br/> 
-크롤링이란? <br/> 
-검색 로봇들이 웹페이지를 돌아다니며 데이터를 수집하는 행위
+  > 보통 검색 엔진에는 웹페이지를 크롤링하는 검색 로봇이 있습니다. <br/>
+  > 속성을 어떻게 정의하냐에 따라 결정됩니다. <br/>
+  > cf. [구글 로봇 메타 태그](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag?hl=ko) <br/><br/>
+  > 크롤링이란? <br/>
+  > 검색 로봇들이 웹페이지를 돌아다니며 데이터를 수집하는 행위
 
 <br/>
 
 - \<canonical> 태그 : 대표 URL을 설정
+
 ```html
-<link rel="canonical" href="https://example.com/shop">
+<link rel="canonical" href="https://example.com/shop" />
 ```
-> 구글은 다른 URL을 가지고 있는 웹페이지가 같은 내용을 담고 있으면, 페널티를 부과하게 되고 이는 웹페이지의 색인(indexing)이 불가능해지거나 저품질 콘텐츠로 평가받게 된다. 이에 한 페이지의 대표 URL을 지정함으로써, 검색 로봇이 웹페이지를 크롤링할 때 중복 URL로 인한 페널티가 적용되게 하지 않게끔 도와주는 역할을 합니다. <br/> <br/> 
-색인이란? <br/> 
-크롤링한 데이터를 기반으로 검색 결과에 표시될 수 있도록 하는 것
+
+> 구글은 다른 URL을 가지고 있는 웹페이지가 같은 내용을 담고 있으면, 페널티를 부과하게 되고 이는 웹페이지의 색인(indexing)이 불가능해지거나 저품질 콘텐츠로 평가받게 된다. 이에 한 페이지의 대표 URL을 지정함으로써, 검색 로봇이 웹페이지를 크롤링할 때 중복 URL로 인한 페널티가 적용되게 하지 않게끔 도와주는 역할을 합니다. <br/> <br/>
+> 색인이란? <br/>
+> 크롤링한 데이터를 기반으로 검색 결과에 표시될 수 있도록 하는 것
 
 <br/>
 
-- 오픈 그래프(Open Graph) 태그 :  링크를 공유할 때 어떻게 노출될지 정의
+- 오픈 그래프(Open Graph) 태그 : 링크를 공유할 때 어떻게 노출될지 정의
 
 <p align="center"><img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F1hkKC%2FbtqC78M8NMg%2F6cG5iXuxXcqxpGa7cwaRx0%2Fimg.png" alt="2019 graph" width="700"></p>
 
@@ -443,3 +469,86 @@ cf. [구글 로봇 메타 태그](https://developers.google.com/search/docs/craw
 <br/>
 
 출처 | https://yozm.wishket.com/magazine/detail/1540/
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
+
+## 9. TCP와 UDP의 차이점에 대해 설명해주세요.
+
+TCP와 UDP는 TCP/IP의 전송계층에서 사용되는 프로토콜입니다. 전송계층은 IP에 의해 전달되는 패킷의 오류를 검사하고 재전송 요구 등의 제어를 담당하는 계층입니다.
+
+### TCP(Transmission Control Protocol)
+
+TCP는 연결 지향적 프로토콜입니다. 연결 지향적 프로토콜은 클라이언트와 서버가 연결된 상태에서 데이터를 주고 받는 프로토콜을 의미합니다. 장치들 사이에 논리적인 접속을 성립하기 위해 연결을 설정해 신뢰성을 보장하는 연결형 서비스입니다.
+TCP는 네트워크에 연결된 컴퓨터에서 실행되는 프로그램 간에 일련의 옥텟(데이터, 메시지, 세그먼트라는 블록 단위)을 안정적으로, 순서대로, 에러 없이 교환할 수 있게 합니다.
+
+#### TCP의 특징
+
+- 연결형 서비스로 가상 회선 방식을 제공
+  - 3-way handshaking 과정을 통해 연결을 설정합니다.
+  - 4-way handshaking 과정을 통해 연결을 해제합니다.
+- 흐름 제어(Flow control)
+  - 데이터 처리의 속도를 조절하여 수신자의 버퍼 오버플로우를 방지합니다.
+- 혼잡 제어(Congestion control)
+  - 네트워크 내의 패킷 수가 과도하게 증가하지 않도록 방지합니다.
+- 높은 신뢰성 보장
+  - 위의 특징들 때문에 높은 신뢰성을 보장하게 되지만 UDP보다 데이터의 전송 속도가 느립니다.
+- 전이중(Full-Duplex), 점대점(Point to Point) 방식
+  - 전이중(Full-Duplex) : 전송이 양방향으로 동시에 일어날 수 있습니다.
+  - 점대점(Point to Point) : 각 연결이 정확히 2개의 종단점을 가지고 있습니다.
+
+##### TCP특징 정리!
+
+가상 회선 방식을 제공한다는 것은 발신지와 수신지를 연결하여 패킷을 전송하기 위한 논리적 경로를 배정한다는 말입니다. 3-way handshaking의 과정을 사용하고 데이터의 흐름 제어나 혼잡 제어와 같은 기능을 사용하기 때문에 TCP는 연결형 서비스이고 높은 신뢰성은 보장합니다. 하지만 이러한 특징들 때문에 UDP보다 패킷을 전송하는 속도는 낮아지게 됩니다. 그렇기에 TCP는 연속성보다 신뢰성 있는 전송이 중요할 때 사용하는 프로토콜로 예를 들면, 파일 전송과 같은 경우에 사용됩니다.
+
+##### 3-way handshaking
+
+3-way handshake를 간단히 표현하면 다음과 같습니다.
+
+1. Client -> Server : 내 말 들려?
+2. Server -> Client : 어 잘 들려! 내 말은 들려?
+3. Client -> Server : 잘 들려!
+
+<p align="center"><img src="https://github.com/lapmu/frontend-interview-handbook/assets/115691844/53bec4a8-007d-465b-bd09-e0e0b6e3afeb" width='400px'/></p>
+
+- SYN(synchronize sequence numbers) - 연결 확인을 보내는 무작위의 숫자 값 (내 말 들려?)
+- ACK(acknowledgements) - Client 혹은 Server로부터 받은 SYN에 1을 더해 SYN을 잘 받았다는 ACK (잘 들려!)
+
+##### 4-way handshaking
+
+4-way handshake를 간단히 표현하면 다음과 같습니다.
+
+1. Client -> Server : 나는 다 보냈어! 이제 끊자!
+2. Server -> Client : 알겠어! 잠시만~
+3. Server -> Client : 나도 끊을게!
+4. Client -> Server : 알겠어!
+
+<p align="center"><img src="https://github.com/lapmu/frontend-interview-handbook/assets/115691844/8817c68b-86de-41b5-94a9-d1d5f298bc88" width='400px'/></p>
+
+### UDP(User Datagram Protocol)
+
+UDP는 비연결형 프로토콜입니다. 연결을 위해 할당되는 논리적인 경로가 없고, 각각의 패킷은 다른 경로로 전송되며, 독립적인 관계를 지닙니다.
+
+<p align="center"><img src="https://github.com/lapmu/frontend-interview-handbook/assets/115691844/e409ea33-31b2-4553-a2d8-43dc428993e6" width='400px'/></p>
+
+#### UDP의 특징
+
+- 비연결형 서비스로 데이터그램 방식을 제공
+  - 데이터의 전송 순서가 바뀔수 있습니다.
+- 데이터의 수신 여부를 확인하지 않음
+  - TCP의 3-way handshaking과 같은 과정을 거치지 않습니다.
+- TCP보다 데이터의 전송 속도가 빠름
+- 1:1, 1:다수, 다수:다수 통신이 가능
+
+#### UDP특징 정리!
+
+비연결 서비스이기 때문에 연결을 설정하고 해제하는 과정이 존재하지 않습니다. 패킷을 서로 다른 경로를 통해 독립적으로 처리하며 TCP처럼 흐름 제어 또는 혼잡제어와 같은 처리과정을 거치지 않기 때문에 데이터 전송 속도가 TCP보다 빠르고 네트워크의 부담이 적다는 장점이 있지만 신뢰성 있는 데이터 전송을 보장하지 못합니다. UDP는 신뢰성보다는 연속성 있는 전송이 필요할 때 사용하는 프로토콜로 예를 들면, 실시간 서비스(streaming)에 자주 사용됩니다.
+
+## 총정리!
+
+TCP는 패킷의 전송 순서가 보장되며 높은 신뢰도를 가지는 데이터의 전송을 보장하기 때문에 연속성보다 신뢰성이 필요한 데이터 전송을 할 경우 시용되는 프로토콜이며 UDP는 TCP보다 빠르고 네트워크 부하가 적다는 장점이 있지만 신뢰성 있는 데이터 전송을 보장하지 않기 때문에 신뢰성보다는 연속성이 중요한 실시간 스트리밍과 같은 서비스에 자주 사용합니다.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
