@@ -2,7 +2,7 @@
 
 - [useEffect의 dependency array에 대해서 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#1-useeffect%EC%9D%98-dependency-array%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [리액트의 내부 작동 원리를 재조정 (Reconciliation) 개념과 함께 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#2-%EB%A6%AC%EC%95%A1%ED%8A%B8%EC%9D%98-%EB%82%B4%EB%B6%80-%EC%9E%91%EB%8F%99-%EC%9B%90%EB%A6%AC%EB%A5%BC-%EC%9E%AC%EC%A1%B0%EC%A0%95-reconciliation-%EA%B0%9C%EB%85%90%EA%B3%BC-%ED%95%A8%EA%BB%98-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
-- [리액트 라우터같은 Client Side Routing 에 대해서 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#2-%EB%A6%AC%EC%95%A1%ED%8A%B8%EC%9D%98-%EB%82%B4%EB%B6%80-%EC%9E%91%EB%8F%99-%EC%9B%90%EB%A6%AC%EB%A5%BC-%EC%9E%AC%EC%A1%B0%EC%A0%95-reconciliation-%EA%B0%9C%EB%85%90%EA%B3%BC-%ED%95%A8%EA%BB%98-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
+- [CSR에 대해서 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#3-csr%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [React의 state와 props는 각각 무엇인지 설명해주세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/React#4-react%EC%9D%98-state%EC%99%80-props%EB%8A%94-%EA%B0%81%EA%B0%81-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [React 컴포넌트의 key 속성에 대해 설명하세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/React#5-react-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%9D%98-key-%EC%86%8D%EC%84%B1%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [React를 사용하는 이유에 대해 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#6-react%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
@@ -87,13 +87,13 @@ Server Side Rendering은 전통적인 웹 어플리케이션 렌더링 방식으
  
 <br />
 
-<u>클라이언트 측 렌더링(CSR)을 사용해야 하는 경우</u> <br />
-➡ 정보가 지속적으로 변경되고 사용자 요구를 충족하기 위해 빠른 업데이트를 수행하기 위해 크고 동적인 테이터 처리가 필요한 동적 웹 앱에 사용한다. 
+#### ✅ 클라이언트 측 렌더링(CSR)을 사용해야 하는 경우 <br />
+정보가 지속적으로 변경되고 사용자 요구를 충족하기 위해 빠른 업데이트를 수행하기 위해 크고 동적인 테이터 처리가 필요한 동적 웹 앱에 사용한다. 
 즉, SEO보다 사용자 경험을 우선시 하는 사이트에 추천한다.
 ex. 소셜 네트워크, 온라인 메신저 등
 
-<u>서버 측 렌더링(SSR)을 사용해야 하는 경우</u>  <br />
-➡ 검색 엔진 결과 페이지에 높은 순위를 얻어야 하는 경우에 좋은 선택이다.
+#### ✅ 서버 측 렌더링(SSR)을 사용해야 하는 경우  <br />
+검색 엔진 결과 페이지에 높은 순위를 얻어야 하는 경우에 좋은 선택이다.
 ex. 온라인 마켓플레이스, 직관적인 사용자 인터페이스를 갖춘 애플리케이션 등
 
 둘 다 장단점이 있기에 SSR과 CSR의 특징을 잘 파악하여 애플리케이션에 알맞는 방식을 결정해야 합니다.
