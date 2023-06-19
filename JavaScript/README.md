@@ -1117,3 +1117,30 @@ foo("a", "b", "c");
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
+
+## 24. binding의 개념과 call, apply의 차이점
+
+### binding?
+
+binding은 this가 가리키는 객체를 바꾸는 것을 말합니다. this는 자바스크립트에서 기본적으로 window 객체를 가리킵니다. 하지만 객체 내부, 생성자 new 호출시, 명시적으로 bind시에 따라 this가 가리키는 객체는 바뀌게 되는데 이것을 binding이라고 합니다. 명시적으로 this가 가리키는 객체를 바꿔주는 것이 call, apply, bind입니다.
+
+### call과 apply
+
+call과 apply는 함수를 호출할 때 사용되며 첫번째 매개변수는 함수 내에서 this가 가리키는 값으로 사용됩니다. call은 두번째 매개변수부터 호출하는 함수의 인자로 사용하게 되고 apply는 두번째 매개변수에 작성되는 배열의 요소가 함수의 인자로 사용이 됩니다. 
+
+```javascript
+
+const obj = { name: 'Tom' }
+const say = function (city) {
+    console.log(`Hello, my name is ${this.name}, I live in ${city}`)    
+}
+
+  say('seoul') // Hello, my name is , I live in seoul
+  say.call(obj, 'seoul') // Hello, my name is Tom, I live in seoul
+  say.apply(obj, ['seoul']) // Hello, my name is Tom, I live in seoul
+
+```
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
