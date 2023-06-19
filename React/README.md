@@ -45,42 +45,58 @@ useEffect은 브라우저 렌더링이 모두 끝난 후, 즉 첫 렌더링이 �
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
 
-## 3. 리액트 라우터같은 Client Side Routing 에 대해서 설명하세요.
+## 3. CSR에 대해서 설명하세요.
 
-Server-side Routing은 사용자가 새 페이지나 새 데이터에 접근할 때, 서버에서 이와 일치하는 응답(새로운 URL)을 사용자에게 제공해줍니다. 이는 새로운 전체 페이지를 렌더링한다는 의미이기도 합니다. 때문에 SSR은 페이지를 이동할 때마다 콘텐츠를 브라우저에 표시하기까지 시간이 걸립니다. 하지만 Client side routing은 SSR의 이러한 단점을 보완해줍니다. 클라이언트 단에서 즉, 서버가 아닌 자바스크립트 파일에서 처리되기 때문에 부분적으로 업데이트를 가능하게 합니다. 때문에 초기 로드 때, 데이터를 받아와서 다른 링크 간의 지연 시간이 적습니다. <br/><br/>
-이러한 CSR 방식은 React Router에서도 강력하게 나타납니다. React Router는 동적으로 라우팅이 결정됩니다. 즉, 렌더링 될 때마다 경로가 업데이트 됩니다. 이는 브라우저가 완전히 새로운 문서를 요청하거나 재평가할 필요가 없기 때문에 더 빠른 사용자 경험을 가능하게 합니다. CSR는 SPA가 붐이 일어나면서 흥행을 했었습니다.
+### 1️⃣ 렌더링이란?
+서버로부터 HTML 파일을 받아 브라우저 화면에 표시하고 그리는 일련의 작업을 렌더링이라 합니다!
 
-```javascript
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+<br />
 
-const HomePage = () => {
-  return (
-    <div>
-      <h1>Welcome to the Home Page!</h1>
-    </div>
-  );
-};
-// Using match to dynamically generate which user is being passed
-const User = ({ match }) => {
-  return (
-    <div>
-      <h3>{match.params.userId}</h3>
-    </div>
-  );
-};
-ReactDOM.render(
-  <Router>
-    <Route path='/' render={HomePage} />
-    // the new path will be the user's id passed into the User component
-    <Route path='/:userId' component={User} />
-  </Router>,
-  document.getElementById('root')
-);
-```
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FDDgYc%2FbtqJU4FsnxO%2FEdUlagktFPOO1dJbOQ6zH0%2Fimg.png" width="500px" /></p> <br />
 
-하지만 이러한 CSR에도 단점이 존재합니다. CSR은 초기 로드 시 전체 페이지를 로드해야 하기 때문에 홈페이지에 대한 초기 요청이 더 오래 걸릴 수도 있습니다. 때문에 SSR과 CSR의 특징을 잘 파악하여 애플리케이션에 알맞는 방식을 결정해야 합니다.
+### 2️⃣ CSR이란?
+모바일 시대가 도래하면서 이에 맞는 최적화된 서비스가 필요해졌고, 이때 등장한 것이 SPA입니다.
+
+> **SPA(Single Page Application)란?**  <br /> 최초 한 번 페이지 전체를 로딩한 이후부터는 데이터만 변경하여 사용하는 단일 페이지로 구성된 웹 애플리케이션이다.  <br /> <br /> SPA에서는 화면 구성에 필요한 모든 HTML을 클라이언트가 갖고 있고 서버 측에는 필요한 데이터를 요청하고 JSON으로 받기 때문에 기존의 어플리케이션에 비해 화면을 구성하는 속도가 빠르다.
+
+<br />
+그러나 전통적인 웹 렌더링 방식인 SSR은 SPA를 구현하기엔 한계가 있었습니다. 그 중 가장 큰 이유는 요청 시마다 서버로부터 자원을 받아 파싱(해석)하고 화면에 렌더링했기 때문입니다. 즉, 요청 시마다 새로고침이 되는 문제가 있었습니다. 이에 클라이언트 측에서 자바스크립트를 수행시킬 수 있는 Client Side Rendering 즉, CSR이 등장하게 되었고, 영어 의미 그대로 렌더링이 클라이언트에서 발생하는 것을 말합니다. <br /><br />
+
+이러한 CSR의 방식은 브라우저가 완전히 새로운 문서를 요청하거나 재평가할 필요가 없기 때문에 더 빠른 사용자 경험을 가능하게 합니다. <br /><br />
+
+### 정리
+✔️ 페이지 간 로드 시간이 빠르다. <br />
+✔️ 그러나 초기 업로드 때 모든 자원들을 읽기 때문에 시간이 다소 느리다. <br />
+✔️ 이는 SEO에 친화적이지 않게 만든다. 이는 크롤러가 해당 페이지에 처음 방문했을 때는 빈 페이지이기 때문이다.
+
+<br />
+
+CSR 방식을 기반으로 SPA를 지원하는 것으로는 React, Angular, Vue가 있습니다.
+<br /><br />
+
+### 2️⃣ SSR이란?
+
+Server Side Rendering은 전통적인 웹 어플리케이션 렌더링 방식으로 사용자가 새 페이지나 새 데이터에 접근할 때, 페이지에 대한 요청을 보내면 서버에서 이와 일치하는 응답(새로운 URL)을 사용자에게 제공해줍니다.
+<br /><br />
+이는 새로운 전체 페이지를 렌더링한다는 의미이기도 합니다. 때문에 SSR은 페이지를 이동할 때마다 콘텐츠를 브라우저에 표시하기까지 시간이 걸립니다. 그러나 SSR은 검색 엔진 최적화(SEO)가 가능하다는 점에서 큰 메리트가 있습니다. <br /><br />
+
+### 정리
+✔️ 검색 엔진 최적화(SEO)에 친화적이다. <br />
+✔️ 브라우저가 HTML만을 표시하기 때문에 초기 로딩 속도가 빠르다. (렌더링 후 자바스크립트 다운) <br />
+✔️ 그러나 서버에 요청할 때마다 매번 새로고침이 발생한다. <br />
+ 
+<br />
+
+<u>클라이언트 측 렌더링(CSR)을 사용해야 하는 경우</u> <br />
+➡ 정보가 지속적으로 변경되고 사용자 요구를 충족하기 위해 빠른 업데이트를 수행하기 위해 크고 동적인 테이터 처리가 필요한 동적 웹 앱에 사용한다. 
+즉, SEO보다 사용자 경험을 우선시 하는 사이트에 추천한다.
+ex. 소셜 네트워크, 온라인 메신저 등
+
+<u>서버 측 렌더링(SSR)을 사용해야 하는 경우</u>  <br />
+➡ 검색 엔진 결과 페이지에 높은 순위를 얻어야 하는 경우에 좋은 선택이다.
+ex. 온라인 마켓플레이스, 직관적인 사용자 인터페이스를 갖춘 애플리케이션 등
+
+둘 다 장단점이 있기에 SSR과 CSR의 특징을 잘 파악하여 애플리케이션에 알맞는 방식을 결정해야 합니다.
 
 cf. [client-side routing](https://betterprogramming.pub/react-router-and-client-side-routing-2e483452fbfb)
 <br/><br/>
