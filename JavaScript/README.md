@@ -22,7 +22,7 @@
 - [구조분해할당에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#21-%EA%B5%AC%EC%A1%B0%EB%B6%84%ED%95%B4%ED%95%A0%EB%8B%B9%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [spread문법과 rest문법에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#22-spread%EB%AC%B8%EB%B2%95%EA%B3%BC-rest%EB%AC%B8%EB%B2%95%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [화살표 함수에 대해 일반함수와 비교하여 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#23-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%88%98%EC%97%90-%EB%8C%80%ED%95%B4-%EC%9D%BC%EB%B0%98%ED%95%A8%EC%88%98%EC%99%80-%EB%B9%84%EA%B5%90%ED%95%98%EC%97%AC-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
-
+- [binding의 개념과 call, apply의 차이점에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#24-binding%EC%9D%98-%EA%B0%9C%EB%85%90%EA%B3%BC-call-apply%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90)
 ------
 <br />
 
