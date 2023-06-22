@@ -6,7 +6,7 @@
 - [이벤트 버블링(Event Bubbling)이란 무엇인지 설명하세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#5-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%B2%84%EB%B8%94%EB%A7%81event-bubbling%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [얕은 복사와 깊은 복사에 대해 설명하세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#6-%EC%96%95%EC%9D%80-%EB%B3%B5%EC%82%AC%EC%99%80-%EA%B9%8A%EC%9D%80-%EB%B3%B5%EC%82%AC%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [attribute와 property의 차이점에 대해 설명해보세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#7-attribute%EC%99%80-property%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
-- [ 쿠키와 웹스토리지(로컬 스토리지, 세션 스토리지)에 대해 설명해보세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#8-%EC%BF%A0%ED%82%A4%EC%99%80-%EC%9B%B9%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EB%A1%9C%EC%BB%AC-%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80-%EC%84%B8%EC%85%98-%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
+- [브라우저 저장소(쿠키, 웹 스토리지)에 대해 설명해주세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#8-%EC%BF%A0%ED%82%A4%EC%99%80-%EC%9B%B9%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EB%A1%9C%EC%BB%AC-%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80-%EC%84%B8%EC%85%98-%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
 - [스코프에 대해서 설명해보세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#9-%EC%8A%A4%EC%BD%94%ED%94%84%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
 - [호이스팅에 대해서 설명해보세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#10-%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%B4%EB%B3%B4%EC%84%B8%EC%9A%94)
 - [null, undefined, undeclared, NaN에 대해 각각 설명해주세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/JavaScript#11-null-undefined-undeclared-nan%EC%97%90-%EB%8C%80%ED%95%B4-%EA%B0%81%EA%B0%81-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
@@ -181,7 +181,7 @@ JSON.stringify를 활용해 데이터를 문자로 변형시키고. JSON.parse�
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
 
-## 8. 쿠키와 웹스토리지(로컬 스토리지, 세션 스토리지)에 대해 설명해보세요.
+## 8. 브라우저 저장소(쿠키, 웹 스토리지)에 대해 설명해주세요.
 ### 저장소(쿠키/웹스토리지)는 왜 필요한가
 HTTP는 요청과 응답으로 이뤄지는 하나의 사이클이 끝나면, 연결이 끊어지는 무상태성을 가져 클라이언트의 상태를 보존하지 않습니다.
 
