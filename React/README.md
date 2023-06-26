@@ -19,6 +19,7 @@
 - [브라우저에서 어떻게 JSX 파일이 실행되는지 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#17-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C-%EC%96%B4%EB%96%BB%EA%B2%8C-jsx-%ED%8C%8C%EC%9D%BC%EC%9D%84-%EC%8B%A4%ED%96%89%ED%95%98%EB%8A%94%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [Redux에 대해 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#18-redux%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [리액트 hooks는 무엇이고, 장점은 무엇인가요?](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#18-redux%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
+- [리액트의 상태에는 어떤 것들이 있나요?]()
 
 ---
 <br />
@@ -1085,6 +1086,48 @@ Hooks는 클래스 기반 컴포넌트의 장점(예를 들어 내부 상태와 
 
 이렇듯 Hooks의 등장으로 더이상 클래스형 컴포넌트를 사용하지 않아도 더 쉽고 빠르게 상태 관리를 할 수 있게 되었습니다.
 
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
+
+## 20. 리액트의 상태에는 어떤 것들이 있나요?
+리액트의 상태는 크게 `범위`와 `역할`, `제어 여부`로 나눌 수 있습니다.
+
+> 💡 **상태(State)란?**
+>
+> 리액트에서 `상태(State)`란 컴포넌트 내부에서 관리되는 동적인 값으로, 애플리케이션의 렌더링에 영향을 미치는 자바스크립트 객체를 말합니다.
+> State는 해당 State를 기반으로 동작되는 모든 컴포넌트의 상위 컴포넌트 내에 위치하는 것이 좋습니다.
+
+### 📦 범위 측면
+
+가장 작은 개념의 지역 상태부터 컴포넌트 간 상태, 전역 상태로 나눌 수 있습니다.
+
+**지역 상태(Local State)**
+
+특정 컴포넌트 안에서만 관리되는 상태로, 다른 컴포넌트들과 데이터를 공유하지 않는다는 특성이 있습니다.
+Form 데이터들은 대부분 지역 상태에 속하는데, `input`, `selectbox` 등이 대표적으로 지역 상태를 다룹니다.
+
+**컴포넌트 간 상태(Cross Component State)**
+
+여러 컴포넌트에서 관리되는 상태로, 다수의 컴포넌트에서 쓰이거나 영향을 미치는 상태를 의미합니다. 대표적으로 프로젝트 시 곳곳에서 사용되는 모달이 있습니다. 보통 상위 컴포넌트에서 하위 컴포넌트로 props를 전달하는 props Drilling 방식을 사용합니다.
+
+**전역 상태(Global State)**
+
+프로젝트 전체에 영향을 끼치는 상태로, 대표적으로 유저의 로그인 상태 등이 있습니다. 마찬가지로 props Drilling 방식을 사용해 부모 컴포넌트에서 자식 컴포넌트로 데이터를 전달합니다.
+
+### 📦 역할 측면
+
+어플리케이션의 상호작용적인 부분을 컨트롤하는 `UI 상태`, 서버로부터 데이터를 가져와 캐싱 해놓는 서`버 캐시 상태`, Form의 로딩, Submitting, disabled, validation 등의 데이터를 다루는 `Form 상태`, 브라우저에 의해서 관리되고 새로고침해도 변함 없는 `URL 상태` 등이 있습니다.
+
+### 📦 제어 측면
+
+**서버 상태(Server State)**
+
+서버로부터 불러온 데이터를 말합니다. 클라이언트가 제어 혹은 소유할 수 없기 때문에 서버로부터 특정 시점의 데이터를 가져와 저장해 사용합니다. 즉 비동기적인 상태를 갖습니다.
+
+**클라이언트 상태(Client State)**
+
+언어, UI 테마, 폼 입력, 사이드 바 상태 등 클라이언트가 제어 혹은 소유하는 데이터를 말합니다. 때문에 동기적인 상태를 가지며, 클라이언트 상태는 다시 범위 측면 혹은 역할 측면으로 구분할 수 있습니다.
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
