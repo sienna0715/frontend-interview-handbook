@@ -23,6 +23,7 @@
 - [spread문법과 rest문법에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#22-spread%EB%AC%B8%EB%B2%95%EA%B3%BC-rest%EB%AC%B8%EB%B2%95%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [화살표 함수에 대해 일반함수와 비교하여 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#23-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%88%98%EC%97%90-%EB%8C%80%ED%95%B4-%EC%9D%BC%EB%B0%98%ED%95%A8%EC%88%98%EC%99%80-%EB%B9%84%EA%B5%90%ED%95%98%EC%97%AC-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [binding의 개념과 call, apply의 차이점에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#24-binding%EC%9D%98-%EA%B0%9C%EB%85%90%EA%B3%BC-call-apply%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90)
+- [제너레이터에 대하여 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#25-%EC%A0%9C%EB%84%88%EB%A0%88%EC%9D%B4%ED%84%B0%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 ------
 <br />
 
@@ -1189,4 +1190,7 @@ return가 매우 유사하다고 이해하면 됩니다! 이때 next() 메소드
 
 cf.<br/>
 [[세오토리] 제너레이터란?](https://seo-tory.tistory.com/77) <br/>
-[[javascript.info] 제너레이터](https://ko.javascript.info/generators) <br/>
+[[javascript.info] 제너레이터](https://ko.javascript.info/generators) 
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
