@@ -19,7 +19,7 @@
 - [브라우저에서 어떻게 JSX 파일이 실행되는지 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#17-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C-%EC%96%B4%EB%96%BB%EA%B2%8C-jsx-%ED%8C%8C%EC%9D%BC%EC%9D%84-%EC%8B%A4%ED%96%89%ED%95%98%EB%8A%94%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [Redux에 대해 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#18-redux%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [리액트 hooks는 무엇이고, 장점은 무엇인가요?](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#18-redux%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
-- [리액트의 상태에는 어떤 것들이 있나요?]()
+- [리액트의 상태에는 어떤 것들이 있나요?](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#20-%EB%A6%AC%EC%95%A1%ED%8A%B8%EC%9D%98-%EC%83%81%ED%83%9C%EC%97%90%EB%8A%94-%EC%96%B4%EB%96%A4-%EA%B2%83%EB%93%A4%EC%9D%B4-%EC%9E%88%EB%82%98%EC%9A%94)
 
 ---
 <br />
