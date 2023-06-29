@@ -7,6 +7,7 @@
 - [브라우저의 렌더링 과정에 대하여 설명해 주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#5-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98-%EB%A0%8C%EB%8D%94%EB%A7%81-%EA%B3%BC%EC%A0%95%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-%EC%84%A4%EB%AA%85%ED%95%B4-%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [주소창에 google.com을 입력하면 일어나는 일을 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#6-%EC%A3%BC%EC%86%8C%EC%B0%BD%EC%97%90-googlecom%EC%9D%84-%EC%9E%85%EB%A0%A5%ED%95%98%EB%A9%B4-%EC%9D%BC%EC%96%B4%EB%82%98%EB%8A%94-%EC%9D%BC%EC%9D%84-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [크로스 브라우징에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/FrontEnd#7-%ED%81%AC%EB%A1%9C%EC%8A%A4-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A7%95%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [ES6 이상의 버전으로 작성한 코드를 브라우저에서 인식하지 못한다면 어떻게 해결하실건가요?]()
 - [SEO에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/FrontEnd#8-seo%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [TCP와 UDP의 차이점에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#9-tcp%EC%99%80-udp%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [프레임워크와 라이브러리의 차이점에 대해 말씀해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#10-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EC%99%80-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%97%90-%EB%8C%80%ED%95%B4-%EB%A7%90%EC%94%80%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
@@ -405,10 +406,26 @@ CSS 호환성을 위해 웹 브라우저 별로 전용 CSS 속성을 부여할 �
 
 </style>
 ```
-
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
+
+
+## 7-1. ES6 이상의 버전으로 작성한 코드를 브라우저에서 인식하지 못한다면 어떻게 해결하실건가요?
+> 최신 자바스크립트의 호환성 문제를 해결하는 방법을 묻는 질문
+
+
+브라우저 별로 렌더링 엔진 등의 차이가 있기 때문에 브라우저 호환성 이슈가 발생하는데, 이러한 차이를 최소화해 런타임 환경에 맞게 최적화하는 작업을 크로스 브라우징이라고 합니다. 그리고 이러한 크로스 브라우징 이슈를 해결할 수 있는 툴이 바로 바벨입니다.
+
+### 바벨(Babel)
+
+바벨은 ES6+ 버전의 자바스크립트나 타입스트립트, JSX 등 다른언어로 작성된 코드를 다른 언어로 변환시키는 역할을 수행하여, 모든 브라우저에서 동작할 수 있도록 호환성을 보장합니다.
+
+즉 바벨은 추상화 수준을 유지한 채로 코드를 변화시키는 트랜스파일러의 역할을 합니다. 바벨을 통해 ES6+ 버전의 자바스크립트 코드를 하위 버전으로 변환해 상위 버전을 지원하지 않는 브라우저나 다른 언어를 사용하는 브라우저에서도 기능이 동등하게 동작할 수 있게 합니다.
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
+
 
 ## 8. SEO에 대해 설명해주세요.
 
