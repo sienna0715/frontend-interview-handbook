@@ -32,6 +32,7 @@
 - [spread문법과 rest문법에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#22-spread%EB%AC%B8%EB%B2%95%EA%B3%BC-rest%EB%AC%B8%EB%B2%95%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [화살표 함수에 대해 일반함수와 비교하여 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#23-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%88%98%EC%97%90-%EB%8C%80%ED%95%B4-%EC%9D%BC%EB%B0%98%ED%95%A8%EC%88%98%EC%99%80-%EB%B9%84%EA%B5%90%ED%95%98%EC%97%AC-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [제너레이터에 대하여 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#25-%EC%A0%9C%EB%84%88%EB%A0%88%EC%9D%B4%ED%84%B0%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [함수형 프로그래밍(Functional Programming)이란 무엇인지 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#26-%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8Dfunctional-programming%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 
 <br/>
 
