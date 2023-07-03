@@ -1196,6 +1196,7 @@ cf.<br/>
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
+
 ## 26. 함수형 프로그래밍(Functional Programming)이란 무엇인지 설명해주세요.
 객체 지향 프로그래밍에서는 변수의 상태를 공유하고 상태를 변경하기 때문에 예상치 못한 버그를 일으킬 수 있습니다. 함수형 프로그래밍은 이러한 객체 지향 프로그래밍의 단점을 보완한 프로그래밍 방법으로, 불변성으로 선언한 값을 복사해 변경하므로 반환되는 값이 예측이 가능합니다. 
 
@@ -1259,6 +1260,73 @@ cf.<br/>
 <br />
 
 그 밖에도 함수형 프로그래밍은 불변성, 클로저, 유지관리 가능성, 모듈화 등의 특징을 가집니다.
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
+
+## 27. ES6에서 화살표 함수는 언제 쓰며, 왜 사용하는가?
+1. 함수 본연의 기능을 직관적으로 잘 표현하는 문법이다. ex) 입출력
+2. 코드를 간결하게 표현할 수 있다.
+    - 파라미터가 하나라면 소괄호 생력이 가능하다.
+    - return문이 한 줄이라면 중괄호를 생략할 수 있다.
+3. 화살표 함수의 내부 this는 값을 변화시키지 않는다. 
+```javascript
+let practice = {
+  object: function () {
+    console.log(this);
+  },
+};
+
+practice.object(); // practice
+```
+```javascript
+let practice = {
+  object: () => {
+    console.log(this);
+  },
+};
+
+practice.object(); // window
+```
+자바스크립트의 this는 호출할 때 동적으로 바인딩이 되는데 화살표 함수는 선언한 함수에 this가 없기 때문에 상위 환경 즉, 외부에 있던 this를 그대로 내부에 가져와서 사용하여 window 결과가 나온 이유이다.
+
+이렇듯 화살표 함수는 this 바인딩 문제를 해결하기 위해 사용되기도 합니다. 그러나 오히려 상위 환경의 this를 참조한다는 점이 문제가 될 수도 있습니다.
+```javascript
+const cat = {
+  name: 'meow';
+  callName: () => console.log(this.name);
+}
+
+cat.callName(); // undefined
+```
+위 예제처럼 callName 메소드의 this가 자신을 호출한 객체 cat이 아닌 상위 스코프를 가리키게 되면서(전역 객체를 가리킴) undefined 결과가 나왔습니다.
+일반 함수를 사용해도 메소드로 호출하면 자신을 호출한 객체를 가리키기 때문에 메소드에서는 화살표 함수를 사용할 필요가 없습니다!!!! 이 밖에도 생성자 함수를 만들 수 없습니다. 
+<br /><br />
+
+### 정리
+
+#### 💬 화살표 함수는 언제 사용하면 좋을까? <br />
+함수를 간략히 정의하고 싶고 this를 사용하지 않거나 콜백함수의 this와 외부 함수의 this 간의 불일치 즉, this 바인딩 문제를 해결하고 싶을 때 사용한다.
+
+#### 💬 화살표 함수를 사용하면 안되는 곳 <br />
+- 메소드
+- 생성자 함수
+
+```javascript
+let obj = {
+  myVar: 'foo',
+  
+  myFunc: function() { 
+    console.log(this.myVar)  
+  
+    setTimeout(() => {
+      console.log(this.myVar)
+    }, 1000)
+  }
+}
+obj.myFunc() // foo (1초 뒤) foo
+```
+
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
