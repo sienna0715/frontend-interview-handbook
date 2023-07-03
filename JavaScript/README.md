@@ -25,6 +25,7 @@
 - [binding의 개념과 call, apply의 차이점에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#24-binding%EC%9D%98-%EA%B0%9C%EB%85%90%EA%B3%BC-call-apply%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90)
 - [제너레이터에 대하여 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#25-%EC%A0%9C%EB%84%88%EB%A0%88%EC%9D%B4%ED%84%B0%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [함수형 프로그래밍(Functional Programming)이란 무엇인지 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#26-%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8Dfunctional-programming%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [ES6에서 화살표 함수는 언제 쓰며, 왜 사용하는가?](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#27-es6%EC%97%90%EC%84%9C-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%88%98%EB%8A%94-%EC%96%B8%EC%A0%9C-%EC%93%B0%EB%A9%B0-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EA%B0%80)
 ------
 <br />
 
@@ -1312,6 +1313,7 @@ cat.callName(); // undefined
 - 메소드
 - 생성자 함수
 
+#### 👀 화살표 함수 사용의 좋은 예시
 ```javascript
 let obj = {
   myVar: 'foo',
