@@ -75,7 +75,7 @@
 - [TCP와 UDP의 차이점에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#9-tcp%EC%99%80-udp%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [프레임워크와 라이브러리의 차이점에 대해 말씀해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#10-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EC%99%80-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%97%90-%EB%8C%80%ED%95%B4-%EB%A7%90%EC%94%80%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [UI와 UX에 대해 설명해 주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#11-ui%EC%99%80-ux%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4-%EC%A3%BC%EC%84%B8%EC%9A%94)
-
+- [자바스크립트에서 가비지 컬렉션에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#28-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%97%90%EC%84%9C-%EA%B0%80%EB%B9%84%EC%A7%80-%EC%BB%AC%EB%A0%89%EC%85%98%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 <br/>
 
 ## 👥 Member
