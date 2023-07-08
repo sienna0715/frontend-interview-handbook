@@ -27,6 +27,7 @@
 - [함수형 프로그래밍(Functional Programming)이란 무엇인지 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#26-%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8Dfunctional-programming%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [ES6에서 화살표 함수는 언제 쓰며, 왜 사용하는가?](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#27-es6%EC%97%90%EC%84%9C-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%88%98%EB%8A%94-%EC%96%B8%EC%A0%9C-%EC%93%B0%EB%A9%B0-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EA%B0%80)
 - [자바스크립트에서 가비지 컬렉션에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#28-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%97%90%EC%84%9C-%EA%B0%80%EB%B9%84%EC%A7%80-%EC%BB%AC%EB%A0%89%EC%85%98%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [import와 require의 차이점과 각각 어떤 상황에서 사용하는지 설명해주세요.]()
 ------
 <br />
 
@@ -1376,7 +1377,52 @@ user = null; // (2)
 - 가비지 컬렉션은 메모리를 효율적으로 관리하기 위해 사용됩니다.
 - 가비지 컬렉션은 엔진이 자동으로 수행합니다. 따라서 개발자는 이를 임의로 실행하거나 막을 수 없습니다.
 - 해당 객체가 도달 가능할 수 없는 상태일 때 가비지 컬렉터가 가비지 컬렉션을 수행하여 메모리에서 해당 객체를 제거합니다.
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
+<br/><br/>
+  
+## 29. import와 require의 차이점과 각각 어떤 상황에서 사용하는지 설명해주세요.
+`require`과 `import`는 모듈 키워드로 둘다 외부 파일이나 라이브러리를 불러오는 목적으로 사용되지만, 다른 문법 구조를 가지고 있습니다.
 
+**require**
+
+```jsx
+/* 불러오기 */
+const name = require('./module.js');
+
+/* 내보내기 */
+const name = '고양이';
+/* 단일 객체 */
+module.exports = name;
+/* 복수 객체 */
+exports.variable = name;
+```
+
+**import**
+
+```jsx
+/* 불러오기 */
+import name from './module.js';
+
+/* 내보내기 */
+const name = '고양이';
+/* 단일 객체 */
+export default name;
+/* 복수 객체 */
+export name;
+```
+
+### `require`과 `import`의 주요 차이점
+
+1. `require`은 NodeJS에서 사용되는 CommonJS의 키워드이고, `import`는 ES2015에서 새롭게 도입된 키워드입니다.
+2. `require`은 프로그램의 어느 지점에서나 호출할 수 있지만, `import`는 파일의 시작 부분에서만 실행할 수 있습니다.
+    
+    > ⚠️ 최근엔 import 전용 비동기 문법으로 파일 중간에 모듈 불러오기를 할 수 있습니다.
+    > 
+3. 기본 모듈 시스템으로 CommonJS를 사용하는 NodeJS는 별도 컴파일러 없이 `require`를 통해 외부 파일이나 라이브러리를 불러오지만, ES6 모듈 시스템을 채택하는 리액트는 `import`를 통해 라이브러리를 불러옵니다. 이때 Babel과 같은 ES6 코드를 변환해주는 도구가 없다면 `require` 키워드를 사용해야 합니다.
+4. 일반적으로 `import`는 사용자가 필요한 모듈을 부분적으로 로드할 수 있기 때문에 더 선호되며, `require` 보다 성능이 우수하고 메모리를 절약할 수 있습니다.
+
+**⚠️ 이때 하나의 프로그램에서 두 키워드를 동시에 사용할 수 없으므로, 하나의 키워드를 선택해 사용해야 합니다.**
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#javascript)
 <br/><br/>
