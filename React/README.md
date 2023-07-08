@@ -9,6 +9,7 @@
 - [React의 생명주기에 대해 설명하세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#6-react%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94)
 - [useEffect와 useLayoutEffect의 차이에 대해 설명해주세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/React#8-useeffect%EC%99%80-uselayouteffect%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [제어컴포넌트와 비제어 컴포넌트의 차이점에 대해 설명해주세요.](https://github.com/haizellatte/frontend-interview-handbook/tree/main/React#8-useeffect%EC%99%80-uselayouteffect%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [한 화면에 input이 100개 이상이 있을 때, 이를 어떻게 효율적으로 관리할 수 있을까요?]()
 - [useMemo와 useCallback에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/React/README.md#10-usememo%EC%99%80-usecallback%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [Context API에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/React/README.md#11-context-api%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [props drilling은 무엇이고, 어떻게 해결할 수 있나요?](https://github.com/sienna0715/frontend-interview-handbook/blob/main/React/README.md#12-props-drilling%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B4%EA%B3%A0-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%B4%EA%B2%B0%ED%95%A0-%EC%88%98-%EC%9E%88%EB%82%98%EC%9A%94)
@@ -412,8 +413,6 @@ function Control() {
 
 제어 컴포넌트는 사용자의 입력을 기반으로 **state**를 관리하고 update합니다. 이처럼 제어 컴포넌트는 React에 의해 값이 제어되는 입력, 폼 요소에서 사용됩니다.
 
-<br />
-
 ### 문제점
 
 제어 컴포넌트는 입력할 때마다 렌더링 하기 때문에, 불필요하게 리렌더링되거나 API를 호출할 수 있습니다. 즉 사용자가 입력하는 모든 데이터가 동기화됩니다.
@@ -457,8 +456,6 @@ function UnControl() {
 비제어 컴포넌트는 state로 값을 관리하지 않기 때문에 값이 바뀔 때마다 리렌더링, API 호출을 하지 않아 성능상 이점이 있습니다. 즉 비제어 컴포넌트는 사용자가 직접 트리거 하지 전까지는 리렌더링을 발생시키지 않고 값을 동기화 시키지도 않습니다.
 대표적 예로 submit 버튼을 클릭하면 함수 내에서 ref를 통해 form 내 value들에 접근합니다.
 
-<br />
-
 ### 언제 사용할까?
 
 일반적으로 모든 form 요소의 동기화가 필요하지 않고, form 요소가 증가할수록 면 모든 컴포넌트에 쓰로틀링이나 디바운싱을 걸기엔 어려움이 있습니다. 따라서 만약 값이 트리거 된 이후에 값이 갱신되어도 된다면, 비제어 컴포넌트를 통해 불필요한 렌더링을 방지하고 성능 향상을 할 수 있습니다.
@@ -468,8 +465,6 @@ function UnControl() {
 <br />
 
 ## 3. 제어 컴포넌트 vs 비제어 컴포넌트
-
----
 
 ### 차이점
 
@@ -499,6 +494,14 @@ function UnControl() {
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
+
+## 9-1. 한 화면에 input이 100개 이상이 있을 때, 이를 어떻게 효율적으로 관리할 수 있을까요?
+React-hook-form과 같은 비제어 컴포넌트를 통해 input 요소를 효율적으로 관리할 수 있습니다. 그 이유는 비제어 컴포넌트의 비동기화 때문입니다. 
+
+제어 컴포넌트의 경우 사용자의 입력으로 input의 값이 변경될 때마다 state가 동기화되고, 이에 따라 불필요한 리렌더링이 발생합니다. 반면 비제어 컴포넌트는 제출 버튼을 누르는 시점에만 해당 input 요소의 값에 접근합니다. 따라서 예시와 같이 한 화면에 input 요소가 많을 때, React-hook-form과 같은 비제어 컴포넌트를 사용하면 불필요한 리렌더링을 줄이고, 자원 낭비를 막을 수 있습니다.<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
+
 
 ## 10. useMemo와 useCallback에 대해 설명해주세요.
 ### useMemo
