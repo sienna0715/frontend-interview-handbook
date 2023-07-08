@@ -27,7 +27,7 @@
 - [함수형 프로그래밍(Functional Programming)이란 무엇인지 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#26-%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8Dfunctional-programming%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [ES6에서 화살표 함수는 언제 쓰며, 왜 사용하는가?](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#27-es6%EC%97%90%EC%84%9C-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%88%98%EB%8A%94-%EC%96%B8%EC%A0%9C-%EC%93%B0%EB%A9%B0-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EA%B0%80)
 - [자바스크립트에서 가비지 컬렉션에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/JavaScript/README.md#28-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%97%90%EC%84%9C-%EA%B0%80%EB%B9%84%EC%A7%80-%EC%BB%AC%EB%A0%89%EC%85%98%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
-- [import와 require의 차이점과 각각 어떤 상황에서 사용하는지 설명해주세요.]()
+- [import와 require의 차이점과 각각 어떤 상황에서 사용하는지 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/JavaScript#29-import%EC%99%80-require%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EA%B3%BC-%EA%B0%81%EA%B0%81-%EC%96%B4%EB%96%A4-%EC%83%81%ED%99%A9%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 ------
 <br />
 
