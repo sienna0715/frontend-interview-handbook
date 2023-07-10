@@ -6,12 +6,14 @@
 - [자바스크립트는 싱글 스레드 언어로 알려져있는데, 싱글 스레드와 멀티 스레드의 차이점은 무엇이며, 각 장단점은 무엇인지 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/FrontEnd#4-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%8B%B1%EA%B8%80-%EC%8A%A4%EB%A0%88%EB%93%9C-%EC%96%B8%EC%96%B4%EB%A1%9C-%EC%95%8C%EB%A0%A4%EC%A0%B8%EC%9E%88%EB%8A%94%EB%8D%B0-%EC%8B%B1%EA%B8%80-%EC%8A%A4%EB%A0%88%EB%93%9C%EC%99%80-%EB%A9%80%ED%8B%B0-%EC%8A%A4%EB%A0%88%EB%93%9C%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B4%EB%A9%B0-%EA%B0%81-%EC%9E%A5%EB%8B%A8%EC%A0%90%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [브라우저의 렌더링 과정에 대하여 설명해 주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#5-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98-%EB%A0%8C%EB%8D%94%EB%A7%81-%EA%B3%BC%EC%A0%95%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-%EC%84%A4%EB%AA%85%ED%95%B4-%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [주소창에 google.com을 입력하면 일어나는 일을 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#6-%EC%A3%BC%EC%86%8C%EC%B0%BD%EC%97%90-googlecom%EC%9D%84-%EC%9E%85%EB%A0%A5%ED%95%98%EB%A9%B4-%EC%9D%BC%EC%96%B4%EB%82%98%EB%8A%94-%EC%9D%BC%EC%9D%84-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [DNS에 대해 설명해주세요.]()
 - [크로스 브라우징에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/FrontEnd#7-%ED%81%AC%EB%A1%9C%EC%8A%A4-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A7%95%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [ES6 이상의 버전으로 작성한 코드를 브라우저에서 인식하지 못한다면 어떻게 해결하실건가요?](https://github.com/sienna0715/frontend-interview-handbook/tree/main/FrontEnd#7-1-es6-%EC%9D%B4%EC%83%81%EC%9D%98-%EB%B2%84%EC%A0%84%EC%9C%BC%EB%A1%9C-%EC%9E%91%EC%84%B1%ED%95%9C-%EC%BD%94%EB%93%9C%EB%A5%BC-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C-%EC%9D%B8%EC%8B%9D%ED%95%98%EC%A7%80-%EB%AA%BB%ED%95%9C%EB%8B%A4%EB%A9%B4-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%B4%EA%B2%B0%ED%95%98%EC%8B%A4%EA%B1%B4%EA%B0%80%EC%9A%94)
 - [SEO에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/FrontEnd#8-seo%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [TCP와 UDP의 차이점에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#9-tcp%EC%99%80-udp%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [프레임워크와 라이브러리의 차이점에 대해 말씀해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#10-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EC%99%80-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%97%90-%EB%8C%80%ED%95%B4-%EB%A7%90%EC%94%80%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [UI와 UX에 대해 설명해 주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#11-ui%EC%99%80-ux%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4-%EC%A3%BC%EC%84%B8%EC%9A%94)
+- [CORS가 무엇이며, 해결하기 위한 방법에 대해 설명해 주세요.]()
 
 ---
 
@@ -337,6 +339,13 @@ cf. [객체지향 프로그래밍이란?](https://jongminfire.dev/%EA%B0%9D%EC%B
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
 
+## 6-1. DNS에 대해 설명해주세요.
+도메인 이름 시스템 서버(Domain NAme System Servers)는 URL들의 이름과 IP주소를 저장하고 있는 데이터베이스로, 웹사이트를 위한 주소록입니다. 숫자로 된 IP 주소 대신 사용자가 사용하기 편리하도록 주소를 매핑해 주는 역할을 합니다.
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
+
 ## 7. 크로스 브라우징에 대해 설명해주세요.
 
 ### 🖥️ 크로스 브라우징(Cross Browsing)이란?
@@ -603,3 +612,11 @@ User Experience의 약자로 사용하는 사용자들의 경험을 분석하여
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
+
+## 12. CORS가 무엇이며, 해결하기 위한 방법에 대해 설명해 주세요.
+Cross Origin Resource Sharing의 약자로, 웹 페이지가 제공하는 도메인이 아닌 다른 도메인에서 리소스를 요청하는 것을 의미합니다. 브라우저는 CORS 에러를 발생시켜 악의적인 스크립트가 중요한 데이터에 접근하거나 무단 요청하지 못하도록 방지합니다.
+이를 해결하기 위해서는 프록시 서버를 설정할 수도 있고 또는 CORS 헤더를 작성하여 특정 도메인의 요청을 허용해 줄 수 있습니다.
+
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FJNtN4%2FbtrP7NXIqJQ%2F6z9koCdW87EHtdt27feEt0%2Fimg.jpg" alt="" width="400px" />
+
+cf. [CORS 해결방법](https://sisiblog.tistory.com/285)
