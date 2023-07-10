@@ -603,3 +603,57 @@ User Experience의 약자로 사용하는 사용자들의 경험을 분석하여
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
+
+## 12. 리플로우와 리페인트에 대해 설명해주세요.
+
+리플로우와 리페인트는 DOM 요소의 레이아웃 수치가 변경되었을 때, 변경된 수치를 다시 계산하여 브라우저 화면을 다시 그려주는 작업입니다. 만약 DOM 요소의 레이아웃 수치가 변경되면 리플로우가 발생하여 렌더트리를 재생성하고, 재생성된 렌더트리를 기반으로 요소를 화면에 그리는 리페인트가 발생합니다.
+
+### 리플로우(reflow)
+
+리플로우는 DOM 요소의 기하학적 속성이 변경될때, 브라우저 사이즈가 변할때, 스타일시트가 로딩되었을때 발생하는 변화들을 다시 계산 해주는 작업을 뜻하고 렌더트리를 재생성하는 것을 말합니다.
+
+### 리페인트(repaint)
+
+리플로우가 일어나게되면 리페인트도 일어나게 되지만 background-color, visibillty, outline 등의 스타일 변경 시에는 레이아웃 수치가 변경되지 않으므로 리플로우 과정이 생략된 리페인트 과정만 일어나게 됩니다. 리페인트가 일어나게 되면 DOMtree의 다른 노드들의 스킨까지 검증해야 하므로 많은 리소스가 발생합니다.
+
+### 발생 조건
+
+- 윈도우 리사이징 (뷰포트 변화는 Global Layout에 영향)
+- 폰트의 변화 (height계산에 영향을 주므로 Global Layout에 영향)
+- 스타일 추가 또는 제거(레이아웃을 바꾸므로)
+- 내용 변화 (인풋박스에 텍스트 입력 등..)
+- :hover와 같은 CSS 의사 클래스
+- 클래스 Attribute의 동적 변화
+- JS를 통한 DOM 동적 변화
+- 엘리먼트에 대한 offsetWidth / offsetHeight (화면에서 보여지는 좌표) 계산시
+- 스타일 Attribute 동적변화
+등등...(더욱 자세한 사항은 [이곳으로](https://gist.github.com/paulirish/5d52fb081b3570c81e3a))
+
+### 최적화
+
+- 클래스 변화에 따른 스타일 변화를 원할 경우, 최대한 DOM 구조 상 끝단에 위치한 노드에 주어라. (DOM 구조 상 끝단에 위치한 노드에서 리플로우가 일어날 경우 전체 페이지가 아닌 일부 페이지에서 리플로우가 일어나기 때문에 리플로우의 영향을 최소화함으로써 리소스의 사용을 줄일 수 있습니다.)
+- 인라인 스타일을 최대한 배제하라. (인라인상에 스타일이 주어진 경우, 리플로우는 페이지 전체에 걸쳐 수차례 발생하게 됩니다. 만일 인라인스타일이 없을 경우, 외부스타일 클래스의 조합으로 단 한번만 리플로우를 발생 시킵니다)
+- 애니메이션이 들어간 엘리먼트는 가급적 position:fixed 또는 position:absolute 로 지정 (CSS로 width/height 또는 위치이동을 구현한 애니메이션은 거의 초단위로 상당한 Reflow를 불러 일으킵니다. 이러한 경우에 해당 개체의 position 속성을 fixed 또는 absoute로 주게 되면 다른 요소들의 레이아웃에 영향을 끼치지 않으므로 페이지 전체의 Reflow 대신 해당 애니메이션 요소의 Repaint만을 유발합니다.)
+- 테이블 레이아웃을 피하라. (테이블 레이아웃에서는 아주 작은 변화마저도 해당 테이블 전체 모든 노드에 대한 Reflow를 발생시킵니다.)
+- IE의 경우, CSS에서의 JS표현식을 피하라. (문서 전체 또는 문서 중 일부가 리플로우 될 때마다 표현식이 다시 계산되기 때문에 CSS표현식은 반드시 피해야 합니다.)
+- JS를 통해 스타일변화를 주어야 할 경우, 가급적 한번에 처리하라.
+
+```javascript
+
+let toChange = document.getElementById('elem');
+toChange.style.background = '#333';
+toChange.style.color = '#fff';
+toChange.style.border = '1px solid #ccc';
+
+// CSS
+#elem { border:1px solid #000; color:#000; background:#ddd; }
+.highlight { border-color:#00f; color:#fff; background:#333; }
+
+// js 
+document.getElementById('elem').className = 'highlight';
+
+```
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
