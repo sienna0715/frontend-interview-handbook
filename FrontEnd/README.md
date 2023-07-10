@@ -340,6 +340,7 @@ cf. [객체지향 프로그래밍이란?](https://jongminfire.dev/%EA%B0%9D%EC%B
 <br/><br/>
 
 ## 6-1. DNS에 대해 설명해주세요.
+
 도메인 이름 시스템 서버(Domain NAme System Servers)는 URL들의 이름과 IP주소를 저장하고 있는 데이터베이스로, 웹사이트를 위한 주소록입니다. 숫자로 된 IP 주소 대신 사용자가 사용하기 편리하도록 주소를 매핑해 주는 역할을 합니다.
 
 <br/><br/>
@@ -415,14 +416,14 @@ CSS 호환성을 위해 웹 브라우저 별로 전용 CSS 속성을 부여할 �
 
 </style>
 ```
+
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
 
-
 ## 7-1. ES6 이상의 버전으로 작성한 코드를 브라우저에서 인식하지 못한다면 어떻게 해결하실건가요?
-> 최신 자바스크립트의 호환성 문제를 해결하는 방법을 묻는 질문
 
+> 최신 자바스크립트의 호환성 문제를 해결하는 방법을 묻는 질문
 
 브라우저 별로 렌더링 엔진 등의 차이가 있기 때문에 브라우저 호환성 이슈가 발생하는데, 이러한 차이를 최소화해 런타임 환경에 맞게 최적화하는 작업을 크로스 브라우징이라고 합니다. 그리고 이러한 크로스 브라우징 이슈를 해결할 수 있는 툴이 바로 바벨입니다.
 
@@ -434,7 +435,6 @@ CSS 호환성을 위해 웹 브라우저 별로 전용 CSS 속성을 부여할 �
 <br/><br/>
 👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
 <br/><br/>
-
 
 ## 8. SEO에 대해 설명해주세요.
 
@@ -602,8 +602,7 @@ User Interface의 약자로 사용자가 브라우저를 사용할 때 보이는
 
 ### UX
 
-User Experience의 약자로 사용하는 사용자들의 경험을 분석하여 더 편하고 효율적인 방향으로 프로세스가 진행될 수 있도록 만드는 것을 말합니다. 사용자가 어떠한 서비스, 제품을 직간접적으로 이용하며 느끼는 종합적인 만족도를 말합니다. 
-
+User Experience의 약자로 사용하는 사용자들의 경험을 분석하여 더 편하고 효율적인 방향으로 프로세스가 진행될 수 있도록 만드는 것을 말합니다. 사용자가 어떠한 서비스, 제품을 직간접적으로 이용하며 느끼는 종합적인 만족도를 말합니다.
 
 ### UI와 UX
 
@@ -614,9 +613,64 @@ User Experience의 약자로 사용하는 사용자들의 경험을 분석하여
 <br/><br/>
 
 ## 12. CORS가 무엇이며, 해결하기 위한 방법에 대해 설명해 주세요.
+
 Cross Origin Resource Sharing의 약자로, 웹 페이지가 제공하는 도메인이 아닌 다른 도메인에서 리소스를 요청하는 것을 의미합니다. 브라우저는 CORS 에러를 발생시켜 악의적인 스크립트가 중요한 데이터에 접근하거나 무단 요청하지 못하도록 방지합니다.
 이를 해결하기 위해서는 프록시 서버를 설정할 수도 있고 또는 CORS 헤더를 작성하여 특정 도메인의 요청을 허용해 줄 수 있습니다.
 
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FJNtN4%2FbtrP7NXIqJQ%2F6z9koCdW87EHtdt27feEt0%2Fimg.jpg" alt="" width="400px" />
 
 cf. [CORS 해결방법](https://sisiblog.tistory.com/285)
+
+## 13. 리플로우와 리페인트에 대해 설명해주세요.
+
+리플로우와 리페인트는 DOM 요소의 레이아웃 수치가 변경되었을 때, 변경된 수치를 다시 계산하여 브라우저 화면을 다시 그려주는 작업입니다. 만약 DOM 요소의 레이아웃 수치가 변경되면 리플로우가 발생하여 렌더트리를 재생성하고, 재생성된 렌더트리를 기반으로 요소를 화면에 그리는 리페인트가 발생합니다.
+
+### 리플로우(reflow)
+
+리플로우는 DOM 요소의 기하학적 속성이 변경될때, 브라우저 사이즈가 변할때, 스타일시트가 로딩되었을때 발생하는 변화들을 다시 계산 해주는 작업을 뜻하고 렌더트리를 재생성하는 것을 말합니다.
+
+### 리페인트(repaint)
+
+리플로우가 일어나게되면 리페인트도 일어나게 되지만 background-color, visibillty, outline 등의 스타일 변경 시에는 레이아웃 수치가 변경되지 않으므로 리플로우 과정이 생략된 리페인트 과정만 일어나게 됩니다. 리페인트가 일어나게 되면 DOMtree의 다른 노드들의 스킨까지 검증해야 하므로 많은 리소스가 발생합니다.
+
+### 발생 조건
+
+- 윈도우 리사이징 (뷰포트 변화는 Global Layout에 영향)
+- 폰트의 변화 (height계산에 영향을 주므로 Global Layout에 영향)
+- 스타일 추가 또는 제거(레이아웃을 바꾸므로)
+- 내용 변화 (인풋박스에 텍스트 입력 등..)
+- :hover와 같은 CSS 의사 클래스
+- 클래스 Attribute의 동적 변화
+- JS를 통한 DOM 동적 변화
+- 엘리먼트에 대한 offsetWidth / offsetHeight (화면에서 보여지는 좌표) 계산시
+- 스타일 Attribute 동적변화
+  등등...(더욱 자세한 사항은 [이곳으로](https://gist.github.com/paulirish/5d52fb081b3570c81e3a))
+
+### 최적화
+
+- 클래스 변화에 따른 스타일 변화를 원할 경우, 최대한 DOM 구조 상 끝단에 위치한 노드에 주어라. (DOM 구조 상 끝단에 위치한 노드에서 리플로우가 일어날 경우 전체 페이지가 아닌 일부 페이지에서 리플로우가 일어나기 때문에 리플로우의 영향을 최소화함으로써 리소스의 사용을 줄일 수 있습니다.)
+- 인라인 스타일을 최대한 배제하라. (인라인상에 스타일이 주어진 경우, 리플로우는 페이지 전체에 걸쳐 수차례 발생하게 됩니다. 만일 인라인스타일이 없을 경우, 외부스타일 클래스의 조합으로 단 한번만 리플로우를 발생 시킵니다)
+- 애니메이션이 들어간 엘리먼트는 가급적 position:fixed 또는 position:absolute 로 지정 (CSS로 width/height 또는 위치이동을 구현한 애니메이션은 거의 초단위로 상당한 Reflow를 불러 일으킵니다. 이러한 경우에 해당 개체의 position 속성을 fixed 또는 absoute로 주게 되면 다른 요소들의 레이아웃에 영향을 끼치지 않으므로 페이지 전체의 Reflow 대신 해당 애니메이션 요소의 Repaint만을 유발합니다.)
+- 테이블 레이아웃을 피하라. (테이블 레이아웃에서는 아주 작은 변화마저도 해당 테이블 전체 모든 노드에 대한 Reflow를 발생시킵니다.)
+- IE의 경우, CSS에서의 JS표현식을 피하라. (문서 전체 또는 문서 중 일부가 리플로우 될 때마다 표현식이 다시 계산되기 때문에 CSS표현식은 반드시 피해야 합니다.)
+- JS를 통해 스타일변화를 주어야 할 경우, 가급적 한번에 처리하라.
+
+```javascript
+
+let toChange = document.getElementById('elem');
+toChange.style.background = '#333';
+toChange.style.color = '#fff';
+toChange.style.border = '1px solid #ccc';
+
+// CSS
+#elem { border:1px solid #000; color:#000; background:#ddd; }
+.highlight { border-color:#00f; color:#fff; background:#333; }
+
+// js
+document.getElementById('elem').className = 'highlight';
+
+```
+
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
