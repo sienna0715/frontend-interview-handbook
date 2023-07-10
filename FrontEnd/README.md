@@ -14,7 +14,7 @@
 - [프레임워크와 라이브러리의 차이점에 대해 말씀해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#10-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EC%99%80-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%97%90-%EB%8C%80%ED%95%B4-%EB%A7%90%EC%94%80%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [UI와 UX에 대해 설명해 주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#11-ui%EC%99%80-ux%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4-%EC%A3%BC%EC%84%B8%EC%9A%94)
 - [CORS가 무엇이며, 해결하기 위한 방법에 대해 설명해 주세요.](https://github.com/sienna0715/frontend-interview-handbook/tree/main/FrontEnd#12-cors%EA%B0%80-%EB%AC%B4%EC%97%87%EC%9D%B4%EB%A9%B0-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EB%B0%A9%EB%B2%95%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4-%EC%A3%BC%EC%84%B8%EC%9A%94)
-
+- [리플로우와 리페인트에 대해 설명해주세요.](https://github.com/sienna0715/frontend-interview-handbook/blob/main/FrontEnd/README.md#13-%EB%A6%AC%ED%94%8C%EB%A1%9C%EC%9A%B0%EC%99%80-%EB%A6%AC%ED%8E%98%EC%9D%B8%ED%8A%B8%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
 ---
 
 <br/>
