@@ -613,13 +613,85 @@ User Experience의 약자로 사용하는 사용자들의 경험을 분석하여
 <br/><br/>
 
 ## 12. CORS가 무엇이며, 해결하기 위한 방법에 대해 설명해 주세요.
+### 1️⃣ CORS가 무엇인가요?
+Cross-Origin Resource Sharing의 약자로, 출처가 다른 자원들을 공유한다는 뜻으로, 한 출처에 있는 자원에서 다른 출처에 있는 자원에 접근하도록 하는 개념입니다. 즉, 다른 출처에 있는 자원을 요청한다고 하면, 이를 CORS라고 부릅니다. 그런데 브라우저에서는 보안적인 이유로 이 CORS 요청을 제한하며 이를 해결하기 위해서는 서버의 동의가 필요합니다.
+<br /><br />
+그렇다면 주소에서 어디까지를 출처로 인식할까요?
 
-Cross Origin Resource Sharing의 약자로, 웹 페이지가 제공하는 도메인이 아닌 다른 도메인에서 리소스를 요청하는 것을 의미합니다. 브라우저는 CORS 에러를 발생시켜 악의적인 스크립트가 중요한 데이터에 접근하거나 무단 요청하지 못하도록 방지합니다.
-이를 해결하기 위해서는 프록시 서버를 설정할 수도 있고 또는 CORS 헤더를 작성하여 특정 도메인의 요청을 허용해 줄 수 있습니다.
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FE2KY5%2FbtrI1hxsSYD%2FZJrCDW0gdeOsWgnKvsYn51%2Fimg.png" alt="" width="400px" />
+
+protocol + host + port 3가지가 같으면 동일 출처(origin)로 봅니다.
+<br /><br />
+
+### 2️⃣ cross-origin은 언제 발생하는가?
+1. 프로토콜이 다를 때 ex) http와 https는 프로토콜이 다르다.
+2. 도메인이 다를 때
+3. 포트 번호가 다를 때 ex) 8080포트와 3000포트는 다르다.
+<br /><br />
+
+동일 출처 예시
+- http://example.com:80 === http://example.com
+- http://example.com/app1/index.html === http://example.com/app2/index.html 
+
+다른 출처 예시
+- http://example.com/app1 !== https://example.com/app1
+- http://example.com !== http://www.example.com
+- http://example.com !== http://example.com:8080
+<br />
+
+### 3️⃣ 왜 필요한가?
+CORS가 없이 모든 곳에서 데이터를 요청할 수 있게 되면, 다른 사이트에서 원래 사이트를 흉내낼 수 있게 됩니다. 예를 들어서 기존 사이트와 완전히 동일하게 동작하도록 하여 사용자가 로그인을 하도록 만들고, 로그인했던 세션을 탈취하여 악의적으로 정보를 추출하거나 다른 사람의 정보를 입력하는 등 공격을 할 수 있습니다. 때문에 공격을 할 수 없도록 브라우저에서 보호하고, 필요한 경우에만 서버와 협의하여 요청할 수 있도록 하기 위해서 필요합니다.
+<br /><br />
+
+### 4️⃣ 해결 방법
+- 단순 요청(Simple Request)
+- 프리 플라이트 요청(Preflighted Request)
+- 인증정보 요청(Credential Request)
+<br />
+
+### 5️⃣ 단순 요청(Simple Request)
+- GET, HEAD, POST 요청 중 하나이다.
+- 자동으로 설정되는 헤더 제외하고, Accept, Accept-Language, Contet-Language만 변경하였다.
+- Contet-Type이 application/x-www-form-urlencoded, multipart/form-data, text/plain이다.
+위 조건에 해당하는 것만 단순 요청이라고 합니다. 단순 요청의 경우 요청 확인 과정 없이 바로 본 요청으로 보내집니다.
+<br /><br />
+
+### 6️⃣ 프리 플라이트 요청(Preflighted Request)
+프리 플라이트는 OPTIONS 메서드로 HTTP 요청을 미리 보내 실제 요청이 전송하기에 안전한지 확인합니다. 다른 출처 요청이 유저 데이터에 영향을 줄 수 있기 때문에  미리 전송한다는 의미입니다.
 
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FJNtN4%2FbtrP7NXIqJQ%2F6z9koCdW87EHtdt27feEt0%2Fimg.jpg" alt="" width="400px" />
 
-cf. [CORS 해결방법](https://sisiblog.tistory.com/285)
+Request Header
+- origin : 어디서 요청을 했는지 서버에 알려주는 주소
+- access-control-request-method : 실제 요청이 보낼 HTTP 메서드
+- access-control-request-headers : 실제 요청에 포함된 header
+
+Response Header
+- access-control-allow-origin : 서버가 허용하는 출처
+- access-control-allow-methods : 서버가 허용하는 HTTP 메서드 리스트
+- access-control-allow-headers : 서버가 허용하는 header 리스트
+- access-control-max-age : 프리 플라이트 요청의 응답을 캐시에 저장하는 시간
+<br />
+
+### 7️⃣ 신용(인증정보) 요청(Credential Request)
+신용 요청은 쿠키, 인증 헤더, TLS 클라이언트 인증서 등의 신용정보와 함께 요청합니다. 기본적으로, CORS 정책은 다른 출처 요청에 인증정보 포함을 허용하지 않습니다. 요청에 인증을 포함하는 플래그가 있거나 access-control-allow-credentials가 true로 설정 한다면 요청할 수 있습니다. 
+<br /><br />
+
+### 8️⃣ 어떤 요청 방식이 좋을까요?
+프리플라이트 요청을 사용하는게 좋습니다. 프리 플라이트 요청으로 실제 요청이 실행되기 이전에 검사를 하고 허용할지 않할지를 결정할 수 있기 때문입니다.
+<br /><br />
+
+### 정리
+Cross Origin Resource Sharing의 약자로, 웹 페이지가 제공하는 도메인이 아닌 다른 도메인에서 리소스를 요청하는 것을 의미합니다. 브라우저는 CORS 에러를 발생시켜 악의적인 스크립트가 중요한 데이터에 접근하거나 무단 요청하지 못하도록 방지합니다.
+이를 해결하기 위해서는 프록시 서버를 설정할 수도 있고 또는 CORS 헤더를 작성하여 특정 도메인의 요청을 허용해 줄 수 있습니다.
+
+cf. <br />
+[CORS 해결방법](https://sisiblog.tistory.com/285) <br />
+[CORS란 무엇인가?](https://hannut91.github.io/blogs/infra/cors) <br />
+[CORS란 무엇인가?(2)](https://escapefromcoding.tistory.com/724)
+<br/><br/>
+👆 [맨 위로 올라가기](https://github.com/sienna0715/frontend-interview-handbook/tree/main/React#react)
+<br/><br/>
 
 ## 13. 리플로우와 리페인트에 대해 설명해주세요.
 
